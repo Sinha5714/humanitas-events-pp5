@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Col, Row, Container, Button, Form } from "react-bootstrap";
-import { Link } from 'react-router-dom';
+import { Link , useHistory} from 'react-router-dom';
+import axios from 'axios';
 
 const SignUpForm = () => {
     
@@ -10,6 +11,10 @@ const SignUpForm = () => {
         password2: "",
     });
     const { username, password1, password2 } = signUpData;
+    
+    const [errors, setErrors] = useState({});
+
+    const history = useHistory();
 
     const handleChange = (event) => {
         setSignUpData({
@@ -17,13 +22,22 @@ const SignUpForm = () => {
           [event.target.name]: event.target.value,
         });
       };
-
+    
+    const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+        await axios.post("/dj-rest-auth/registration/", signUpData);
+        history.push("/signin");
+    } catch (err) {
+        setErrors(err.response?.data);
+    }
+    };
   return (
     <Row>
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className="p-4">
           <h1>Sign Up</h1>
-          <Form>
+          <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="username">
                     <Form.Label>Username</Form.Label>
                     <Form.Control
