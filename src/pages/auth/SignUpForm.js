@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Col, Row, Container, Button, Form } from "react-bootstrap";
+import {Col, Row, Container, Button, Form, Alert } from "react-bootstrap";
 import { Link , useHistory} from 'react-router-dom';
 import axios from 'axios';
 
@@ -48,7 +48,11 @@ const SignUpForm = () => {
                     onChange={handleChange}
                     />
                 </Form.Group>
-
+                {errors.username?.map((message, idx) => (
+                    <Alert variant="warning" key={idx}>
+                        {message}
+                    </Alert>
+                ))}
                 <Form.Group controlId="password1">
                     <Form.Label>Password</Form.Label>
                     <Form.Control
@@ -59,6 +63,11 @@ const SignUpForm = () => {
                     onChange={handleChange}
                     />
                 </Form.Group>
+                {errors.password1?.map((message, idx) => (
+                    <Alert variant="warning" key={idx}>
+                        {message}
+                    </Alert>
+                ))}
                 <Form.Group controlId="password2">
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control
@@ -69,9 +78,19 @@ const SignUpForm = () => {
                     onChange={handleChange}
                     />
                 </Form.Group>
+                {errors.password2?.map((message, idx) => (
+                    <Alert variant="warning" key={idx}>
+                        {message}
+                    </Alert>
+                ))}
                 <Button variant="primary" type="submit">
                     Sign Up
                 </Button>
+                {errors.non_field_errors?.map((message, idx) => (
+                    <Alert key={idx} variant="warning" className="mt-3">
+                        {message}
+                    </Alert>
+                ))}
             </Form>
         </Container>
         <Container className="mt-3">
