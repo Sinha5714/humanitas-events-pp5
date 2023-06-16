@@ -1,12 +1,13 @@
 .App {
     font-family: "Montserrat", sans-serif;
-    background-color: #ebcdcd;
+    background-color: #eef4f9;
     min-height: 100vh;
   }
 
 .Main{
     padding-top: 81px;
 }
+
 * {
     box-sizing: border-box;
 }
