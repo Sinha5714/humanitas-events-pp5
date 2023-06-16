@@ -1,29 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react';
 import {Col, Row, Container, Button, Form } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
 const SignUpForm = () => {
+    
+    const [signUpData, setSignUpData] = useState({
+        username: "",
+        password1: "",
+        password2: "",
+    });
+    const { username, password1, password2 } = signUpData;
+
+    const handleChange = (event) => {
+        setSignUpData({
+          ...signUpData,
+          [event.target.name]: event.target.value,
+        });
+      };
+
   return (
     <Row>
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className="p-4">
           <h1>Sign Up</h1>
           <Form>
-                <Form.Group controlId="formBasicEmail">
+                <Form.Group controlId="username">
                     <Form.Label>Username</Form.Label>
-                    <Form.Control type="text" placeholder="Username" />
+                    <Form.Control
+                    type="text"
+                    name="username"
+                    value={username}
+                    placeholder="Username"
+                    onChange={handleChange}
+                    />
                 </Form.Group>
 
-                <Form.Group controlId="formBasicPassword">
+                <Form.Group controlId="password1">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control
+                    type="password"
+                    name="password1"
+                    value={password1}
+                    placeholder="Password"
+                    onChange={handleChange}
+                    />
                 </Form.Group>
-                <Form.Group controlId="formBasicPassword2">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Confirm Password" />
+                <Form.Group controlId="password2">
+                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Control
+                    type="password"
+                    name="password2"
+                    value={password2} 
+                    placeholder="Confirm Password"
+                    onChange={handleChange}
+                    />
                 </Form.Group>
                 <Button variant="primary" type="submit">
-                    Submit
+                    Sign Up
                 </Button>
             </Form>
         </Container>
