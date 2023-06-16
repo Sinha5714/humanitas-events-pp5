@@ -3,21 +3,40 @@ import styles from '../styles/NavBar.module.css';
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
+import axios from "axios";
 
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
-    const loggedInIcons = <>{currentUser?.username}</>
+    const setCurrentUser = useSetCurrentUser()
+
+    const handleLogOut = async () =>{
+        try {
+            await axios.post("/dj-rest-auth/logout/");
+            setCurrentUser(null);
+        } catch (err) {
+            console.log(err)
+        }
+    };
+
+    const loggedInIcons = 
+        <>
+            <NavLink className={styles.NavLink}
+            to="/"
+            onClick={handleLogOut}>
+                <i className="fas fa-sign-out-alt"></i>Logout
+            </NavLink>
+        </>
     const loggedOutIcons = 
         <>
             <NavLink className={styles.NavLink}
-                activeClassName={styles.Active} to="/signin">
-                    <i className="fas fa-sign-in-alt"></i>Sign In
+            activeClassName={styles.Active} to="/signin">
+                <i className="fas fa-sign-in-alt"></i>Sign In
             </NavLink>
             <NavLink className={styles.NavLink}
-                activeClassName={styles.Active} to="/signup">
-                    <i className="fas fa-user-plus"></i>Sign Up
+            activeClassName={styles.Active} to="/signup">
+                <i className="fas fa-user-plus"></i>Sign Up
             </NavLink>
         </>
             
