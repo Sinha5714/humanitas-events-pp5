@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EventsCreateForm = () => {
+function EventsCreateForm() {
   return (
     <div>EventsCreateForm</div>
   )
