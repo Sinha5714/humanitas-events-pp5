@@ -5,6 +5,7 @@ import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import axios from "axios";
+import Avatar from "./Avatar";
 
 
 const NavBar = () => {
@@ -36,6 +37,10 @@ const NavBar = () => {
         to="/" 
         onClick={handleLogOut}>
             <i className="fas fa-sign-out-alt"></i>Logout
+        </NavLink>
+        <NavLink className={styles.NavLink}
+         to={`/profiles/${currentUser?.profile_id}`}>
+            <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
         </NavLink>
     </>
     )
