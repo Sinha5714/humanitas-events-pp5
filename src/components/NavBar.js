@@ -20,15 +20,27 @@ const NavBar = () => {
         }
     };
 
-    const loggedInIcons = 
+    const addEventIcon = (
+        <NavLink
+        exact
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/events/create">
+            <i className="fas fa-plus"></i>Add Event
+        </NavLink>
+    )
+
+    const loggedInIcons = (
         <>
-            <NavLink className={styles.NavLink}
-            to="/"
-            onClick={handleLogOut}>
-                <i className="fas fa-sign-out-alt"></i>Logout
-            </NavLink>
-        </>
-    const loggedOutIcons = 
+        <NavLink className={styles.NavLink}
+        to="/" 
+        onClick={handleLogOut}>
+            <i className="fas fa-sign-out-alt"></i>Logout
+        </NavLink>
+    </>
+    )
+       
+    const loggedOutIcons = (
         <>
             <NavLink className={styles.NavLink}
             activeClassName={styles.Active} to="/signin">
@@ -39,7 +51,8 @@ const NavBar = () => {
                 <i className="fas fa-user-plus"></i>Sign Up
             </NavLink>
         </>
-            
+    )
+       
     return (
         <Navbar className={styles.NavBar} expand="md" fixed="top">
         <Container>
@@ -51,6 +64,7 @@ const NavBar = () => {
                 Humanitas Events
                 </Navbar.Brand>
             </NavLink>
+            {currentUser && addEventIcon}
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto text-left">
