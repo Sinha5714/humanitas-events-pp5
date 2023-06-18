@@ -5,7 +5,8 @@ import { Container } from "react-bootstrap";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
-import EventsCreateForm from "./pages/EventsCreateForm";
+import EventsCreateForm from "./pages/events/EventsCreateForm";
+
 
 
 function App() {
