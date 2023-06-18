@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { Col, Container, Form, Button } from 'react-bootstrap';
+import { Col, Container, Form, Button, Row, Image } from 'react-bootstrap';
+import Upload from "../../assets/upload-image.png";
+import Asset from '../../components/Asset';
+import styles from "../../styles/EventsCreateEditForm.module.css"
 
 
 function EventsCreateForm() {
@@ -112,9 +115,41 @@ function EventsCreateForm() {
             <h2 className="text-center">Add a New Event</h2>
 
         </Container>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-            <Container>{textFields}</Container>
-        </Col>
+        <Form>
+            <Row>
+                <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+                    <Container className={styles.Container}>
+                        <Form.Group className="text-center">
+                            {image?(
+                                <>
+                                    <figure>
+                                        <Image src={image} rounded />
+                                    </figure>
+                                    <div>
+                                        <Form.Label
+                                        htmlFor='image-upload'>
+                                            Change the image
+                                        </Form.Label>
+                                    </div>
+                                </>
+                            ) : (
+                                <Form.Label
+                                className="d-flex justify-content-center"
+                                htmlFor='image-upload'>
+                                    <Asset src={Upload} message="Click to upload event image here" />
+                                </Form.Label>
+                            )
+
+                            }
+                        </Form.Group>
+                    </Container>
+                </Col>
+                <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+                    <Container>{textFields}</Container>
+                </Col>
+            </Row>
+        </Form>
+        
         </>
 
         
