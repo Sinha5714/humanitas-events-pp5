@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react'
-import { Col, Container, Form, Button, Row, Image } from 'react-bootstrap';
+import { Col, Container, Form, Button, Row, Image, Alert } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import Upload from "../../assets/upload-image.png";
 import Asset from '../../components/Asset';
+import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsCreateEditForm.module.css"
+import { axiosReq } from '../../api/axiosDefaults';
 
 
 function EventsCreateForm() {
@@ -40,6 +42,27 @@ function EventsCreateForm() {
         };
     };
 
+    const handleSubmit = async (event) =>{
+        event.preventDefault()
+        const formData = new FormData();
+
+        formData.append('title', title)
+        formData.append('content', content)
+        formData.append('event_start_date', event_start_date)
+        formData.append('event_end_date', event_end_date)
+        formData.append('category', category)
+        formData.append('sub_category', sub_category)
+        formData.append('image', imageInput.current.files[0])
+        try{
+            const {data} = await axiosReq.post('/events/', formData);
+            history.push(`/events/${data.id}`)
+        }catch (err) {
+            if(err.response?.status !== 401){
+                setErrors(err.response?.data)
+            }
+        }
+    }
+
     const textFields = (
         <div className="text-center">
             <Form.Group>
@@ -52,6 +75,11 @@ function EventsCreateForm() {
                 >
                 </Form.Control>
             </Form.Group>
+            {errors?.title?.map((message, idx) =>(
+                <Alert variant='warning' key={idx}>
+                    {message}
+                </Alert>
+            ))}
             <Form.Group>
                 <Form.Label>Content</Form.Label>
                 <Form.Control
@@ -63,8 +91,13 @@ function EventsCreateForm() {
                 >
                 </Form.Control>               
             </Form.Group>
+            {errors?.content?.map((message, idx) =>(
+                <Alert variant='warning' key={idx}>
+                    {message}
+                </Alert>
+            ))}
             <Form.Group>
-                <Form.Label>From</Form.Label>
+                <Form.Label>Starting Date</Form.Label>
                 <Form.Control
                 type="date"
                 name="event_start_date"
@@ -73,8 +106,13 @@ function EventsCreateForm() {
                 >
                 </Form.Control>
             </Form.Group>
+            {errors?.event_start_date?.map((message, idx) =>(
+                <Alert variant='warning' key={idx}>
+                    {message}
+                </Alert>
+            ))}
             <Form.Group>
-                <Form.Label>Till</Form.Label>
+                <Form.Label>End Date</Form.Label>
                 <Form.Control
                 type="date"
                 name="event_end_date"
@@ -82,6 +120,11 @@ function EventsCreateForm() {
                 onChange={handleChange}
                 ></Form.Control>
             </Form.Group>
+            {errors?.event_end_date?.map((message, idx) =>(
+                <Alert variant='warning' key={idx}>
+                    {message}
+                </Alert>
+            ))}
             <Form.Group>
                 <Form.Label>Category</Form.Label>
                 <Form.Control
@@ -98,6 +141,11 @@ function EventsCreateForm() {
                 <option>Education-Rights</option>
                 </Form.Control>
             </Form.Group>
+            {errors?.category?.map((message, idx) =>(
+                <Alert variant='warning' key={idx}>
+                    {message}
+                </Alert>
+            ))}
             <Form.Group>
                 <Form.Label>Sub-Category</Form.Label>
                 <Form.Control
@@ -111,32 +159,43 @@ function EventsCreateForm() {
                 <option>Retreats</option>
                 </Form.Control>
             </Form.Group>
+            {errors?.sub_category?.map((message, idx) =>(
+                <Alert variant='warning' key={idx}>
+                    {message}
+                </Alert>
+            ))}
 
             <Button
+            onClick={() => history.goBack()}
             >
                 Cancel
             </Button>
             <Button  type="submit">
                 Add
             </Button>
+            {errors.non_field_errors?.map((message, idx) => (
+                <Alert variant="warning" className="mt-3" key={idx}>
+                    {message}{" "}
+                </Alert>
+            ))}
         </div>
-    )
+    );
     
     return (
         <>
-        <Container>
+        <Container className={`${appStyles.Content} mt-3`}>
             <h2 className="text-center">Add a New Event</h2>
 
         </Container>
-        <Form>
+        <Form onSubmit={handleSubmit}>
             <Row>
                 <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-                    <Container className={styles.Container}>
+                    <Container className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}>
                         <Form.Group className="text-center">
                             {image?(
                                 <>
                                     <figure>
-                                        <Image src={image} rounded />
+                                        <Image className={appStyles.Image} src={image} rounded />
                                     </figure>
                                     <div>
                                         <Form.Label
@@ -158,11 +217,16 @@ function EventsCreateForm() {
                             onChange={handleChangeImage}
                             ref={imageInput} />
                         </Form.Group>
+                        {errors?.image?.map((message, idx) =>(
+                            <Alert variant='warning' key={idx}>
+                                {message}
+                            </Alert>
+                        ))}
                         <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>
                 <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-                    <Container>{textFields}</Container>
+                    <Container className={appStyles.Content}>{textFields}</Container>
                 </Col>
             </Row>
         </Form>
