@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Col, Container, Form, Button, Row, Image } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import Upload from "../../assets/upload-image.png";
 import Asset from '../../components/Asset';
 import styles from "../../styles/EventsCreateEditForm.module.css"
@@ -18,13 +19,25 @@ function EventsCreateForm() {
         image: '',
     });
     const { title, content, event_start_date, event_end_date, category, sub_category, image } = eventData;
-
+    const [errors, setErrors] = useState({});
+    const imageInput = useRef(null);
+    const history = useHistory();
 
     const handleChange = (event) =>{
         setEventData({
             ...eventData,
             [event.target.name]: event.target.value,
         });
+    };
+
+    const handleChangeImage = (event) =>{
+        if(event.target.files.length){
+            URL.revokeObjectURL(image);
+            setEventData({
+                ...eventData,
+                image: URL.createObjectURL(event.target.files[0]),
+            });
+        };
     };
 
     const textFields = (
@@ -138,10 +151,14 @@ function EventsCreateForm() {
                                 htmlFor='image-upload'>
                                     <Asset src={Upload} message="Click to upload event image here" />
                                 </Form.Label>
-                            )
-
-                            }
+                            )}
+                            <Form.File
+                            id="image-upload"
+                            accept="image/*"
+                            onChange={handleChangeImage}
+                            ref={imageInput} />
                         </Form.Group>
+                        <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>
                 <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
