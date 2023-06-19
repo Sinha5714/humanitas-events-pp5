@@ -36,16 +36,27 @@ const NavBar = () => {
 
     const loggedInIcons = (
         <>
-        <NavLink className={styles.NavLink}
-        to="/" 
-        onClick={handleLogOut}>
-            <i className="fas fa-sign-out-alt"></i>Logout
-        </NavLink>
-        <NavLink className={styles.NavLink}
-         to={`/profiles/${currentUser?.profile_id}`}>
-            <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
-        </NavLink>
-    </>
+            <NavLink
+            exact
+            className={styles.NavLink}
+            activeClassName={styles.Active}
+            to="/feed"
+            onClick={() => {}}
+            >
+                <i className="fas fa-stream"></i>Feed
+            </NavLink>
+
+            <NavLink className={styles.NavLink}
+            to="/" 
+            onClick={handleLogOut}>
+                <i className="fas fa-sign-out-alt"></i>Logout
+            </NavLink>
+
+            <NavLink className={styles.NavLink}
+            to={`/profiles/${currentUser?.profile_id}`}>
+                <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+            </NavLink>
+        </>
     )
        
     const loggedOutIcons = (

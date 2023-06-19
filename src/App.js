@@ -8,16 +8,31 @@ import SignInForm from "./pages/auth/SignInForm";
 import EventsCreateForm from "./pages/events/EventsCreateForm";
 import EventPage from "./pages/events/EventPage";
 import EventsPage from "./pages/events/EventsPage";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 
 
 function App() {
+    const currentUser = useCurrentUser();
+    const profile_id = currentUser?.profile_id || "";
     return (
         <div className={styles.App}>
             <NavBar/>
             <Container className={styles.Main}>
                 <Switch>
-                    <Route exact path="/" render={() => <EventsPage />} />
+                    <Route exact
+                    path="/"
+                    render={() => (
+                        <EventsPage message="No results found. Adjust the search keyword!" />
+                    )}
+                    />
+                    <Route exact
+                    path="/feed"
+                    render={() => (
+                        <EventsPage message="No results found. Adjust the search keyword or follow a user!" 
+                        filter={`user__followed__user__profile=${profile_id}&`}/>
+                    )}
+                    />
                     <Route exact path="/signin" render={() => <SignInForm />} />
                     <Route exact path="/signup" render={() => <SignUpForm />} />
                     <Route exact path="/events/create" render={() => <EventsCreateForm />} />
