@@ -12,4 +12,14 @@
     margin: 0 0;
   }
 
+.Star {
+    color: rgb(246, 255, 0);
+}
 
+.Star:hover {
+    color: rgb(137, 137, 30);
+}
+
+.StarOutline:hover {
+    color: yellow;
+}

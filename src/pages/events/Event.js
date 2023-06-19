@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRes } from '../../api/axiosDefaults';
 import Avatar from '../../components/Avatar';
+import { EditDeleteDropdown } from '../../components/Dropdowns';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import styles from '../../styles/Event.module.css';
 
@@ -31,7 +32,11 @@ const Event = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === user;
+    const history = useHistory();
 
+    const handleEdit = () =>{
+        history.push(`/events/${id}/edit`)
+    }
     const handleInterested = async() => {
         try {
             const {data} = await axiosRes.post('/interested/', {event:id});
@@ -73,7 +78,7 @@ const Event = (props) => {
                     </Link>
                     <div className='d-flex align-items-center'>
                         <span>{updated_on}</span>
-                        {is_owner && eventPage && "..."}
+                        {is_owner && eventPage && <EditDeleteDropdown handleEdit={handleEdit} />}
                     </div>
                 </Media>
             </Card.Body>
@@ -88,19 +93,19 @@ const Event = (props) => {
                 <div>
                     {is_owner?(
                         <OverlayTrigger placement='top' overlay={<Tooltip>You can't show interest to your own event</Tooltip>}>
-                            <i className="fas fa-star" />
+                            <i className="far fa-star" />
                         </OverlayTrigger>
                     ): interested_id?(
                         <span onClick={handleNotInterested}>
-                            <i className="fas fa-star" />
+                            <i className={`fas fa-star ${styles.Star}`} />
                         </span>
                     ): currentUser? (
                         <span onClick={handleInterested}>
-                            <i className='far fa-star' />
+                            <i className={`far fa-star ${styles.StarOutline}`} />
                         </span>
                     ) : (
                         <OverlayTrigger placement='top' overlay={<Tooltip>Log in to show your interest!</Tooltip>}>
-                            <i className="fas fa-star" />
+                            <i className="far fa-star" />
                         </OverlayTrigger>
                     )}
                     <span className='mr-2'>{interested_count}</span>
