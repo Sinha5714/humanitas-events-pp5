@@ -33,6 +33,13 @@ function App() {
                         filter={`user__followed__user__profile=${profile_id}&`}/>
                     )}
                     />
+                    <Route exact
+                    path="/interests"
+                    render={() => (
+                        <EventsPage message="No results found. Adjust the search keyword or show your interest in an event!" 
+                        filter={`interested_user__profile=${profile_id}&ordering=-interested__created_on`}/>
+                    )}
+                    />
                     <Route exact path="/signin" render={() => <SignInForm />} />
                     <Route exact path="/signup" render={() => <SignUpForm />} />
                     <Route exact path="/events/create" render={() => <EventsCreateForm />} />

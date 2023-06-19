@@ -46,6 +46,16 @@ const NavBar = () => {
                 <i className="fas fa-stream"></i>Feed
             </NavLink>
 
+            <NavLink
+            exact
+            className={styles.NavLink}
+            activeClassName={styles.Active}
+            to="/interests"
+            onClick={() => {}}
+            >
+                <i className="fas fa-star"></i>Interested
+            </NavLink>
+
             <NavLink className={styles.NavLink}
             to="/" 
             onClick={handleLogOut}>
