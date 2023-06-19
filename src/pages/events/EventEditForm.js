@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Col, Container, Form, Button, Row, Image, Alert } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import Upload from "../../assets/upload-image.png";
-import Asset from '../../components/Asset';
 import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsCreateEditForm.module.css"
 import { axiosReq } from '../../api/axiosDefaults';
@@ -73,10 +71,12 @@ function EventsEditForm() {
         formData.append('event_end_date', event_end_date)
         formData.append('category', category)
         formData.append('sub_category', sub_category)
-        formData.append('image', imageInput.current.files[0])
+        if (imageInput?.current?.files[0]) {
+            formData.append('image', imageInput.current.files[0])
+        }  
         try{
-            const {data} = await axiosReq.post('/events/', formData);
-            history.push(`/events/${data.id}`)
+            await axiosReq.put(`/events/${id}`, formData);
+            history.push(`/events/${id}`);
         }catch (err) {
             if(err.response?.status !== 401){
                 setErrors(err.response?.data)
@@ -192,7 +192,7 @@ function EventsEditForm() {
                 Cancel
             </Button>
             <Button  type="submit">
-                Add
+                Save
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
                 <Alert variant="warning" className="mt-3" key={idx}>
@@ -203,35 +203,21 @@ function EventsEditForm() {
     );
     
     return (
-        <>
-        <Container className={`${appStyles.Content} mt-3`}>
-            <h2 className="text-center">Add a New Event</h2>
-
-        </Container>
+        
         <Form onSubmit={handleSubmit}>
             <Row>
                 <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
                     <Container className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}>
-                        <Form.Group className="text-center">
-                            {image?(
-                                <>
-                                    <figure>
-                                        <Image className={appStyles.Image} src={image} rounded />
-                                    </figure>
-                                    <div>
-                                        <Form.Label
-                                        htmlFor='image-upload'>
-                                            Change the image
-                                        </Form.Label>
-                                    </div>
-                                </>
-                            ) : (
+                        <Form.Group className="text-center">     
+                            <figure>
+                                <Image className={appStyles.Image} src={image} rounded />
+                            </figure>
+                            <div>
                                 <Form.Label
-                                className="d-flex justify-content-center"
                                 htmlFor='image-upload'>
-                                    <Asset src={Upload} message="Click to upload event image here" />
+                                    Change the image
                                 </Form.Label>
-                            )}
+                            </div>
                             <Form.File
                             id="image-upload"
                             accept="image/*"
@@ -251,9 +237,6 @@ function EventsEditForm() {
                 </Col>
             </Row>
         </Form>
-        
-        </>
-
         
     )
 }
