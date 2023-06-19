@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosReq } from '../../api/axiosDefaults';
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import Comment from '../comments/Comment';
 import CommentCreateForm from '../comments/CommentCreateForm';
 import Event from './Event';
 
@@ -19,10 +20,13 @@ function EventPage() {
     useEffect(()=>{
         const handleMount = async () => {
             try {
-                const [ {data : event}] = await Promise.all(
-                    [axiosReq.get(`/events/${id}`)]
+                const [ {data : event}, {data: comments}] = await Promise.all([
+                    axiosReq.get(`/events/${id}`),
+                    axiosReq.get(`/comments/?post=${id}`)
+                    ]
                 )
                 setEvent({results : [event]});
+                setComments(comments);
             } catch (err) {
                 console.log(err)
             }
@@ -44,9 +48,18 @@ function EventPage() {
                         setEvent={setEvent}
                         setComments={setComments} 
                     />
-                    ) : comments.results.length? (
+                    ) :  comments.results.length? (
                         "Comments"
                     ) : null}
+                    {comments.results.length ? (
+                        comments.results.map((comment) => (
+                        <Comment key={comment.id} {...comment} />
+                    ))
+                    ) : currentUser ? (
+                        <span>No comments yet, be the first to comment!</span>
+                    ) : (
+                        <span>No comments... yet</span>
+                    )}
                 </Container>
             </Col>
             <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">

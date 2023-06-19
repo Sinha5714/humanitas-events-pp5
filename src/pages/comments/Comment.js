@@ -15,9 +15,9 @@ const Comment = (props) => {
           <Avatar src={profile_image} />
         </Link>
         <Media.Body className="align-self-center ml-2">
-          <span className={styles.Owner}>{user}</span>
+          <span className={styles.User}>{user}</span>
           <span className={styles.Date}>{updated_on}</span>
-          <p>{content}</p>
+          <p className={styles.Comment}>{content}</p>
         </Media.Body>
       </Media>
     </div>
