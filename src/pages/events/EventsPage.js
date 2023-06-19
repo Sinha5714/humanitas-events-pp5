@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Form, Row } from 'react-bootstrap'
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosReq } from '../../api/axiosDefaults';
 import Event from './Event';
@@ -12,10 +12,12 @@ function EventsPage({message, filter=""}) {
     const [hasLoaded, setHasLoaded] = useState(false);
     const {pathname} = useLocation();
 
+    const [query, setQuery] = useState("");
+
     useEffect(()=>{
         const fetchEvents = async () => {
             try {
-                const {data} = await axiosReq.get(`/events/?${filter}`)
+                const {data} = await axiosReq.get(`/events/?${filter}search=${query}`)
                 setEvents(data)
                 setHasLoaded(true)
             } catch (err) {
@@ -24,11 +26,23 @@ function EventsPage({message, filter=""}) {
         }
         setHasLoaded(false)
         fetchEvents()
-    }, [filter, pathname])
+    }, [filter,query, pathname])
   return (
     <Row className='h-100'>
         <Col className='py-2 p-0 p-lg-2' lg={8}>
             <p>Popular profiles mobile</p>
+            <i className='fas fa-search' />
+            <Form
+            onSubmit={(event) => event.preventDefault()}>
+                <Form.Control
+                value={query}
+                onChange={(event) => setQuery(event.target.value)} 
+                type='text'
+                className='mr-sm-2'
+                placeholder='Search Events by title, username, date or category'
+                />
+                
+            </Form>
             {hasLoaded? (
                 <>
                     {events.results.length?(
