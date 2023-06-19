@@ -37,6 +37,16 @@ const Event = (props) => {
     const handleEdit = () =>{
         history.push(`/events/${id}/edit`)
     }
+
+    const handleDelete = async() => {
+        try {
+            await axiosRes.delete(`/events/${id}/`);
+            history.goBack();
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
     const handleInterested = async() => {
         try {
             const {data} = await axiosRes.post('/interested/', {event:id});
@@ -78,7 +88,9 @@ const Event = (props) => {
                     </Link>
                     <div className='d-flex align-items-center'>
                         <span>{updated_on}</span>
-                        {is_owner && eventPage && <EditDeleteDropdown handleEdit={handleEdit} />}
+                        {is_owner && eventPage && (
+                            <EditDeleteDropdown handleEdit={handleEdit} handleDelete={handleDelete} />
+                        )}
                     </div>
                 </Media>
             </Card.Body>

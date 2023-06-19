@@ -15,7 +15,7 @@ const ThreeDots = React.forwardRef(({ onClick }, ref ) => (
     />
 ));
 ThreeDots.displayName = "ThreeDots";
-export const EditDeleteDropdown = ({handleEdit}) => {
+export const EditDeleteDropdown = ({handleEdit, handleDelete}) => {
 
     return (
         <>
@@ -35,7 +35,7 @@ export const EditDeleteDropdown = ({handleEdit}) => {
                 </Dropdown.Item>
                 <Dropdown.Item
                     className={styles.DropdownItem}
-                    onClick={()=>{}}
+                    onClick={handleDelete}
                     aria-label="delete"
                 >
                     <i className="far fa-trash-alt" />
