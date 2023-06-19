@@ -47,6 +47,21 @@ const Event = (props) => {
             console.log(err);
         }
     };
+    const handleNotInterested = async() => {
+        try {
+            await axiosRes.delete(`/interested/${interested_id}/`);
+            setEvents((prevEvents) =>({
+                ...prevEvents,
+                results: prevEvents.results.map((event) =>{
+                    return event.id === id
+                    ? {...event, interested_count: event.interested_count - 1, interested_id: null }
+                    : event;
+                })
+            }))
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     return (
         <Card className={styles.Event}>
@@ -73,10 +88,10 @@ const Event = (props) => {
                 <div>
                     {is_owner?(
                         <OverlayTrigger placement='top' overlay={<Tooltip>You can't show interest to your own event</Tooltip>}>
-                            <i className="far fa-star" />
+                            <i className="fas fa-star" />
                         </OverlayTrigger>
                     ): interested_id?(
-                        <span onClick={() => {}}>
+                        <span onClick={handleNotInterested}>
                             <i className="fas fa-star" />
                         </span>
                     ): currentUser? (
@@ -85,14 +100,14 @@ const Event = (props) => {
                         </span>
                     ) : (
                         <OverlayTrigger placement='top' overlay={<Tooltip>Log in to show your interest!</Tooltip>}>
-                            <i className="far fa-star" />
+                            <i className="fas fa-star" />
                         </OverlayTrigger>
                     )}
                     <span className='mr-2'>{interested_count}</span>
 
                     {is_owner?(
                         <OverlayTrigger placement='top' overlay={<Tooltip>You can't send join request to your own event</Tooltip>}>
-                            <i className="far fa-calendar-check" />
+                            <i className="fas fa-calendar-check" />
                         </OverlayTrigger>
                     ): join_id?(
                         <span onClick={() => {}}>
@@ -104,7 +119,7 @@ const Event = (props) => {
                         </span>
                     ) : (
                         <OverlayTrigger placement='top' overlay={<Tooltip>Log in to send a join request!</Tooltip>}>
-                            <i className="far fa-calendar-check" />
+                            <i className="fas fa-calendar-check" />
                         </OverlayTrigger>
                     )}
                     <span className='mr-2'>{join_request}</span>
