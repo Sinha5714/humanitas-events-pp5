@@ -7,7 +7,8 @@ import NoResults from "../../assets/no-results.png";
 import appStyles from "../../App.module.css";
 import Asset from '../../components/Asset';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { fetchMoreData } from '../../utils';
+import { fetchMoreData } from '../../utils/utils';
+
 
 function EventsPage({message, filter=""}) {
     const [events, setEvents] = useState({results: []});
