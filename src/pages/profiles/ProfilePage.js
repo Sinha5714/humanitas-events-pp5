@@ -19,7 +19,7 @@ function ProfilePage() {
     const [profileEvents, setProfileEvents] = useState({ results: [] });
     const currentUser = useCurrentUser();
     const {id} = useParams();
-    const setProfileData = useSetProfileData();
+    const {setProfileData, handleFollow} = useSetProfileData();
     const {pageProfile} = useProfileData();
     const [profile] = pageProfile.results;
     const is_owner = currentUser?.username === profile?.user;
@@ -79,7 +79,7 @@ function ProfilePage() {
                         </Button>
                         ) : (
                         <Button
-                            onClick={() => {}}
+                            onClick={() => handleFollow(profile)}
                         >
                             Follow
                         </Button>
