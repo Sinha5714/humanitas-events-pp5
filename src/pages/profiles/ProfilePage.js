@@ -80,6 +80,27 @@ function ProfilePage() {
                 </Col>
             </Col>
         </Row>
+        <Container className={appStyles.Content}>
+            <h5 className="text-center p-2">About {profile?.user}</h5>
+            {profile?.name && (
+              <>
+                <Col className="p-1">Name:</Col>
+                <Col className="p-2">
+                  <strong>{profile?.name}</strong>
+                </Col>
+              </>
+            )}
+
+            {profile?.bio && (
+              <>
+                <Col className="p-1">About Me:</Col>
+                <Col className="p-2">
+                  <strong>{profile?.about_me}</strong>
+                </Col>
+              </>
+            )}
+          </Container>
+              
         <Col>
             <ProfileContactDetails mobile />
         </Col>
