@@ -8,6 +8,7 @@ import appStyles from "../../App.module.css";
 import Asset from '../../components/Asset';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/utils';
+import PopularProfiles from '../profiles/PopularProfiles';
 
 
 function EventsPage({message, filter=""}) {
@@ -33,19 +34,20 @@ function EventsPage({message, filter=""}) {
   return (
     <Row className='h-100'>
         <Col className='py-2 p-0 p-lg-2' lg={8}>
-            <p>Popular profiles mobile</p>
-            <i className='fas fa-search' />
-            <Form
-            onSubmit={(event) => event.preventDefault()}>
-                <Form.Control
-                value={query}
-                onChange={(event) => setQuery(event.target.value)} 
-                type='text'
-                className='mr-sm-2'
-                placeholder='Search Events by title, username, date or category'
-                />
-                
-            </Form>
+            <PopularProfiles />
+            <Container>
+                <i className='fas fa-search' />
+                <Form onSubmit={(event) => event.preventDefault()}>
+                    <Form.Control
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)} 
+                    type='text'
+                    className='mr-sm-2'
+                    placeholder='Search Events by title, username, date or category'
+                    />
+                    
+                </Form>
+            </Container>
             {hasLoaded? (
                 <>
                     {events.results.length?(
