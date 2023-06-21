@@ -11,6 +11,7 @@ const Profile = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === user;
+
     return (
     <div className={`${styles.Profiles} mb-2`}>
         <div>
@@ -23,7 +24,7 @@ const Profile = (props) => {
             {currentUser && !is_owner && (following_id ? (
                 <Button>Unfollow</Button>
             ): (
-                <Button>Follow</Button>
+                <Button onClick={() => {}}>Follow</Button>
             ))}
         </div> 
 
