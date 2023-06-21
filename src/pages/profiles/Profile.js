@@ -3,6 +3,7 @@ import styles from '../../styles/Profile.module.css';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Avatar from '../../components/Avatar';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import { Button } from 'react-bootstrap';
 
 const Profile = (props) => {
     const {profile} = props;
@@ -18,6 +19,13 @@ const Profile = (props) => {
             </Link>
         </div>
         <div className={`mx-2 ${styles.WordBreak}`}>{user}</div>
+        <div>
+            {currentUser && !is_owner && (following_id ? (
+                <Button>Unfollow</Button>
+            ): (
+                <Button>Follow</Button>
+            ))}
+        </div> 
 
     </div>
   )
