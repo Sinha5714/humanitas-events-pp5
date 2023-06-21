@@ -3,17 +3,19 @@ import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import PopularProfiles from "./PopularProfiles";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
-import { useSetProfileData } from "../../contexts/ProfileDataContext";
+import { useProfileData, useSetProfileData } from "../../contexts/ProfileDataContext";
 
 function ProfilePage() {
     const [hasLoaded, setHasLoaded] = useState(false);
     const currentUser = useCurrentUser();
     const {id} = useParams();
     const setProfileData = useSetProfileData();
+    const {pageProfile} = useProfileData();
+    const [profile] = pageProfile.results;
 
     useEffect(() => {
         const fetchData = async () =>{
@@ -37,7 +39,7 @@ function ProfilePage() {
         <>
         <Row noGutters className="px-3 text-center">
             <Col lg={3} className="text-lg-left">
-            <p>Image</p>
+            <Image className={styles.ProfilePic} roundedCircle src={profile?.profile_pic}/>
             </Col>
             <Col lg={6}>
             <h3 className="m-2">Profile username</h3>
