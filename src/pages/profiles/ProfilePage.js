@@ -8,6 +8,7 @@ import PopularProfiles from "./PopularProfiles";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useProfileData, useSetProfileData } from "../../contexts/ProfileDataContext";
+import ProfileContactDetails from "./ProfileContactDetails";
 
 function ProfilePage() {
     const [hasLoaded, setHasLoaded] = useState(false);
@@ -79,6 +80,9 @@ function ProfilePage() {
                 </Col>
             </Col>
         </Row>
+        <Col>
+            <ProfileContactDetails mobile />
+        </Col>
         </>
     );
 
@@ -106,7 +110,7 @@ function ProfilePage() {
             </Container>
         </Col>
         <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-            <p>Contact Details</p>
+            <ProfileContactDetails />
         </Col>
         </Row>
     );
