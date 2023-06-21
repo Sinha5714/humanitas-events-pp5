@@ -3,7 +3,7 @@ import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import PopularProfiles from "./PopularProfiles";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -39,16 +39,28 @@ function ProfilePage() {
         <>
         <Row noGutters className="px-3 text-center">
             <Col lg={3} className="text-lg-left">
-            <Image className={styles.ProfilePic} roundedCircle src={profile?.profile_pic}/>
+                <Image className={styles.ProfilePic} roundedCircle src={profile?.profile_pic}/>
             </Col>
-            <Col lg={6}>
-            <h3 className="m-2">Profile username</h3>
-            <p>Profile stats</p>
+            <Col lg={8}>
+                <h3 className="m-2">{profile?.user}</h3>
+                <Row className="justify-content-center no-gutters">
+                    <Col xs={3} className="my-2">
+                        <div>{profile?.events_count}</div>
+                        <div>Events</div>
+                    </Col>
+                    <Col xs={3} className="my-2">
+                        <div>{profile?.followers_count}</div>
+                        <div>followers</div>
+                    </Col>
+                    <Col xs={3} className="my-2">
+                        <div>{profile?.following_count}</div>
+                        <div>following</div>
+                    </Col>
+                </Row>
+                <Col lg={-4}>
+                    <Button>Follow</Button>
+                </Col>
             </Col>
-            <Col lg={3} className="text-lg-right">
-            <p>Follow button</p>
-            </Col>
-            <Col className="p-3">Profile content</Col>
         </Row>
         </>
     );
@@ -77,7 +89,7 @@ function ProfilePage() {
             </Container>
         </Col>
         <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-            
+            <p>Contact Details</p>
         </Col>
         </Row>
     );
