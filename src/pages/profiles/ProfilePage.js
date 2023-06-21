@@ -9,9 +9,14 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useProfileData, useSetProfileData } from "../../contexts/ProfileDataContext";
 import ProfileContactDetails from "./ProfileContactDetails";
+import NoResults from "../../assets/no-results.png";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
+import Event from "../events/Event";
 
 function ProfilePage() {
     const [hasLoaded, setHasLoaded] = useState(false);
+    const [profileEvents, setProfileEvents] = useState({ results: [] });
     const currentUser = useCurrentUser();
     const {id} = useParams();
     const setProfileData = useSetProfileData();
@@ -22,13 +27,16 @@ function ProfilePage() {
     useEffect(() => {
         const fetchData = async () =>{
             try {
-                const [{data : pageProfile}] = await Promise.all([
-                    axiosReq.get(`/profiles/${id}`)
+                const [{data : pageProfile}, {data: profileEvents}] = await Promise.all([
+                    axiosReq.get(`/profiles/${id}`),
+                    axiosReq.get(`/events/?user__profile=${id}`)
+
                 ])
                 setProfileData(prevState => ({
                     ...prevState,
                     pageProfile: {results: [pageProfile]}
                 }))
+                setProfileEvents(profileEvents)
                 setHasLoaded(true);
             } catch (err) {
                 console.log(err);
@@ -109,9 +117,25 @@ function ProfilePage() {
 
     const mainProfileEvents = (
         <>
-        <hr />
-        <p className="text-center">Profile user's events</p>
-        <hr />
+            <hr />
+            <p className="text-center">{profile?.user}'s Events</p>
+            <hr />
+            {profileEvents.results.length ? (
+                <InfiniteScroll
+                children={profileEvents.results.map((event) => (
+                    <Event key={event.id} {...event} setEvents={setProfileEvents} />
+                ))}
+                dataLength={profileEvents.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!profileEvents.next}
+                next={() => fetchMoreData(profileEvents, setProfileEvents)}
+                />
+            ) : (
+                <Asset
+                src={NoResults}
+                message={`No results found, ${profile?.user} hasn't posted yet.`}
+                />
+            )}
         </>
     );
 
