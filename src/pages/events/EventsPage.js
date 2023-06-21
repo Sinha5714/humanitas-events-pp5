@@ -9,6 +9,7 @@ import Asset from '../../components/Asset';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/utils';
 import PopularProfiles from '../profiles/PopularProfiles';
+import UpComingEvents from './UpComingEvents';
 
 
 function EventsPage({message, filter=""}) {
@@ -73,7 +74,7 @@ function EventsPage({message, filter=""}) {
             )}        
         </Col>
         <Col md={4} className='d-none d-lg-block p-0 p-lg-2'>
-            <p>Upcoming events</p>
+            <UpComingEvents />
         </Col>
     </Row>
   )
