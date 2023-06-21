@@ -49,15 +49,20 @@ export const ProfileDataProvider = ({ children }) => {
                 pageProfile: {
                     results: prevState.pageProfile.results.map((profile) => 
                         unfollowHelper(profile, clickedProfile)
-                    )
-                }
-            }))
+                    ),
+                },
+                popularProfiles: {
+                    ...prevState.popularProfiles,
+                    results: prevState.popularProfiles.results.map((profile) =>
+                      unfollowHelper(profile, clickedProfile)
+                    ),
+                  },
+            }));
         } catch (err) {
             console.log(err)
             
         }
     }
-
 
     useEffect(() => {
         const handleMount = async () => {
