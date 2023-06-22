@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Button, Col, Container, Form } from 'react-bootstrap';
+import { Button, Col, Container, Form, Image, Row } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosReq } from '../../api/axiosDefaults';
 import { useCurrentUser, useSetCurrentUser } from '../../contexts/CurrentUserContext'
@@ -39,7 +39,15 @@ const ProfileEditForm = () => {
                 try {
                     const {data} = await axiosReq.get(`/profiles/${id}/`);
                     const {name, about_me, profile_pic, instagram_link, facebook_link, phone_number, email} = data;
-                    setProfileData({name, about_me, profile_pic, instagram_link, facebook_link, phone_number, email});
+                    setProfileData(
+                        {name,
+                        about_me,
+                        profile_pic,
+                        instagram_link,
+                        facebook_link,
+                        phone_number,
+                        email
+                        });
                 } catch (err) {
                     console.log(err);
                     history.push("/");
@@ -119,7 +127,7 @@ const ProfileEditForm = () => {
                 name="email"
                 />
             </Form.Group>
-            <Button onClick={() => history.goback()}>
+            <Button onClick={() => history.goBack()}>
                 Cancel
             </Button>
             <Button type="submit">
@@ -128,7 +136,51 @@ const ProfileEditForm = () => {
         </>
     )
     return (
-        <Container className={appStyles.Content}>{textFields}</Container>
+        <>
+            <Container className={`${appStyles.Content} mt-3`}>
+                <h2 className="text-center">Edit Profile</h2>
+            </Container>
+            <Form onSubmit={()=>{}}>
+                <Row>
+                    <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={4}>
+                        <Container className={appStyles.Content}>
+                            <Form.Group>
+                                {profile_pic && (
+                                    <figure>
+                                        <Image src={profile_pic} fluid />
+                                    </figure>
+                                )}
+                                <div>
+                                    <Form.Label
+                                    htmlFor='image-upload'>
+                                        Change profile image
+                                    </Form.Label>
+                                </div>
+                                <Form.File
+                                id="image-upload"
+                                ref={imageFile}
+                                accept="image/*"
+                                onChange={(e) => {
+                                    if(e.target.files.length) {
+                                        setProfileData({
+                                            ...profileData,
+                                            image: URL.createObjectURL(e.target.files[0]),
+                                        })
+                                    }
+                                }}
+                                />
+                            </Form.Group>
+                            <div className='d-md-none'>{textFields}</div>
+                        </Container>
+                    </Col>
+                    <Col md={5} lg={8} className="d-none d-md-block p-0 p-md-2 text-center">
+                        <Container className={appStyles.Content}>{textFields}</Container>
+                    </Col>
+                </Row>
+            </Form>
+            
+        </>
+        
     )
 }
 
