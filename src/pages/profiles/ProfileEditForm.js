@@ -49,9 +49,16 @@ const ProfileEditForm = () => {
         handleMount();
     }, [currentUser, history, id]);
 
-  return (
+    const handleChange = (event) => {
+        setProfileData({
+            ...profileData,
+            [event.target.name] : event.target.value,
+        });
+    };
+
+    return (
     <div>ProfileEditForm</div>
-  )
+    )
 }
 
 export default ProfileEditForm
