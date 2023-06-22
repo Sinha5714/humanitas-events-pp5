@@ -48,10 +48,6 @@ function ProfilePage() {
 
     const mainProfile = (
         <>
-        {profile?.is_owner && 
-            <ProfileEditDropdown
-            id={profile?.id}
-        />}
         <Row noGutters className="px-3 text-center">
             <Col lg={3} className="text-lg-left">
                 <Image className={styles.ProfilePic} roundedCircle src={profile?.profile_pic}/>
@@ -92,7 +88,12 @@ function ProfilePage() {
                     </div>
                 </Col>
             </Col>
+            {profile?.is_owner && 
+            <ProfileEditDropdown
+            id={profile?.id}
+        />}
         </Row>
+        
         <Container className={appStyles.Content}>
             <h5 className="text-center p-2">About {profile?.user}</h5>
             {profile?.name && (
