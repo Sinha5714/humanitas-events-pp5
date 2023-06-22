@@ -195,16 +195,10 @@ function EventsEditForm() {
             <Button  type="submit">
                 Save
             </Button>
-            {errors.non_field_errors?.map((message, idx) => (
-                <Alert variant="warning" className="mt-3" key={idx}>
-                    {message}{" "}
-                </Alert>
-            ))}
         </div>
     );
     
     return (
-        
         <Form onSubmit={handleSubmit}>
             <Row>
                 <Col className="py-2 p-0 p-md-2" md={7} lg={8}>

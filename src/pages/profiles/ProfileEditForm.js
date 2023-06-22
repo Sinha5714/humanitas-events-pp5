@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Button, Col, Container, Form, Image, Row } from 'react-bootstrap';
+import { Alert, Button, Col, Container, Form, Image, Row } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosReq } from '../../api/axiosDefaults';
 import { useCurrentUser, useSetCurrentUser } from '../../contexts/CurrentUserContext'
@@ -32,6 +32,8 @@ const ProfileEditForm = () => {
         phone_number,
         email
     } = profileData;
+
+    const [errors, setErrors] = useState({});
 
     useEffect(() => {
         const handleMount = async () => {
@@ -88,9 +90,9 @@ const ProfileEditForm = () => {
             }));
             history.goBack()
         } catch (err) {
-            console.log(err)
+            console.log(err);
+            setErrors(err.response?.data);
         }
-
     }
 
     const textFields = (
@@ -104,6 +106,11 @@ const ProfileEditForm = () => {
                 name="name"
                 />
             </Form.Group>
+            {errors?.name?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                {message}
+                </Alert>
+            ))}
             <Form.Group>
                 <Form.Label>About:</Form.Label>
                 <Form.Control
@@ -114,6 +121,11 @@ const ProfileEditForm = () => {
                 rows={6}
                 />
             </Form.Group>
+            {errors?.about_me?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                {message}
+                </Alert>
+            ))}
             <Form.Row>
                 <Form.Group as={Col}>
                     <Form.Label>Facebook:</Form.Label>
@@ -124,6 +136,11 @@ const ProfileEditForm = () => {
                     name="facebook_link"
                     />
                 </Form.Group>
+                {errors?.facebook_link?.map((message, idx) => (
+                    <Alert variant="warning" key={idx}>
+                    {message}
+                </Alert>
+                ))}
                 <Form.Group as={Col}>
                     <Form.Label>Instagram:</Form.Label>
                     <Form.Control
@@ -133,8 +150,12 @@ const ProfileEditForm = () => {
                     name="instagram_link"
                     />
                 </Form.Group>
-            </Form.Row>
-            
+                {errors?.instagram_link?.map((message, idx) => (
+                    <Alert variant="warning" key={idx}>
+                    {message}
+                </Alert>
+                ))}
+            </Form.Row> 
             <Form.Group>
                 <Form.Label>Phone Number:</Form.Label>
                 <Form.Control
@@ -144,6 +165,11 @@ const ProfileEditForm = () => {
                 name="phone_number"
                 />
             </Form.Group>
+            {errors?.phone_number?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                {message}
+                </Alert>
+            ))}
             <Form.Group>
                 <Form.Label>Email Address:</Form.Label>
                 <Form.Control
@@ -153,6 +179,11 @@ const ProfileEditForm = () => {
                 name="email"
                 />
             </Form.Group>
+            {errors?.email?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                {message}
+                </Alert>
+            ))}
             <Button onClick={() => history.goBack()}>
                 Cancel
             </Button>
@@ -176,6 +207,11 @@ const ProfileEditForm = () => {
                                         <Image src={profile_pic} fluid />
                                     </figure>
                                 )}
+                                {errors?.profile_pic?.map((message, idx) => (
+                                    <Alert variant="warning" key={idx}>
+                                    {message}
+                                    </Alert>
+                                ))}
                                 <div>
                                     <Form.Label
                                     htmlFor='image-upload'>

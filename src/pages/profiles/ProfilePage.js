@@ -104,7 +104,7 @@ function ProfilePage() {
               </>
             )}
 
-            {profile?.bio && (
+            {profile?.about_me && (
               <>
                 <Col className="p-1">About Me:</Col>
                 <Col className="p-2">
