@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Col, Container, Form } from 'react-bootstrap';
+import { Button, Col, Container, Form } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosReq } from '../../api/axiosDefaults';
 import { useCurrentUser, useSetCurrentUser } from '../../contexts/CurrentUserContext'
@@ -119,6 +119,12 @@ const ProfileEditForm = () => {
                 name="email"
                 />
             </Form.Group>
+            <Button onClick={() => history.goback()}>
+                Cancel
+            </Button>
+            <Button type="submit">
+                Save
+            </Button>
         </>
     )
     return (
