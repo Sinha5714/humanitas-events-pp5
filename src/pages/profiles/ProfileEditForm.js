@@ -66,6 +66,32 @@ const ProfileEditForm = () => {
         });
     };
 
+    const handleSubmit = async (event) =>{
+        event.preventDefault();
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('about_me', about_me);
+        formData.append('instagram_link', instagram_link);
+        formData.append('facebook_link', facebook_link);
+        formData.append('phone_number', phone_number);
+        formData.append('email', email);
+
+        if(imageFile?.current?.files[0]) {
+            formData.append('profile_pic', imageFile?.current?.files[0]);
+        }
+
+        try {
+            const {data} = await axiosReq.put(`/profiles/${id}/`, formData);
+            setCurrentUser((currentUser) => ({
+                ...currentUser,
+                profile_pic: data.profile_pic,
+            }));
+            history.goBack()
+        } catch (err) {
+            console.log(err)
+        }
+
+    }
 
     const textFields = (
         <>
@@ -140,7 +166,7 @@ const ProfileEditForm = () => {
             <Container className={`${appStyles.Content} mt-3`}>
                 <h2 className="text-center">Edit Profile</h2>
             </Container>
-            <Form onSubmit={()=>{}}>
+            <Form onSubmit={handleSubmit}>
                 <Row>
                     <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={4}>
                         <Container className={appStyles.Content}>
@@ -164,7 +190,7 @@ const ProfileEditForm = () => {
                                     if(e.target.files.length) {
                                         setProfileData({
                                             ...profileData,
-                                            image: URL.createObjectURL(e.target.files[0]),
+                                            profile_pic: URL.createObjectURL(e.target.files[0]),
                                         })
                                     }
                                 }}
