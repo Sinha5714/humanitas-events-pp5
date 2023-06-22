@@ -3,9 +3,11 @@ import {Col, Row, Container, Button, Form, Alert } from "react-bootstrap";
 import { Link , useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
+import { useRedirect } from '../../hooks/useRedirect';
 
 const SignInForm = () => {
     const setCurrentUser = useSetCurrentUser();
+    useRedirect('loggedIn');
 
     const [signInData, setSignInData] = useState({
         username: "",
@@ -29,7 +31,7 @@ const SignInForm = () => {
     try {
         const {data} = await axios.post("/dj-rest-auth/login/", signInData);
         setCurrentUser(data.user);
-        history.push("/");
+        history.goBack();
     } catch (err) {
         setErrors(err.response?.data);
     }
@@ -38,7 +40,7 @@ const SignInForm = () => {
     <Row>
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className="p-4">
-          <h1>Sign Up</h1>
+          <h1>Sign In</h1>
           <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="username">
                     <Form.Label>Username</Form.Label>
