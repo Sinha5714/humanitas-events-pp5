@@ -6,9 +6,11 @@ import Asset from '../../components/Asset';
 import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsCreateEditForm.module.css"
 import { axiosReq } from '../../api/axiosDefaults';
+import { useRedirect } from '../../hooks/useRedirect';
 
 
 function EventsCreateForm() {
+    useRedirect('loggedOut');
 
     const [eventData, setEventData] = useState({
         title: '',
