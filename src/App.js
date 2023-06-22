@@ -12,6 +12,7 @@ import { useCurrentUser } from "./contexts/CurrentUserContext";
 import EventsEditForm from "./pages/events/EventEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import UsernameForm from "./pages/profiles/UsernameForm";
 
 
 
@@ -50,6 +51,7 @@ function App() {
                     <Route exact path="/events/:id" render={() => <EventPage />} />
                     <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
                     <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
+                    <Route exact path="/profiles/:id/edit/username" render={() => <UsernameForm />} />
                     <Route render={() => <p>Page not found!</p>} />
                 </Switch>
             </Container>
