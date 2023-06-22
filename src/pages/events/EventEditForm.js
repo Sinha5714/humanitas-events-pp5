@@ -117,6 +117,7 @@ function EventsEditForm() {
                     {message}
                 </Alert>
             ))}
+
             <Form.Group>
                 <Form.Label>Starting Date</Form.Label>
                 <Form.Control
