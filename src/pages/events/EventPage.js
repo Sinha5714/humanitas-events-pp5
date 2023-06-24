@@ -45,7 +45,7 @@ function EventPage() {
                 <PopularProfiles />
                 <UpComingEvents mobile />
 
-                <Event {...event.results[0]} setEvent={setEvent} eventPage />
+                <Event {...event.results[0]} setEvents={setEvent} eventPage />
                 <Container className={appStyles.Content}>
                     {currentUser? (
                         <CommentCreateForm
