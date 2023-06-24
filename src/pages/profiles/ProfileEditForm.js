@@ -184,10 +184,10 @@ const ProfileEditForm = () => {
                 {message}
                 </Alert>
             ))}
-            <Button onClick={() => history.goBack()}>
+            <Button className={`${appStyles.Button}`} onClick={() => history.goBack()}>
                 Cancel
             </Button>
-            <Button type="submit">
+            <Button className={`${appStyles.Button}`} type="submit">
                 Save
             </Button>
         </>

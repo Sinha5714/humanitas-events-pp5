@@ -70,7 +70,15 @@ figure {
     text-align: center;
     display: inline-block;
   }
-  
+
+.Button {
+    border-color: #F6F6F7;
+    background-color: #613FE5 !important;
+    color: #F6F6F7;
+    margin: 0 20px;
+    width: 150px;
+  }
+
   /* scrollbar */
 *::-webkit-scrollbar {
     width: 5px;

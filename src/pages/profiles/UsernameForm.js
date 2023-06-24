@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Row, Form, Container, Button, Alert } from 'react-bootstrap';
+import { Col, Row, Form, Container, Button, Alert, Modal } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { useCurrentUser, useSetCurrentUser } from '../../contexts/CurrentUserContext';
 import appStyles from "../../App.module.css";
@@ -13,6 +13,7 @@ const UsernameForm = () => {
     const {id} = useParams();
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() =>{
         if(currentUser?.profile_id?.toString() === id){
@@ -28,20 +29,38 @@ const UsernameForm = () => {
             await axiosRes.put("/dj-rest-auth/user/", {
                 username,
             });
+            setShowModal(true);
             setCurrentUser((prevUser) => ({
                 ...prevUser,
                 username,
             }));
-            history.goBack();
         } catch (err) {
-            console.log(err);
             setErrors(err.response?.data);
         }
     }
+    const handleCloseModal = () => {
+        setShowModal(false);
+        history.goBack();    
+    };
 
   return (
     <Row>
         <Col className="py-2 mx-auto text-center" md={6}>
+            {showModal && (
+                <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Success</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        Username updated successfully!
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleCloseModal}>
+                        Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            )}
             <Container className={appStyles.Content}>
                 <Form onSubmit={handleSubmit} className="my-2">
                     <Form.Group>
@@ -58,8 +77,20 @@ const UsernameForm = () => {
                             {message}
                         </Alert>
                     ))}
-                    <Button onClick={() => history.goBack()}>Cancel</Button>
-                    <Button type="submit">Save</Button>
+                     <Button
+                        onMouseDown={(event) => event.preventDefault()}
+                        className={`mx-2 ${appStyles.Button}`}
+                        onClick={() => history.goBack()}
+                        >
+                        Cancel
+                    </Button>
+                    <Button
+                        type="submit"
+                        className={`mx-2 my-2 ${appStyles.Button}`}
+                        onMouseDown={(event) => event.preventDefault()}
+                        >
+                        Save
+                    </Button>
                 </Form>
             </Container>
         </Col>

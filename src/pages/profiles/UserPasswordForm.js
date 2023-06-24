@@ -104,20 +104,19 @@ const UserPasswordForm = () => {
                 {message}
               </Alert>
             ))}
-
-            <Button
-              type="submit"
-              className={`mx-2 my-2 ${appStyles.Button}`}
-              onMouseDown={(event) => event.preventDefault()}
-            >
-              Save
-            </Button>
             <Button
               onMouseDown={(event) => event.preventDefault()}
               className={`mx-2 ${appStyles.Button}`}
               onClick={() => history.goBack()}
             >
               Cancel
+            </Button>
+            <Button
+              type="submit"
+              className={`mx-2 my-2 ${appStyles.Button}`}
+              onMouseDown={(event) => event.preventDefault()}
+            >
+              Save
             </Button>
           </Form>
         </Container>

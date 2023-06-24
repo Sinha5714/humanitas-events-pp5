@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Button, Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRes } from '../../api/axiosDefaults';
 import Avatar from '../../components/Avatar';
@@ -78,6 +78,37 @@ const Event = (props) => {
         }
     };
 
+    const handleJoin = async() => {
+        try {
+            const {data} = await axiosRes.post('/join/', {event:id});
+            setEvents((prevEvents) =>({
+                ...prevEvents,
+                results: prevEvents.results.map((event) =>{
+                    return event.id === id
+                    ? {...event, join_request: event.join_request + 1, join_id: data.id }
+                    : event;
+                })
+            }))
+        } catch (err) {
+            console.log(err);
+        }
+    };
+    const handleCancelJoin = async() => {
+        try {
+            await axiosRes.delete(`/join/${join_id}/`);
+            setEvents((prevEvents) =>({
+                ...prevEvents,
+                results: prevEvents.results.map((event) =>{
+                    return event.id === id
+                    ? {...event, join_request: event.join_request - 1, join_id: null }
+                    : event;
+                })
+            }))
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
     return (
         <Card className={styles.Event}>
             <Card.Body>
@@ -124,19 +155,15 @@ const Event = (props) => {
 
                     {is_owner?(
                         <OverlayTrigger placement='top' overlay={<Tooltip>You can't send join request to your own event</Tooltip>}>
-                            <i className="fas fa-calendar-check" />
+                            <Button>Join</Button>
                         </OverlayTrigger>
                     ): join_id?(
-                        <span onClick={() => {}}>
-                            <i className="fas fa-calendar-check" />
-                        </span>
+                        <Button onClick={handleCancelJoin}>Cancel</Button>
                     ): currentUser? (
-                        <span onClick={()=>{}}>
-                            <i className='far fa-calendar-check' />
-                        </span>
+                        <Button>Join</Button>
                     ) : (
                         <OverlayTrigger placement='top' overlay={<Tooltip>Log in to send a join request!</Tooltip>}>
-                            <i className="fas fa-calendar-check" />
+                            <Button>Join</Button>
                         </OverlayTrigger>
                     )}
                     <span className='mr-2'>{join_request}</span>
@@ -145,7 +172,6 @@ const Event = (props) => {
                         <i className='far fa-comments'></i>
                     </Link>
                     {comments_count}
-
                 </div>
 
             </Card.Body>
