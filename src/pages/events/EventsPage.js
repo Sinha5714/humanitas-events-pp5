@@ -5,6 +5,7 @@ import { axiosReq } from '../../api/axiosDefaults';
 import Event from './Event';
 import NoResults from "../../assets/no-results.png";
 import appStyles from "../../App.module.css";
+import styles from "../../styles/EventsPage.module.css";
 import Asset from '../../components/Asset';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/utils';
@@ -40,16 +41,17 @@ function EventsPage({message, filter=""}) {
             <UpComingEvents mobile />
 
             <Container>
-                <i className='fas fa-search' />
-                <Form onSubmit={(event) => event.preventDefault()}>
+                <i className={`fas fa-search ${styles.SearchIcon}`} />
+                <Form
+                className={styles.SearchBar}
+                onSubmit={(event) => event.preventDefault()}>
                     <Form.Control
                     value={query}
                     onChange={(event) => setQuery(event.target.value)} 
                     type='text'
                     className='mr-sm-2'
                     placeholder='Search Events by title, username, date or category'
-                    />
-                    
+                    />   
                 </Form>
             </Container>
             {hasLoaded? (

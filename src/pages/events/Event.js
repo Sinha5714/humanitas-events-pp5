@@ -7,6 +7,7 @@ import { EditDeleteDropdown } from '../../components/Dropdowns';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import styles from '../../styles/Event.module.css';
 
+
 const Event = (props) => {
     const {
         id,
@@ -151,27 +152,28 @@ const Event = (props) => {
                             <i className="far fa-star" />
                         </OverlayTrigger>
                     )}
-                    <span className='mr-2'>{interested_count}</span>
-
-                    {is_owner?(
-                        <OverlayTrigger placement='top' overlay={<Tooltip>You can't send join request to your own event</Tooltip>}>
-                            <Button>Join</Button>
-                        </OverlayTrigger>
-                    ): join_id?(
-                        <Button onClick={handleCancelJoin}>Cancel</Button>
-                    ): currentUser? (
-                        <Button>Join</Button>
-                    ) : (
-                        <OverlayTrigger placement='top' overlay={<Tooltip>Log in to send a join request!</Tooltip>}>
-                            <Button>Join</Button>
-                        </OverlayTrigger>
-                    )}
-                    <span className='mr-2'>{join_request}</span>
-                        
+                    <span className='mr-2'>{interested_count}</span>    
                     <Link to={`/events/${id}`}>
                         <i className='far fa-comments'></i>
                     </Link>
                     {comments_count}
+                </div>
+                <div>
+                    <span className='mr-2'>{join_request} people has requested to join this event. </span>
+                    {is_owner?(
+                            <OverlayTrigger placement='top' overlay={<Tooltip>You can't send join request to your own event</Tooltip>}>
+                                <Button>Join</Button>
+                            </OverlayTrigger>
+                        ): join_id?(
+                            <Button onClick={handleCancelJoin}>Cancel Join Request</Button>
+                        ): currentUser? (
+                            <Button onClick={handleJoin}>Click here to Join</Button>
+                        ) : (
+                            <OverlayTrigger placement='top' overlay={<Tooltip>Log in to send a join request!</Tooltip>}>
+                                <Button>Join</Button>
+                            </OverlayTrigger>
+                        )}
+                    
                 </div>
 
             </Card.Body>
