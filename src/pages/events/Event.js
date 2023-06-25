@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRes } from '../../api/axiosDefaults';
 import Avatar from '../../components/Avatar';
 import { EditDeleteDropdown } from '../../components/Dropdowns';
+import Feedback from '../../components/Feedback';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import styles from '../../styles/Event.module.css';
 
@@ -34,6 +35,7 @@ const Event = (props) => {
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === user;
     const history = useHistory();
+    const [showAlert, setShowAlert] = useState(false);
 
     const handleEdit = () =>{
         history.push(`/events/${id}/edit`)
@@ -42,7 +44,11 @@ const Event = (props) => {
     const handleDelete = async() => {
         try {
             await axiosRes.delete(`/events/${id}/`);
-            history.goBack();
+            setShowAlert(true);
+            setTimeout(function (){
+                history.goBack();
+            }, 2000);
+            
         } catch (err) {
             console.log(err);
         }
@@ -112,6 +118,9 @@ const Event = (props) => {
 
     return (
         <Card className={styles.Event}>
+            {showAlert && (
+                <Feedback variant="info" message="Your event post has been deleted successfully" />
+            )}
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
                     <Link to={`/profiles/${profile_id}`}>
