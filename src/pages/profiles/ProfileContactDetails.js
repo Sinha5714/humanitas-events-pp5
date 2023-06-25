@@ -22,7 +22,7 @@ const ProfileContactDetails = ({mobile}) => {
                     pageProfile: {results: [pageProfile]}
                 }))
             } catch (err) {
-                console.log(err);
+                // console.log(err)
             }
         }   
         fetchData()

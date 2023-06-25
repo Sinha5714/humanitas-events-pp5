@@ -46,11 +46,11 @@ const Event = (props) => {
             await axiosRes.delete(`/events/${id}/`);
             setShowAlert(true);
             setTimeout(function (){
-                history.goBack();
+                history.push("/");
             }, 2000);
             
         } catch (err) {
-            console.log(err);
+            // console.log(err)
         }
     }
 
@@ -66,7 +66,7 @@ const Event = (props) => {
                 })
             }))
         } catch (err) {
-            console.log(err);
+            
         }
     };
     const handleNotInterested = async() => {
@@ -81,7 +81,7 @@ const Event = (props) => {
                 })
             }))
         } catch (err) {
-            console.log(err);
+            
         }
     };
 
@@ -97,7 +97,7 @@ const Event = (props) => {
                 })
             }))
         } catch (err) {
-            console.log(err);
+            
         }
     };
     const handleCancelJoin = async() => {
@@ -112,7 +112,7 @@ const Event = (props) => {
                 })
             }))
         } catch (err) {
-            console.log(err);
+            
         }
     };
 

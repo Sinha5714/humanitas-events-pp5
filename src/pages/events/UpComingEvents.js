@@ -23,7 +23,7 @@ const UpComingEvents = ({mobile}) => {
                     upcomingEvents: data,
                 }))
             } catch (err) {
-                console.log(err)
+                // console.log(err)
             }
         };
         handleMount();

@@ -38,6 +38,7 @@ const UserPasswordForm = () => {
             await axiosRes.post("/dj-rest-auth/password/change/", userData);
             setShowModal(true);
         } catch (err) {
+            // console.log(err)
             setErrors(err.response?.data);
         }
     };

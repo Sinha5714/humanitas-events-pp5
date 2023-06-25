@@ -33,7 +33,7 @@ function CommentEditForm(props) {
         setShowEditForm(false);
         setShowAlert(true);
         } catch (err) {
-        console.log(err);
+            // console.log(err)
         }
     };
 

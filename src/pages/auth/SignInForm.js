@@ -33,6 +33,7 @@ const SignInForm = () => {
         setCurrentUser(data.user);
         history.goBack();
     } catch (err) {
+        // console.log(err)
         setErrors(err.response?.data);
     }
     };
