@@ -47,6 +47,7 @@ const UpComingEvents = ({mobile}) => {
                     <Link to={`/events/${event.id}`}>
                       {event.title}
                     </Link>
+                    <p>{event.event_start_date}</p>
                   </Card>
                 ))}
             </div>
