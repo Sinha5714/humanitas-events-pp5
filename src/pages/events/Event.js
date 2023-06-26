@@ -172,10 +172,10 @@ const Event = (props) => {
                     {comments_count}
                 </div>
                 <div>
-                    <span className='mr-2'>{join_request} people has requested to join this event. </span>
+                    <span className='mr-2'>{join_request} people are joining this event. </span>
                     {is_owner?(
                             <OverlayTrigger placement='top' overlay={<Tooltip>You can't send join request to your own event</Tooltip>}>
-                                <Button>Join</Button>
+                                <Button>Click here to Join</Button>
                             </OverlayTrigger>
                         ): join_id?(
                             <Button onClick={handleCancelJoin}>Cancel Join Request</Button>
@@ -185,10 +185,8 @@ const Event = (props) => {
                             <OverlayTrigger placement='top' overlay={<Tooltip>Log in to send a join request!</Tooltip>}>
                                 <Button>Join</Button>
                             </OverlayTrigger>
-                        )}
-                    
+                        )}   
                 </div>
-
             </Card.Body>
         </Card>
     )

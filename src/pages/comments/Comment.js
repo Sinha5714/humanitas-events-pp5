@@ -21,7 +21,7 @@ const Comment = (props) => {
 
   const handleDelete = async () => {
     setIsDeleted(true);
-    setTimeout(async () =>{
+    setTimeout(async () => {
         try {
             await axiosRes.delete(`/comments/${id}/`)
             setEvent(prevEvent => ({

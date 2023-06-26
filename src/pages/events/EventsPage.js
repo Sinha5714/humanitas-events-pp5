@@ -63,7 +63,10 @@ function EventsPage({message, filter=""}) {
                         {events.results.length?(
                             <InfiniteScroll
                                 children={events.results.map((event) => (
-                                    <Event key={event.id} {...event} setEvents={setEvents} /> 
+                                    <Event key={event.id}
+                                    {...event}
+                                    setEvents={setEvents}
+                                    content={event.content.length > 200 ? (event.content.slice(0, 200) + "......") : event.content} /> 
                                 ))}
                                 dataLength={events.results.length}
                                 loader={<Asset spinner />}

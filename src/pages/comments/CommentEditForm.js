@@ -38,7 +38,7 @@ function CommentEditForm(props) {
     };
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form className="mt-2 text-center" onSubmit={handleSubmit}>
         <Form.Group className="pr-1">
             <Form.Control
             className={styles.Form}
@@ -51,7 +51,9 @@ function CommentEditForm(props) {
         <div className="text-right">
             <button
             className={styles.Button}
-            onClick={() => setShowEditForm(false)}
+            onClick={() => {
+                setShowEditForm(false);
+                setShowAlert(false)}}
             type="button"
             >
             cancel
@@ -59,6 +61,7 @@ function CommentEditForm(props) {
             <button
             className={styles.Button}
             disabled={!content.trim()}
+            onMouseDown={(e) => e.preventDefault()}
             type="submit"
             >
             save
