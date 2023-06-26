@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Row, Form, Container, Button, Alert, Modal } from 'react-bootstrap';
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Alert  from "react-bootstrap/Alert";
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { useCurrentUser, useSetCurrentUser } from '../../contexts/CurrentUserContext';
 import appStyles from "../../App.module.css";

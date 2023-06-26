@@ -1,7 +1,7 @@
 import styles from "./App.module.css";
 import NavBar from './components/NavBar';
 import {Route, Switch} from 'react-router-dom';
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
@@ -14,7 +14,6 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
-
 
 
 function App() {

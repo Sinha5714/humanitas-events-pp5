@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { Card, Container } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosReq } from '../../api/axiosDefaults';
 import Asset from '../../components/Asset';

@@ -1,5 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Col, Container, Form, Button, Row, Image, Alert } from 'react-bootstrap';
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Alert  from "react-bootstrap/Alert";
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsCreateEditForm.module.css"

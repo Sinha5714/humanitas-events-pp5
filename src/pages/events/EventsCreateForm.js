@@ -1,5 +1,11 @@
 import React, { useRef, useState } from 'react'
-import { Col, Container, Form, Button, Row, Image, Alert } from 'react-bootstrap';
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Alert  from "react-bootstrap/Alert";
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import Upload from "../../assets/upload-image.png";
 import Asset from '../../components/Asset';

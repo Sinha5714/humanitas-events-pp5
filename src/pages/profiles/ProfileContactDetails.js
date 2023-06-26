@@ -3,7 +3,8 @@ import { Link, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosReq } from '../../api/axiosDefaults';
 import { useProfileData, useSetProfileData } from '../../contexts/ProfileDataContext';
 import appStyles from "../../App.module.css";
-import { Col, Container } from 'react-bootstrap';
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 
 const ProfileContactDetails = ({mobile}) => {
     const {id} = useParams();

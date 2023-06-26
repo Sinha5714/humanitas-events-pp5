@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import {Col, Row, Container, Button, Form, Alert } from "react-bootstrap";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Alert  from "react-bootstrap/Alert";
 import { Link , useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { useSetCurrentUser } from '../../contexts/CurrentUserContext';

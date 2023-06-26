@@ -3,20 +3,20 @@
     border: 1px solid #dadadf;
   }
   
-  .NavLink {
+.NavLink {
     padding: 5px;
   }
   
-  .Active  {
+.Active  {
     color: #c1d718;
   }
 
-  i {
+i {
     padding: 7px;
     font-size: 1.6rem;
   }
   
-  i:hover {
+i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
   }
