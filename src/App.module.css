@@ -78,6 +78,12 @@ figure {
     margin: 0 20px;
     width: 150px;
   }
+  
+.Alert {
+    margin-bottom: 0;
+    padding: 5px;
+    font-weight: bold;
+  }
 
   /* scrollbar */
 *::-webkit-scrollbar {

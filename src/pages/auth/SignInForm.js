@@ -5,6 +5,8 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert  from "react-bootstrap/Alert";
+import appStyles from "../../App.module.css";
+import styles from "../../styles/SignInSignUpForm.module.css";
 import { Link , useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
@@ -45,61 +47,63 @@ const SignInForm = () => {
     }
     };
   return (
-    <Row>
-      <Col className="my-auto py-2 p-md-2" md={6}>
-        <Container className="p-4">
-          <h1>Sign In</h1>
-          <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="username">
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control
-                    type="text"
-                    name="username"
-                    value={username}
-                    placeholder="Username"
-                    onChange={handleChange}
-                    />
-                </Form.Group>
-                {errors.username?.map((message, idx) => (
-                    <Alert variant="warning" key={idx}>
-                        {message}
-                    </Alert>
-                ))}
-                <Form.Group controlId="password">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                    type="password"
-                    name="password"
-                    value={password}
-                    placeholder="Password"
-                    onChange={handleChange}
-                    />
-                </Form.Group>
-                {errors.password?.map((message, idx) => (
-                    <Alert variant="warning" key={idx}>
-                        {message}
-                    </Alert>
-                ))}
-                <Button variant="primary" type="submit">
-                    Sign In
-                </Button>
-                {errors.non_field_errors?.map((message, idx) => (
-                    <Alert key={idx} variant="warning" className="mt-3">
-                        {message}
-                    </Alert>
-                ))}
-            </Form>
-        </Container>
-        <Container className="mt-3">
-          <Link to="/signup">
-            Don't Have an account! <span>Sign Up Here</span>
-          </Link>
-        </Container>
-      </Col>
-      <Col
-        md={6}
-        className="my-auto d-none d-md-block p-2">
-      </Col>
+    <Row className="text-center">
+        <Col className="my-auto offset-md-2" md={8}>
+            <Container className={`${appStyles.Content} p-4 `}>
+            <h1 className='mb-4'>Sign In</h1>
+                <Form onSubmit={handleSubmit}>
+                    {errors.username?.map((message, idx) => (
+                        <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                                {message}
+                        </Alert>
+                        ))}
+                    <Form.Group controlId="username">
+                        <Form.Label className="d-none">Username</Form.Label>
+                        <Form.Control
+                        className={`${appStyles.Input} text-center`}
+                        type="text"
+                        name="username"
+                        value={username}
+                        placeholder="Username"
+                        onChange={handleChange}
+                        />
+                    </Form.Group>
+                    
+                    {errors.password?.map((message, idx) => (
+                        <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                            {message}
+                        </Alert>
+                    ))}
+                    <Form.Group controlId="password">
+                        <Form.Label className="d-none">Password</Form.Label>
+                        <Form.Control
+                        className={`${appStyles.Input} text-center`}
+                        type="password"
+                        name="password"
+                        value={password}
+                        placeholder="Password"
+                        onChange={handleChange}
+                        />
+                    </Form.Group>
+                    
+                    {errors.non_field_errors?.map((message, idx) => (
+                        <Alert key={idx} variant="warning" className={appStyles.Alert}>
+                            {message}
+                        </Alert>
+                    ))}
+                    <Button
+                    className={`my-3 ${appStyles.button}`}
+                    type="submit"
+                    onMouseDown={(e) => e.preventDefault()}>
+                        Sign In
+                    </Button>
+                    
+                    <Link className={styles.Link} to="/signup">
+                        Don't Have an account? Click <span>here </span> to sign up.
+                    </Link>
+                </Form>
+            </Container>
+        </Col>
     </Row>
   );
 };
