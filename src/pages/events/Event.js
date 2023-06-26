@@ -11,6 +11,7 @@ import { EditDeleteDropdown } from '../../components/Dropdowns';
 import Feedback from '../../components/Feedback';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import styles from '../../styles/Event.module.css';
+import { EndDateFormatter, StartDateFormatter } from '../../utils/DateFormatter';
 
 
 const Event = (props) => {
@@ -145,7 +146,7 @@ const Event = (props) => {
             <Card.Body>
                 {title && <Card.Title className='text-center'>{title}</Card.Title>}
                 {category && sub_category && <Card.Text className='text-center'>{category} - {sub_category}</Card.Text>}
-                {event_start_date && event_end_date && <Card.Text className='text-center'>{event_start_date} - {event_end_date}</Card.Text>}
+                {event_start_date && event_end_date && <Card.Text className='text-center'><StartDateFormatter event_start_date={event_start_date} /> - <EndDateFormatter event_end_date={event_end_date} /></Card.Text>}
                 {content && <Card.Text>{content}</Card.Text>}
                 <div>
                     {is_owner?(
