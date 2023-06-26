@@ -2,7 +2,7 @@
     font-family: "Work Sans", sans-serif;
     background-color: #eef4f9;
     min-height: 100vh;
-  }
+}
 
 .Main{
     padding-top: 81px;
@@ -17,13 +17,13 @@
     padding: 10px;
     border-radius: 2px;
     border: 1px solid #dadadf;
-  }
+}
   
 .FillerImage {
     object-fit: cover;
     height: 100%;
     width: 100%;
-  }
+}
   
 .Image {
     max-height: 40vh;
@@ -69,14 +69,6 @@ i:hover {
 figure {
     text-align: center;
     display: inline-block;
-  }
-
-.Button {
-    border-color: #F6F6F7;
-    background-color: #613FE5 !important;
-    color: #F6F6F7;
-    margin: 0 20px;
-    width: 150px;
   }
   
 .Alert {

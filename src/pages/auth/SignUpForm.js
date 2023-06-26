@@ -106,7 +106,7 @@ const SignUpForm = () => {
                     </Alert>
                 ))}
                 <Button 
-                className={`my-3 ${appStyles.button}`}
+                className={`my-3 ${styles.SignInUpBtn}`}
                 type="submit"
                 onMouseDown={(e) => e.preventDefault()}>
                     Sign Up

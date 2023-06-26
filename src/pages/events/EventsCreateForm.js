@@ -104,35 +104,38 @@ function EventsCreateForm() {
                     {message}
                 </Alert>
             ))}
-            <Form.Group>
-                <Form.Label>Starting Date</Form.Label>
-                <Form.Control
-                type="date"
-                name="event_start_date"
-                value={event_start_date}
-                onChange={handleChange}
-                >
-                </Form.Control>
-            </Form.Group>
-            {errors?.event_start_date?.map((message, idx) =>(
-                <Alert variant='warning' key={idx}>
-                    {message}
-                </Alert>
-            ))}
-            <Form.Group>
-                <Form.Label>End Date</Form.Label>
-                <Form.Control
-                type="date"
-                name="event_end_date"
-                value={event_end_date}
-                onChange={handleChange}
-                ></Form.Control>
-            </Form.Group>
-            {errors?.event_end_date?.map((message, idx) =>(
-                <Alert variant='warning' key={idx}>
-                    {message}
-                </Alert>
-            ))}
+            <Form.Row>
+                <Form.Group as={Col}>
+                    <Form.Label>Starting Date</Form.Label>
+                    <Form.Control
+                    type="date"
+                    name="event_start_date"
+                    value={event_start_date}
+                    onChange={handleChange}
+                    >
+                    </Form.Control>
+                </Form.Group>
+                {errors?.event_start_date?.map((message, idx) =>(
+                    <Alert variant='warning' key={idx}>
+                        {message}
+                    </Alert>
+                ))}
+                <Form.Group as={Col}>
+                    <Form.Label>End Date</Form.Label>
+                    <Form.Control
+                    type="date"
+                    name="event_end_date"
+                    value={event_end_date}
+                    onChange={handleChange}
+                    ></Form.Control>
+                </Form.Group>
+                {errors?.event_end_date?.map((message, idx) =>(
+                    <Alert variant='warning' key={idx}>
+                        {message}
+                    </Alert>
+                ))}
+            </Form.Row>
+            
             <Form.Group>
                 <Form.Label>Category</Form.Label>
                 <Form.Control
@@ -175,10 +178,13 @@ function EventsCreateForm() {
 
             <Button
             onClick={() => history.goBack()}
+            className={styles.CancelButton}
             >
                 Cancel
             </Button>
-            <Button  type="submit">
+            <Button  type="submit"
+            className={styles.SaveButton}
+            onMouseDown={(e) => e.preventDefault()}>
                 Add
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
@@ -197,10 +203,10 @@ function EventsCreateForm() {
         </Container>
         <Form onSubmit={handleSubmit}>
             <Row>
-                <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+                <Col className="py-2 p-0 p-md-2" md={6} lg={6}>
                     <Container className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}>
                         <Form.Group className="text-center">
-                            {image?(
+                            {image ? (
                                 <>
                                     <figure>
                                         <Image className={appStyles.Image} src={image} rounded />
@@ -208,7 +214,7 @@ function EventsCreateForm() {
                                     <div>
                                         <Form.Label
                                         htmlFor='image-upload'>
-                                            Change the image
+                                            Add an image
                                         </Form.Label>
                                     </div>
                                 </>
@@ -233,7 +239,7 @@ function EventsCreateForm() {
                         <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>
-                <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+                <Col md={6} lg={6} className="d-none d-md-block p-0 p-md-2">
                     <Container className={appStyles.Content}>{textFields}</Container>
                 </Col>
             </Row>

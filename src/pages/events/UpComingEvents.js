@@ -49,7 +49,9 @@ const UpComingEvents = ({mobile}) => {
                     <Link to={`/events/${event.id}`}>
                       {event.title}
                     </Link>
-                    <p>{event.event_start_date}</p>
+                    <p>
+                        <StartDateFormatter event_start_date={event.event_start_date} />
+                    </p>
                   </Card>
                 ))}
             </div>
@@ -58,11 +60,12 @@ const UpComingEvents = ({mobile}) => {
               .filter((a) => new Date(a.event_start_date) - new Date() > 0)
               .map((event) => (
                 <div key={event.id}>
-                  <Link to={`/events/${event.id}`}>
-                    <strong>{event.title}</strong>
-                  </Link>
-                  <p>
-                    <StartDateFormatter event_start_date={event.event_start_date} /></p>
+                    <Link to={`/events/${event.id}`}>
+                        <strong>{event.title}</strong>
+                    </Link>
+                    <p>
+                    <StartDateFormatter event_start_date={event.event_start_date} />
+                    </p>
                   <hr />
                 </div>
               ))
