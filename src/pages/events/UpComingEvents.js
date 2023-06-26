@@ -6,6 +6,7 @@ import { axiosReq } from '../../api/axiosDefaults';
 import Asset from '../../components/Asset';
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import { StartDateFormatter } from '../../utils/DateFormatter';
 
 const UpComingEvents = ({mobile}) => {
     const[upcomingEventsData, setUpcomingEventsData] = useState({
@@ -60,7 +61,8 @@ const UpComingEvents = ({mobile}) => {
                   <Link to={`/events/${event.id}`}>
                     <strong>{event.title}</strong>
                   </Link>
-                  <p>{event.event_start_date}</p>
+                  <p>
+                    <StartDateFormatter event_start_date={event.event_start_date} /></p>
                   <hr />
                 </div>
               ))
