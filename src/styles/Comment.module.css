@@ -8,12 +8,6 @@
     font-weight: lighter;
     color: #db628e;
 }
-.CommentBox {
-    color: var(--dark-slate-grey);
-    border: 1px solid var(--light);
-    border-radius: 35px;
-    padding: 5px 10px 5px 20px;
-}
 
 .Comment {
     font-weight: bold;

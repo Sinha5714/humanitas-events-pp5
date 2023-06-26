@@ -59,6 +59,7 @@ function CommentCreateForm(props) {
       <button
         className={`${styles.Button} btn d-block ml-auto`}
         disabled={!content.trim()}
+        onMouseDown={(e) => e.preventDefault()}
         type="submit"
       >
         Post

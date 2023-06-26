@@ -116,7 +116,7 @@ const Event = (props) => {
                 })
             }))
         } catch (err) {
-            
+           // console.log(err) 
         }
     };
 
@@ -175,15 +175,19 @@ const Event = (props) => {
                     <span className='mr-2'>{join_request} people are joining this event. </span>
                     {is_owner?(
                             <OverlayTrigger placement='top' overlay={<Tooltip>You can't send join request to your own event</Tooltip>}>
-                                <Button>Click here to Join</Button>
+                                <Button className={styles.JoinButton}>Click here to Join</Button>
                             </OverlayTrigger>
                         ): join_id?(
-                            <Button onClick={handleCancelJoin}>Cancel Join Request</Button>
+                            <Button onClick={handleCancelJoin}
+                            onMouseDown={(e) => e.preventDefault()}
+                            className={styles.CancelButton} >Cancel Join Request</Button>
                         ): currentUser? (
-                            <Button onClick={handleJoin}>Click here to Join</Button>
+                            <Button onClick={handleJoin}
+                            onMouseDown={(e) => e.preventDefault()}
+                            className={styles.JoinButton}>Click here to Join</Button>
                         ) : (
                             <OverlayTrigger placement='top' overlay={<Tooltip>Log in to send a join request!</Tooltip>}>
-                                <Button>Join</Button>
+                                <Button className={styles.JoinButton}>Click here to Join</Button>
                             </OverlayTrigger>
                         )}   
                 </div>
