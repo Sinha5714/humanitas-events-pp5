@@ -1,22 +1,22 @@
 .NavBar {
     background-color: #ff9c9c;
     border: 1px solid #dadadf;
-  }
-  
+}
+
 .NavLink {
     padding: 5px;
-  }
-  
-.Active  {
+}
+
+.Active {
     color: #c1d718;
-  }
+}
 
 i {
     padding: 7px;
     font-size: 1.6rem;
-  }
-  
+}
+
 i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
-  }
+}

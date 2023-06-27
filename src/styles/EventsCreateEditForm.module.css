@@ -11,12 +11,13 @@
     min-width: 75px;
     margin: 5px;
 }
-  
+
 .SaveButton:hover {
     cursor: pointer;
     background-color: rgb(231, 242, 20);
     color: #242a3d;
 }
+
 .CancelButton {
     border: none;
     background-color: #e71515;
@@ -26,7 +27,7 @@
     min-width: 75px;
     margin: 5px;
 }
-  
+
 .CancelButton:hover {
     cursor: pointer;
     background-color: rgb(243, 122, 122);

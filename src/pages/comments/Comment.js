@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import  Media  from "react-bootstrap/Media";
+import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";
@@ -10,7 +10,16 @@ import styles from "../../styles/Comment.module.css";
 import CommentEditForm from "./CommentEditForm";
 
 const Comment = (props) => {
-  const { profile_id, profile_image, user, updated_on, content, id, setEvent, setComments } = props;
+  const {
+    profile_id,
+    profile_image,
+    user,
+    updated_on,
+    content,
+    id,
+    setEvent,
+    setComments,
+  } = props;
 
   const [showEditForm, setShowEditForm] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
@@ -22,30 +31,35 @@ const Comment = (props) => {
   const handleDelete = async () => {
     setIsDeleted(true);
     setTimeout(async () => {
-        try {
-            await axiosRes.delete(`/comments/${id}/`)
-            setEvent(prevEvent => ({
-                results: [{
-                    ...prevEvent.results[0],
-                    comments_count: prevEvent.results[0].comments_count - 1
-                }]
-            }));
-            setComments((prevComments) => ({
-                ...prevComments,
-                results: prevComments.results.filter((comment) => comment.id !== id),
-            }));
-        } catch (err) {
-           // console.log(err)
-        }
-    }, 2500);  
-  }
+      try {
+        await axiosRes.delete(`/comments/${id}/`);
+        setEvent((prevEvent) => ({
+          results: [
+            {
+              ...prevEvent.results[0],
+              comments_count: prevEvent.results[0].comments_count - 1,
+            },
+          ],
+        }));
+        setComments((prevComments) => ({
+          ...prevComments,
+          results: prevComments.results.filter((comment) => comment.id !== id),
+        }));
+      } catch (err) {
+        // console.log(err)
+      }
+    }, 2500);
+  };
 
-  return isDeleted? (
+  return isDeleted ? (
     <Feedback variant="info" message="Comment has been deleted successfully!" />
   ) : (
     <div>
-        {showAlert && (
-        <Feedback variant="info" message="Comment has been updated successfully!" />
+      {showAlert && (
+        <Feedback
+          variant="info"
+          message="Comment has been updated successfully!"
+        />
       )}
       <Media>
         <Link to={`/profiles/${profile_id}`}>
@@ -56,20 +70,23 @@ const Comment = (props) => {
           <span className={styles.Date}>{updated_on}</span>
           {showEditForm ? (
             <CommentEditForm
-            id={id}
-            profile_id={profile_id}
-            content={content}
-            profileImage={profile_image}
-            setComments={setComments}
-            setShowEditForm={setShowEditForm}
-            setShowAlert={setShowAlert} />
+              id={id}
+              profile_id={profile_id}
+              content={content}
+              profileImage={profile_image}
+              setComments={setComments}
+              setShowEditForm={setShowEditForm}
+              setShowAlert={setShowAlert}
+            />
           ) : (
             <p className={styles.Comment}>{content}</p>
           )}
-          
         </Media.Body>
         {is_owner && !showEditForm && (
-            <EditDeleteDropdown handleEdit={() => setShowEditForm(true)} handleDelete={handleDelete} />
+          <EditDeleteDropdown
+            handleEdit={() => setShowEditForm(true)}
+            handleDelete={handleDelete}
+          />
         )}
       </Media>
     </div>

@@ -1,7 +1,7 @@
 .Link {
     display: block;
 }
-  
+
 .Link span {
     color: #DF210C;
 }
@@ -15,7 +15,7 @@
     min-width: 100px;
     margin: 5px;
 }
-  
+
 .SignInUpBtn:hover {
     cursor: pointer;
     background-color: rgb(231, 242, 20);

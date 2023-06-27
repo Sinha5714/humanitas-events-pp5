@@ -1,76 +1,76 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Alert  from "react-bootstrap/Alert";
-import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min'
-import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import Alert from "react-bootstrap/Alert";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import appStyles from "../../App.module.css";
-import { axiosRes } from '../../api/axiosDefaults';
+import { axiosRes } from "../../api/axiosDefaults";
 
 const UserPasswordForm = () => {
-    const history = useHistory();
-    const {id} = useParams();
-    const currentUser = useCurrentUser();
+  const history = useHistory();
+  const { id } = useParams();
+  const currentUser = useCurrentUser();
 
-    const [userData, setUserData] = useState({
-        new_password1: "",
-        new_password2: "",
+  const [userData, setUserData] = useState({
+    new_password1: "",
+    new_password2: "",
+  });
+  const { new_password1, new_password2 } = userData;
+  const [errors, setErrors] = useState({});
+  const [showModal, setShowModal] = useState(false);
+
+  const handleChange = (event) => {
+    setUserData({
+      ...userData,
+      [event.target.name]: event.target.value,
     });
-    const{new_password1, new_password2} = userData;
-    const [errors, setErrors] = useState({});
-    const [showModal, setShowModal] = useState(false);
+  };
 
-    const handleChange = (event) => {
-        setUserData({
-            ...userData,
-            [event.target.name]: event.target.value,
-        });
-    };
+  useEffect(() => {
+    if (currentUser?.profile_id?.toString() !== id) {
+      history.push("/");
+    }
+  }, [currentUser, history, id]);
 
-    useEffect(() => {
-        if (currentUser?.profile_id?.toString() !== id) {
-            history.push("/");
-        }
-    }, [currentUser, history, id]);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axiosRes.post("/dj-rest-auth/password/change/", userData);
+      setShowModal(true);
+    } catch (err) {
+      // console.log(err)
+      setErrors(err.response?.data);
+    }
+  };
 
- 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            await axiosRes.post("/dj-rest-auth/password/change/", userData);
-            setShowModal(true);
-        } catch (err) {
-            // console.log(err)
-            setErrors(err.response?.data);
-        }
-    };
-
-    const handleCloseModal = () => {
-        setShowModal(false);
-        history.goBack();    
-    };
-    return (
-        <Row>
-            <Col className="py-2 mx-auto text-center font-weight-bold" md={8}>
-            {showModal && (
-                <Modal show={showModal} onHide={handleCloseModal} centered={true}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Success</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        Password updated successfully!
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleCloseModal}>
-                        Close
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
-            )}
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.goBack();
+  };
+  return (
+    <Row>
+      <Col className="py-2 mx-auto text-center font-weight-bold" md={8}>
+        {showModal && (
+          <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+            <Modal.Header closeButton>
+              <Modal.Title>Success</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Password updated successfully!</Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleCloseModal}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        )}
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
@@ -128,8 +128,8 @@ const UserPasswordForm = () => {
           </Form>
         </Container>
       </Col>
-    </Row>   
-    )
-}
+    </Row>
+  );
+};
 
-export default UserPasswordForm
+export default UserPasswordForm;
