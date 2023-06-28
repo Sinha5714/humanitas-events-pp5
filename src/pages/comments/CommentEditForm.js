@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentCreateEditForm.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
 
 function CommentEditForm(props) {
   const { id, content, setShowEditForm, setComments, setShowAlert } = props;
@@ -50,7 +51,7 @@ function CommentEditForm(props) {
       </Form.Group>
       <div className="text-right">
         <button
-          className={styles.Button}
+          className={btnStyles.CancelButton}
           onClick={() => {
             setShowEditForm(false);
             setShowAlert(false);
@@ -60,7 +61,7 @@ function CommentEditForm(props) {
           cancel
         </button>
         <button
-          className={styles.Button}
+          className={btnStyles.Button}
           disabled={!content.trim()}
           onMouseDown={(e) => e.preventDefault()}
           type="submit"

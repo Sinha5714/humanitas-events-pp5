@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Col from "react-bootstrap/Col";
@@ -85,11 +86,19 @@ function ProfilePage() {
               {currentUser &&
                 !is_owner &&
                 (profile?.following_id ? (
-                  <Button onClick={() => handleUnfollow(profile)}>
+                  <Button
+                    className={btnStyles.UnfollowBtn}
+                    onClick={() => handleUnfollow(profile)}
+                  >
                     Unfollow
                   </Button>
                 ) : (
-                  <Button onClick={() => handleFollow(profile)}>Follow</Button>
+                  <Button
+                    className={btnStyles.FollowBtn}
+                    onClick={() => handleFollow(profile)}
+                  >
+                    Follow
+                  </Button>
                 ))}
             </div>
           </Col>

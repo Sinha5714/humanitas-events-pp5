@@ -11,6 +11,7 @@ import { EditDeleteDropdown } from "../../components/Dropdowns";
 import Feedback from "../../components/Feedback";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/Event.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
 import {
   EndDateFormatter,
   StartDateFormatter,
@@ -215,13 +216,13 @@ const Event = (props) => {
                 <Tooltip>You can't send join request to your own event</Tooltip>
               }
             >
-              <Button className={styles.JoinButton}>Click here to Join</Button>
+              <Button className={btnStyles.Button}>Click here to Join</Button>
             </OverlayTrigger>
           ) : join_id ? (
             <Button
               onClick={handleCancelJoin}
               onMouseDown={(e) => e.preventDefault()}
-              className={styles.CancelButton}
+              className={btnStyles.CancelButton}
             >
               Cancel Join Request
             </Button>
@@ -229,7 +230,7 @@ const Event = (props) => {
             <Button
               onClick={handleJoin}
               onMouseDown={(e) => e.preventDefault()}
-              className={styles.JoinButton}
+              className={btnStyles.Button}
             >
               Click here to Join
             </Button>
@@ -238,7 +239,7 @@ const Event = (props) => {
               placement="top"
               overlay={<Tooltip>Log in to send a join request!</Tooltip>}
             >
-              <Button className={styles.JoinButton}>Click here to Join</Button>
+              <Button className={btnStyles.Button}>Click here to Join</Button>
             </OverlayTrigger>
           )}
         </div>

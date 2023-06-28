@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import styles from "../../styles/SignInSignUpForm.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
 import appStyles from "../../App.module.css";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
@@ -105,7 +106,7 @@ const SignUpForm = () => {
               </Alert>
             ))}
             <Button
-              className={`my-3 ${styles.SignInUpBtn}`}
+              className={`my-3 ${btnStyles.Button}`}
               type="submit"
               onMouseDown={(e) => e.preventDefault()}
             >

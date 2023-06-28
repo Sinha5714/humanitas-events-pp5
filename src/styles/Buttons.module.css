@@ -1,0 +1,47 @@
+.Button {
+    border: none;
+    background-color: #1dfa4d;
+    color: rgb(4, 4, 4);
+    border-radius: 100px;
+    padding: 4px 10px;
+    min-width: 100px;
+    margin: 5px;
+}
+
+.Button:hover {
+    cursor: pointer;
+    background-color: rgb(231, 242, 20);
+    color: #242a3d;
+}
+
+.CancelButton {
+    border: none;
+    background-color: #e71515;
+    color: rgb(4, 4, 4);
+    border-radius: 100px;
+    padding: 4px 10px;
+    min-width: 75px;
+    margin: 5px;
+}
+
+.CancelButton:hover {
+    cursor: pointer;
+    background-color: rgb(243, 122, 122);
+    color: #242a3d;
+}
+
+.UnfollowBtn {
+    border: none;
+    background-color: #721dfa;
+    color: rgb(4, 4, 4);
+    border-radius: 100px;
+    padding: 4px 10px;
+    min-width: 100px;
+    margin: 5px;
+}
+
+.UnfollowBtn:hover {
+    cursor: pointer;
+    background-color: rgb(231, 242, 20);
+    color: #242a3d;
+}

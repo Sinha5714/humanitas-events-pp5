@@ -6,18 +6,3 @@
     color: #DF210C;
 }
 
-.SignInUpBtn {
-    border: none;
-    background-color: #1dfa4d;
-    color: rgb(4, 4, 4);
-    border-radius: 100px;
-    padding: 4px 10px;
-    min-width: 100px;
-    margin: 5px;
-}
-
-.SignInUpBtn:hover {
-    cursor: pointer;
-    background-color: rgb(231, 242, 20);
-    color: #242a3d;
-}

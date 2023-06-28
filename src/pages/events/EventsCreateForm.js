@@ -11,6 +11,7 @@ import Upload from "../../assets/upload-image.png";
 import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsCreateEditForm.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
@@ -180,12 +181,15 @@ function EventsCreateForm() {
         </Alert>
       ))}
 
-      <Button onClick={() => history.goBack()} className={styles.CancelButton}>
+      <Button
+        onClick={() => history.goBack()}
+        className={btnStyles.CancelButton}
+      >
         Cancel
       </Button>
       <Button
         type="submit"
-        className={styles.SaveButton}
+        className={btnStyles.Button}
         onMouseDown={(e) => e.preventDefault()}
       >
         Add

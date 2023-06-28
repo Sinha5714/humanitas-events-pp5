@@ -15,6 +15,7 @@ import {
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
 import appStyles from "../../App.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
 
 const UsernameForm = () => {
@@ -90,14 +91,14 @@ const UsernameForm = () => {
             ))}
             <Button
               onMouseDown={(event) => event.preventDefault()}
-              className={`mx-2 ${appStyles.Button}`}
+              className={btnStyles.CancelButton}
               onClick={() => history.goBack()}
             >
               Cancel
             </Button>
             <Button
               type="submit"
-              className={`mx-2 my-2 ${appStyles.Button}`}
+              className={btnStyles.Button}
               onMouseDown={(event) => event.preventDefault()}
             >
               Save

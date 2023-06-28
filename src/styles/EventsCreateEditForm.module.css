@@ -1,35 +1,3 @@
 .Container {
     min-height: 343px;
 }
-
-.SaveButton {
-    border: none;
-    background-color: #1dfa4d;
-    color: rgb(4, 4, 4);
-    border-radius: 100px;
-    padding: 4px 10px;
-    min-width: 75px;
-    margin: 5px;
-}
-
-.SaveButton:hover {
-    cursor: pointer;
-    background-color: rgb(231, 242, 20);
-    color: #242a3d;
-}
-
-.CancelButton {
-    border: none;
-    background-color: #e71515;
-    color: rgb(250, 242, 242);
-    border-radius: 100px;
-    padding: 4px 10px;
-    min-width: 75px;
-    margin: 5px;
-}
-
-.CancelButton:hover {
-    cursor: pointer;
-    background-color: rgb(243, 122, 122);
-    color: #050505;
-}

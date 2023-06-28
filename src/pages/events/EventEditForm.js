@@ -12,6 +12,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsCreateEditForm.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 
 function EventsEditForm() {
@@ -212,12 +213,15 @@ function EventsEditForm() {
         </Alert>
       ))}
 
-      <Button className={styles.CancelButton} onClick={() => history.goBack()}>
+      <Button
+        className={btnStyles.CancelButton}
+        onClick={() => history.goBack()}
+      >
         Cancel
       </Button>
       <Button
         type="submit"
-        className={styles.SaveButton}
+        className={btnStyles.Button}
         onMouseDown={(e) => e.preventDefault()}
       >
         Save
