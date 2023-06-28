@@ -13,7 +13,7 @@ const Comment = (props) => {
   const {
     profile_id,
     profile_image,
-    user,
+    owner,
     updated_on,
     content,
     id,
@@ -26,7 +26,7 @@ const Comment = (props) => {
   const [isDeleted, setIsDeleted] = useState(false);
 
   const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === user;
+  const is_owner = currentUser?.username === owner;
 
   const handleDelete = async () => {
     setIsDeleted(true);
@@ -66,7 +66,7 @@ const Comment = (props) => {
           <Avatar src={profile_image} />
         </Link>
         <Media.Body className="align-self-center ml-2">
-          <span className={styles.User}>{user}</span>
+          <span className={styles.User}>{owner}</span>
           <span className={styles.Date}>{updated_on}</span>
           {showEditForm ? (
             <CommentEditForm

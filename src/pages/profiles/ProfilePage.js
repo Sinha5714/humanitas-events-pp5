@@ -30,7 +30,7 @@ function ProfilePage() {
   const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
   const { pageProfile } = useProfileData();
   const [profile] = pageProfile.results;
-  const is_owner = currentUser?.username === profile?.user;
+  const is_owner = currentUser?.username === profile?.owner;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +38,7 @@ function ProfilePage() {
         const [{ data: pageProfile }, { data: profileEvents }] =
           await Promise.all([
             axiosReq.get(`/profiles/${id}`),
-            axiosReq.get(`/events/?user__profile=${id}`),
+            axiosReq.get(`/events/?owner__profile=${id}`),
           ]);
         setProfileData((prevState) => ({
           ...prevState,
@@ -65,7 +65,7 @@ function ProfilePage() {
           />
         </Col>
         <Col lg={8}>
-          <h3 className="m-2">{profile?.user}</h3>
+          <h3 className="m-2">{profile?.owner}</h3>
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.events_count}</div>
@@ -96,7 +96,7 @@ function ProfilePage() {
         </Col>
       </Row>
       <Container className={appStyles.Content}>
-        <h5 className="text-center p-2">About {profile?.user}</h5>
+        <h5 className="text-center p-2">About {profile?.owner}</h5>
         {profile?.name && (
           <>
             <Col className="p-1">Name:</Col>
@@ -125,7 +125,7 @@ function ProfilePage() {
   const mainProfileEvents = (
     <>
       <hr />
-      <p className="text-center">{profile?.user}'s Events</p>
+      <p className="text-center">{profile?.owner}'s Events</p>
       <hr />
       {profileEvents.results.length ? (
         <InfiniteScroll
@@ -140,7 +140,7 @@ function ProfilePage() {
       ) : (
         <Asset
           src={NoResults}
-          message={`No results found, ${profile?.user} hasn't posted yet.`}
+          message={`No results found, ${profile?.owner} hasn't posted yet.`}
         />
       )}
     </>

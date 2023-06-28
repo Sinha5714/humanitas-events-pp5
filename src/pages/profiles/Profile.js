@@ -8,10 +8,10 @@ import { useSetProfileData } from "../../contexts/ProfileDataContext";
 
 const Profile = (props) => {
   const { profile } = props;
-  const { id, following_id, profile_pic, user } = profile;
+  const { id, following_id, profile_pic, owner } = profile;
 
   const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === user;
+  const is_owner = currentUser?.username === owner;
 
   const { handleFollow, handleUnfollow } = useSetProfileData();
 
@@ -22,7 +22,7 @@ const Profile = (props) => {
           <Avatar src={profile_pic} height={40} />
         </Link>
       </div>
-      <div className={`mx-2 ${styles.WordBreak}`}>{user}</div>
+      <div className={`mx-2 ${styles.WordBreak}`}>{owner}</div>
       <div>
         {currentUser &&
           !is_owner &&

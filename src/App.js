@@ -36,7 +36,7 @@ function App() {
             render={() => (
               <EventsPage
                 message="No results found. Adjust the search keyword or follow a user!"
-                filter={`user__followed__user__profile=${profile_id}&`}
+                filter={`owner__followed__owner__profile=${profile_id}&`}
               />
             )}
           />
@@ -46,7 +46,7 @@ function App() {
             render={() => (
               <EventsPage
                 message="No results found. Adjust the search keyword or show your interest in an event!"
-                filter={`interested__user__profile=${profile_id}&ordering=-interested__created_on`}
+                filter={`interested__owner__profile=${profile_id}&ordering=-interested__created_on`}
               />
             )}
           />
