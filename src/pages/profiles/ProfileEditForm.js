@@ -17,6 +17,7 @@ import {
 } from "../../contexts/CurrentUserContext";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Buttons.module.css";
+import Modal from "react-bootstrap/Modal";
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -24,6 +25,7 @@ const ProfileEditForm = () => {
   const { id } = useParams();
   const history = useHistory();
   const imageFile = useRef();
+  const [showModal, setShowModal] = useState(false);
 
   const [profileData, setProfileData] = useState({
     name: "",
@@ -107,11 +109,15 @@ const ProfileEditForm = () => {
         ...currentUser,
         profile_pic: data.profile_pic,
       }));
-      history.goBack();
+      setShowModal(true);
     } catch (err) {
       // console.log(err)
       setErrors(err.response?.data);
     }
+  };
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.goBack();
   };
 
   const textFields = (
@@ -227,6 +233,19 @@ const ProfileEditForm = () => {
       <Form onSubmit={handleSubmit}>
         <Row>
           <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={4}>
+          {showModal && (
+          <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+            <Modal.Header closeButton>
+              <Modal.Title>Success</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Profile has been updated successfully!</Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleCloseModal}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        )}
             <Container className={appStyles.Content}>
               <Form.Group>
                 {profile_pic && (
