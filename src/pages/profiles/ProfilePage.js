@@ -94,7 +94,7 @@ function ProfilePage() {
                   </Button>
                 ) : (
                   <Button
-                    className={btnStyles.FollowBtn}
+                    className={btnStyles.Button}
                     onClick={() => handleFollow(profile)}
                   >
                     Follow

@@ -36,7 +36,7 @@ const Profile = (props) => {
             </Button>
           ) : (
             <Button
-            className={btnStyles.FollowBtn}
+            className={btnStyles.Button}
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => handleFollow(profile)}>
                 Follow

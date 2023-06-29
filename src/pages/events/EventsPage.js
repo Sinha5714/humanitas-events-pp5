@@ -9,12 +9,14 @@ import Event from "./Event";
 import NoResults from "../../assets/no-results.png";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsPage.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
 import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import UpComingEvents from "./UpComingEvents";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import Button from "react-bootstrap/Button";
 
 function EventsPage({ message, filter = "" }) {
   const [events, setEvents] = useState({ results: [] });
@@ -22,12 +24,16 @@ function EventsPage({ message, filter = "" }) {
   const { pathname } = useLocation();
   const currentUser = useCurrentUser();
   const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("");
+  const [subCategory, setSubCategory] = useState("");
 
   useEffect(() => {
     const fetchEvents = async () => {
       try {
         const { data } = await axiosReq.get(
-          `/events/?${filter}search=${query}`
+          `/events/?${filter}search=${query}${
+            category !== null ? `&category=${category}` : ""
+          }${subCategory !== null ? `&sub_category=${subCategory}` : ""}`
         );
         setEvents(data);
         setHasLoaded(true);
@@ -37,7 +43,7 @@ function EventsPage({ message, filter = "" }) {
     };
     setHasLoaded(false);
     fetchEvents();
-  }, [filter, query, pathname, currentUser]);
+  }, [filter, query, pathname, category, subCategory, currentUser]);
 
   return (
     <Row className="h-100">
@@ -57,10 +63,91 @@ function EventsPage({ message, filter = "" }) {
               onChange={(event) => setQuery(event.target.value)}
               type="text"
               className="mr-sm-2"
-              placeholder="Search Events by title, username, date or category"
+              placeholder="Search Events by title, username and date"
             />
           </Form>
         </Container>
+        <Container className="bg-white">
+          <Col>
+            <p className="font-weight-bold text-center">Categories</p>
+          </Col>
+          <Col className="text-center">
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setCategory(null)}
+            >
+              All
+            </Button>
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setCategory("Discrimination")}
+            >
+              Discrimination
+            </Button>
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setCategory("LGBTQ")}
+            >
+              LGBTQ
+            </Button>
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setCategory("Equal-Rights")}
+            >
+              Equal Rights
+            </Button>
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setCategory("Marraige-Rights")}
+            >
+              Marraige Rights
+            </Button>
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setCategory("Work-Rights")}
+            >
+              Work Rights
+            </Button>
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setCategory("Education-Rights")}
+            >
+              Education Rights
+            </Button>
+          </Col>
+        </Container>
+        <Container className="bg-white mt-4 mb-4">
+          <Col>
+            <p className="font-weight-bold text-center">Sub-Categories</p>
+          </Col>
+          <Col className="text-center">
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setSubCategory(null)}
+            >
+              All
+            </Button>
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setSubCategory("Seminars")}
+            >
+              Seminars
+            </Button>
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setSubCategory("Meet-ups")}
+            >
+              Meet-ups
+            </Button>
+            <Button
+              className={btnStyles.Button}
+              onClick={() => setSubCategory("Retreats")}
+            >
+              Retreats
+            </Button>
+          </Col>
+        </Container>
+
         {hasLoaded ? (
           <>
             {events.results.length ? (
