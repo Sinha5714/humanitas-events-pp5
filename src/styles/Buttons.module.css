@@ -1,6 +1,6 @@
 .Button {
     border: none;
-    background-color: #1dfa4d7a;
+    background-color: #91f5ad;
     color: rgb(4, 4, 4);
     font-weight: 700;
     border-radius: 100px;
@@ -11,13 +11,13 @@
 
 .Button:hover {
     cursor: pointer;
-    background-color: rgb(231, 242, 20);
+    background-color: #c2e812;
     color: #242a3d;
 }
 
 .CancelButton {
     border: none;
-    background-color: #e71515;
+    background-color: #ff934f;
     color: rgb(4, 4, 4);
     font-weight: 700;
     border-radius: 100px;
@@ -28,7 +28,6 @@
 
 .CancelButton:hover {
     cursor: pointer;
-    background-color: rgb(243, 122, 122);
     color: #242a3d;
 }
 
