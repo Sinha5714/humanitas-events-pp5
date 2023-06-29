@@ -205,11 +205,16 @@ const ProfileEditForm = () => {
       ))}
       <Button
         className={btnStyles.CancelButton}
+        onMouseDown={(e) => e.preventDefault()}
         onClick={() => history.goBack()}
       >
         Cancel
       </Button>
-      <Button className={btnStyles.Button} type="submit">
+      <Button
+        className={btnStyles.Button}
+        onMouseDown={(e) => e.preventDefault()}
+        type="submit"
+      >
         Save
       </Button>
     </>

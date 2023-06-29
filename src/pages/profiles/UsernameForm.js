@@ -90,7 +90,7 @@ const UsernameForm = () => {
               </Alert>
             ))}
             <Button
-              onMouseDown={(event) => event.preventDefault()}
+              onMouseDown={(e) => e.preventDefault()}
               className={btnStyles.CancelButton}
               onClick={() => history.goBack()}
             >
@@ -99,7 +99,7 @@ const UsernameForm = () => {
             <Button
               type="submit"
               className={btnStyles.Button}
-              onMouseDown={(event) => event.preventDefault()}
+              onMouseDown={(e) => e.preventDefault()}
             >
               Save
             </Button>

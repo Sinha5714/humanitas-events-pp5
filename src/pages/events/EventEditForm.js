@@ -215,6 +215,7 @@ function EventsEditForm() {
 
       <Button
         className={btnStyles.CancelButton}
+        onMouseDown={(e) => e.preventDefault()}
         onClick={() => history.goBack()}
       >
         Cancel

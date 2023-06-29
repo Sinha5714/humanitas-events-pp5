@@ -52,6 +52,7 @@ function CommentEditForm(props) {
       <div className="text-right">
         <button
           className={btnStyles.CancelButton}
+          onMouseDown={(e) => e.preventDefault()}
           onClick={() => {
             setShowEditForm(false);
             setShowAlert(false);

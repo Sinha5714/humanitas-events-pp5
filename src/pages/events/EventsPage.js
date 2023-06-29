@@ -74,42 +74,49 @@ function EventsPage({ message, filter = "" }) {
           <Col className="text-center">
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setCategory(null)}
             >
               All
             </Button>
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setCategory("Discrimination")}
             >
               Discrimination
             </Button>
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setCategory("LGBTQ")}
             >
               LGBTQ
             </Button>
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setCategory("Equal-Rights")}
             >
               Equal Rights
             </Button>
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setCategory("Marraige-Rights")}
             >
               Marraige Rights
             </Button>
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setCategory("Work-Rights")}
             >
               Work Rights
             </Button>
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setCategory("Education-Rights")}
             >
               Education Rights
@@ -123,24 +130,28 @@ function EventsPage({ message, filter = "" }) {
           <Col className="text-center">
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setSubCategory(null)}
             >
               All
             </Button>
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setSubCategory("Seminars")}
             >
               Seminars
             </Button>
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setSubCategory("Meet-ups")}
             >
               Meet-ups
             </Button>
             <Button
               className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setSubCategory("Retreats")}
             >
               Retreats

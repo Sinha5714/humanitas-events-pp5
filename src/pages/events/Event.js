@@ -77,7 +77,7 @@ const Event = (props) => {
         }),
       }));
     } catch (err) {
-        // console.log(err)
+      // console.log(err)
     }
   };
   const handleNotInterested = async () => {
@@ -216,7 +216,12 @@ const Event = (props) => {
                 <Tooltip>You can't send join request to your own event</Tooltip>
               }
             >
-              <Button className={btnStyles.Button}>Click here to Join</Button>
+              <Button
+                className={btnStyles.Button}
+                onMouseDown={(e) => e.preventDefault()}
+              >
+                Click here to Join
+              </Button>
             </OverlayTrigger>
           ) : join_id ? (
             <Button
@@ -239,7 +244,12 @@ const Event = (props) => {
               placement="top"
               overlay={<Tooltip>Log in to send a join request!</Tooltip>}
             >
-              <Button className={btnStyles.Button}>Click here to Join</Button>
+              <Button
+                className={btnStyles.Button}
+                onMouseDown={(e) => e.preventDefault()}
+              >
+                Click here to Join
+              </Button>
             </OverlayTrigger>
           )}
         </div>

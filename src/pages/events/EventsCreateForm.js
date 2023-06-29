@@ -183,6 +183,7 @@ function EventsCreateForm() {
 
       <Button
         onClick={() => history.goBack()}
+        onMouseDown={(e) => e.preventDefault()}
         className={btnStyles.CancelButton}
       >
         Cancel
