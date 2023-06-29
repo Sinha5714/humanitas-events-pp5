@@ -14,6 +14,7 @@ import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsCreateEditForm.module.css";
 import btnStyles from "../../styles/Buttons.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
+import Modal from "react-bootstrap/Modal";
 
 function EventsEditForm() {
   const [eventData, setEventData] = useState({
@@ -38,6 +39,7 @@ function EventsEditForm() {
   const imageInput = useRef(null);
   const history = useHistory();
   const { id } = useParams();
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -103,12 +105,16 @@ function EventsEditForm() {
     }
     try {
       await axiosReq.put(`/events/${id}`, formData);
-      history.push(`/events/${id}`);
+      setShowModal(true);
     } catch (err) {
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
+  };
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.push(`/events/${id}`);
   };
 
   const textFields = (
@@ -234,6 +240,19 @@ function EventsEditForm() {
     <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="py-2 p-0 p-md-2" md={6} lg={6}>
+          {showModal && (
+            <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+              <Modal.Header closeButton>
+                <Modal.Title>Success</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>Event data has been updated successfully!</Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleCloseModal}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          )}
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
