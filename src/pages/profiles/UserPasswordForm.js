@@ -83,13 +83,13 @@ const UserPasswordForm = () => {
                 value={new_password1}
                 onChange={handleChange}
                 name="new_password1"
-                className={`${appStyles.Input} text-center`}
+                className="text-center"
                 aria-label="new password"
               />
             </Form.Group>
 
             {errors?.new_password1?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
@@ -102,13 +102,13 @@ const UserPasswordForm = () => {
                 value={new_password2}
                 onChange={handleChange}
                 name="new_password2"
-                className={`${appStyles.Input} text-center`}
+                className="text-center"
                 aria-label="confirm new password"
               />
             </Form.Group>
 
             {errors?.new_password2?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}

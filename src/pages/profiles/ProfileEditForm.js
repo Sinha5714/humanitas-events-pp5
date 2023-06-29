@@ -132,7 +132,7 @@ const ProfileEditForm = () => {
         />
       </Form.Group>
       {errors?.name?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="warning" className={appStyles.Alert} key={idx}>
           {message}
         </Alert>
       ))}
@@ -147,7 +147,7 @@ const ProfileEditForm = () => {
         />
       </Form.Group>
       {errors?.about_me?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="warning" className={appStyles.Alert} key={idx}>
           {message}
         </Alert>
       ))}
@@ -162,7 +162,7 @@ const ProfileEditForm = () => {
           />
         </Form.Group>
         {errors?.facebook_link?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
             {message}
           </Alert>
         ))}
@@ -176,7 +176,7 @@ const ProfileEditForm = () => {
           />
         </Form.Group>
         {errors?.instagram_link?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
             {message}
           </Alert>
         ))}
@@ -191,7 +191,7 @@ const ProfileEditForm = () => {
         />
       </Form.Group>
       {errors?.phone_number?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="warning" className={appStyles.Alert} key={idx}>
           {message}
         </Alert>
       ))}
@@ -205,7 +205,7 @@ const ProfileEditForm = () => {
         />
       </Form.Group>
       {errors?.email?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="warning" className={appStyles.Alert} key={idx}>
           {message}
         </Alert>
       ))}
@@ -254,7 +254,7 @@ const ProfileEditForm = () => {
                   </figure>
                 )}
                 {errors?.profile_pic?.map((message, idx) => (
-                  <Alert variant="warning" key={idx}>
+                  <Alert variant="warning" className={appStyles.Alert} key={idx}>
                     {message}
                   </Alert>
                 ))}

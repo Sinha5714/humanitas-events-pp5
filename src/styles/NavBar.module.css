@@ -1,5 +1,5 @@
 .NavBar {
-    background-color: #ff9c9c;
+    background-color: #6a6a6e6b;
     border: 1px solid #dadadf;
 }
 
@@ -7,16 +7,34 @@
     padding: 5px;
 }
 
-.Active {
-    color: #c1d718;
+.Active i {
+    color: #e1ff00;
+}
+
+.Active  {
+    color: #e1ff00;
 }
 
 i {
     padding: 7px;
     font-size: 1.6rem;
+    color: rgb(9, 9, 9);
 }
 
 i:hover {
     cursor: pointer;
-    transition: color ease-in-out 0.3s;
+    color: #e1ff00;
+}
+
+a {
+    color: rgb(5, 5, 5)
+}
+
+a:hover {
+    cursor: pointer;
+    color: #e1ff00;
+}
+
+a::after {
+    display: none !important;
 }

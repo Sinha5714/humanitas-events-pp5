@@ -129,7 +129,7 @@ function EventsEditForm() {
         ></Form.Control>
       </Form.Group>
       {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="warning" className={appStyles.Alert} key={idx}>
           {message}
         </Alert>
       ))}
@@ -144,7 +144,7 @@ function EventsEditForm() {
         ></Form.Control>
       </Form.Group>
       {errors?.content?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="warning" className={appStyles.Alert} key={idx}>
           {message}
         </Alert>
       ))}
@@ -160,7 +160,7 @@ function EventsEditForm() {
           ></Form.Control>
         </Form.Group>
         {errors?.event_start_date?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
             {message}
           </Alert>
         ))}
@@ -174,7 +174,7 @@ function EventsEditForm() {
           ></Form.Control>
         </Form.Group>
         {errors?.event_end_date?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
             {message}
           </Alert>
         ))}
@@ -196,7 +196,7 @@ function EventsEditForm() {
         </Form.Control>
       </Form.Group>
       {errors?.category?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="warning" className={appStyles.Alert} key={idx}>
           {message}
         </Alert>
       ))}
@@ -214,7 +214,7 @@ function EventsEditForm() {
         </Form.Control>
       </Form.Group>
       {errors?.sub_category?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="warning" className={appStyles.Alert} key={idx}>
           {message}
         </Alert>
       ))}
@@ -271,7 +271,7 @@ function EventsEditForm() {
               />
             </Form.Group>
             {errors?.image?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
