@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import Upload from "../../assets/upload-image.png";
+import Upload from "../../assets/upload.png";
 import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsCreateEditForm.module.css";
@@ -222,7 +222,7 @@ function EventsCreateForm() {
                     </figure>
                     <div>
                       <Form.Label htmlFor="image-upload">
-                        Add an image
+                        Change the image
                       </Form.Label>
                     </div>
                   </>

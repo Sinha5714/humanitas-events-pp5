@@ -74,7 +74,7 @@ const UpComingEvents = ({ mobile }) => {
           )}
         </>
       ) : (
-        <Asset spinner />
+        <Asset message="No upcoming events"/>
       )}
     </Container>
   );
