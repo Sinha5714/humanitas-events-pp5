@@ -111,7 +111,7 @@ const NavBar = () => {
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
-          <Navbar.Brand>Humanitas Events</Navbar.Brand>
+          <Navbar.Brand className="text-green">Humanitas Events</Navbar.Brand>
         </NavLink>
         {currentUser && addEventIcon}
         <Navbar.Toggle

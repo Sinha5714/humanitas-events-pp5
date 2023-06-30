@@ -124,7 +124,7 @@ function ProfilePage() {
 
         {profile?.about_me && (
           <>
-            <Col className="p-1">About Me:</Col>
+            <Col className="p-1">Bio:</Col>
             <Col className="p-2">
               <strong>{profile?.about_me}</strong>
             </Col>
