@@ -1,27 +1,32 @@
+// React imports
 import React, { useEffect, useState } from "react";
-import Asset from "../../components/Asset";
-import styles from "../../styles/ProfilePage.module.css";
-import btnStyles from "../../styles/Buttons.module.css";
-import appStyles from "../../App.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+// Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
+// CSS imports
+import styles from "../../styles/ProfilePage.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
+import appStyles from "../../App.module.css";
+// Components imports
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import Asset from "../../components/Asset";
 import PopularProfiles from "./PopularProfiles";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useProfileData,
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
 import ProfileContactDetails from "./ProfileContactDetails";
-import NoResults from "../../assets/no-results.png";
-import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Event from "../events/Event";
 import { ProfileEditDropdown } from "../../components/Dropdowns";
+// Image imports
+import NoResults from "../../assets/no-results.png";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);

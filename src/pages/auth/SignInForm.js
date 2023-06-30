@@ -1,15 +1,19 @@
+// React imports
 import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import axios from "axios";
+// Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
+// CSS imports
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SignInSignUpForm.module.css";
 import btnStyles from "../../styles/Buttons.module.css";
-import { Link, useHistory } from "react-router-dom";
-import axios from "axios";
+// Components imports
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";

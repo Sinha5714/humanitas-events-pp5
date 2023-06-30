@@ -1,14 +1,17 @@
+// React imports
 import React from "react";
-import NotFound from "../assets/404.jpg";
-import appStyles from "../App.module.css";
-import btnStyles from "../styles/Buttons.module.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+// Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-
+// CSS imports
+import appStyles from "../App.module.css";
+import btnStyles from "../styles/Buttons.module.css";
+// Image import
+import NotFound from "../assets/404.jpg";
 
 const PageNotFound = () => {
   return (

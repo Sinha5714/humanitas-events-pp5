@@ -1,8 +1,12 @@
-import styles from "./App.module.css";
-import NavBar from "./components/NavBar";
+// React imports
 import { Route, Switch } from "react-router-dom";
+// Bootstrap imports
 import Container from "react-bootstrap/Container";
+// CSS imports
+import styles from "./App.module.css";
+// Components imports
 import "./api/axiosDefaults";
+import NavBar from "./components/NavBar";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import EventsCreateForm from "./pages/events/EventsCreateForm";

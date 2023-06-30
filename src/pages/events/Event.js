@@ -1,17 +1,21 @@
+// React imports
 import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+// Bootstrap imports
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+// CSS imports
+import styles from "../../styles/Event.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
+// Components imports
 import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";
 import { EditDeleteDropdown } from "../../components/Dropdowns";
 import Feedback from "../../components/Feedback";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import styles from "../../styles/Event.module.css";
-import btnStyles from "../../styles/Buttons.module.css";
 import {
   EndDateFormatter,
   StartDateFormatter,

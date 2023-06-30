@@ -1,11 +1,15 @@
+// React imports
 import React, { useEffect, useState } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+// Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import InfiniteScroll from "react-infinite-scroll-component";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosReq } from "../../api/axiosDefaults";
+// CSS imports
 import appStyles from "../../App.module.css";
+import { axiosReq } from "../../api/axiosDefaults";
+// Components imports
 import Asset from "../../components/Asset";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { fetchMoreData } from "../../utils/utils";

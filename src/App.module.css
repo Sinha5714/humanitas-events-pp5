@@ -2,11 +2,19 @@
     font-family: "Work Sans", sans-serif;
     background-color: #eef4f9;
     min-height: 100vh;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .Main {
     padding-top: 81px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 900;
 }
 
 * {
@@ -24,10 +32,6 @@
     max-height: 40vh;
     max-width: 100%;
     object-fit: contain;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 input[type="file"] {

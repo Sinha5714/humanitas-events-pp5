@@ -1,10 +1,14 @@
+// React imports
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+// Bootstrap imports
+import Button from "react-bootstrap/Button";
+// CSS imports
 import styles from "../../styles/Profile.module.css";
 import btnStyles from "../../styles/Buttons.module.css";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+// Components imports
 import Avatar from "../../components/Avatar";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Button from "react-bootstrap/Button";
 import { useSetProfileData } from "../../contexts/ProfileDataContext";
 
 const Profile = (props) => {
@@ -29,17 +33,19 @@ const Profile = (props) => {
           !is_owner &&
           (following_id ? (
             <Button
-            className={btnStyles.UnfollowBtn}
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => handleUnfollow(profile)}>
-                Unfollow
+              className={btnStyles.UnfollowBtn}
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => handleUnfollow(profile)}
+            >
+              Unfollow
             </Button>
           ) : (
             <Button
-            className={btnStyles.Button}
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => handleFollow(profile)}>
-                Follow
+              className={btnStyles.Button}
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => handleFollow(profile)}
+            >
+              Follow
             </Button>
           ))}
       </div>

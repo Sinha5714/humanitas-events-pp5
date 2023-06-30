@@ -1,4 +1,6 @@
+// React imports
 import { createContext, useContext, useEffect, useState } from "react";
+// Components imports
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { followHelper, unfollowHelper } from "../utils/utils";
 import { useCurrentUser } from "./CurrentUserContext";
@@ -37,7 +39,7 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-        // console.log(err)
+      // console.log(err)
     }
   };
 

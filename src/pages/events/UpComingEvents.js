@@ -1,12 +1,16 @@
+// React imports
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+// Bootstrap imports
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosReq } from "../../api/axiosDefaults";
-import Asset from "../../components/Asset";
+// CSS imports
 import appStyles from "../../App.module.css";
+// Components imports
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { StartDateFormatter } from "../../utils/DateFormatter";
+import { axiosReq } from "../../api/axiosDefaults";
+import Asset from "../../components/Asset";
 
 const UpComingEvents = ({ mobile }) => {
   const [upcomingEventsData, setUpcomingEventsData] = useState({
@@ -74,7 +78,7 @@ const UpComingEvents = ({ mobile }) => {
           )}
         </>
       ) : (
-        <Asset message="No upcoming events"/>
+        <Asset message="No upcoming events" />
       )}
     </Container>
   );

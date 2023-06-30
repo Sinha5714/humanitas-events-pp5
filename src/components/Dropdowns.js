@@ -1,7 +1,10 @@
-import styles from "../styles/Dropdowns.module.css";
+// React imports
 import React from "react";
-import Dropdown from "react-bootstrap/Dropdown";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+// CSS imports
+import styles from "../styles/Dropdowns.module.css";
+// Bootstrap imports
+import Dropdown from "react-bootstrap/Dropdown";
 
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
   <i

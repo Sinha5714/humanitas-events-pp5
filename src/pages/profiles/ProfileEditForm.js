@@ -1,4 +1,10 @@
+// React imports
 import React, { useEffect, useRef, useState } from "react";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
+// Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -6,18 +12,16 @@ import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
-import {
-  useHistory,
-  useParams,
-} from "react-router-dom/cjs/react-router-dom.min";
+import Modal from "react-bootstrap/Modal";
+// CSS imports
+import appStyles from "../../App.module.css";
+import btnStyles from "../../styles/Buttons.module.css";
+// Components imports
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
-import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Buttons.module.css";
-import Modal from "react-bootstrap/Modal";
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -233,19 +237,19 @@ const ProfileEditForm = () => {
       <Form onSubmit={handleSubmit}>
         <Row>
           <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={4}>
-          {showModal && (
-          <Modal show={showModal} onHide={handleCloseModal} centered={true}>
-            <Modal.Header closeButton>
-              <Modal.Title>Success</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>Profile has been updated successfully!</Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleCloseModal}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        )}
+            {showModal && (
+              <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Success</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Profile has been updated successfully!</Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleCloseModal}>
+                    Close
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+            )}
             <Container className={appStyles.Content}>
               <Form.Group>
                 {profile_pic && (
@@ -254,7 +258,11 @@ const ProfileEditForm = () => {
                   </figure>
                 )}
                 {errors?.profile_pic?.map((message, idx) => (
-                  <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                  <Alert
+                    variant="warning"
+                    className={appStyles.Alert}
+                    key={idx}
+                  >
                     {message}
                   </Alert>
                 ))}

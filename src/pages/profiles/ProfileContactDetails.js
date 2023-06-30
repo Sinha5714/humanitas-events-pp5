@@ -1,13 +1,17 @@
+// React imports
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom/cjs/react-router-dom.min";
+// Bootstrap imports
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+// CSS imports
+import appStyles from "../../App.module.css";
+// Components imports
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useProfileData,
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
-import appStyles from "../../App.module.css";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 
 const ProfileContactDetails = ({ mobile }) => {
   const { id } = useParams();

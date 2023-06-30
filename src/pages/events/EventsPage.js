@@ -1,22 +1,27 @@
+// React imports
 import React, { useEffect, useState } from "react";
+import Asset from "../../components/Asset";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+// Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosReq } from "../../api/axiosDefaults";
-import Event from "./Event";
-import NoResults from "../../assets/no-results.png";
+import Button from "react-bootstrap/Button";
+// CSS imports
 import appStyles from "../../App.module.css";
 import styles from "../../styles/EventsPage.module.css";
 import btnStyles from "../../styles/Buttons.module.css";
-import Asset from "../../components/Asset";
-import InfiniteScroll from "react-infinite-scroll-component";
+// Components imports
+import { axiosReq } from "../../api/axiosDefaults";
+import Event from "./Event";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import UpComingEvents from "./UpComingEvents";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Button from "react-bootstrap/Button";
+// Image imports
+import NoResults from "../../assets/no-results.png";
 
 function EventsPage({ message, filter = "" }) {
   const [events, setEvents] = useState({ results: [] });
