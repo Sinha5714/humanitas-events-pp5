@@ -25,7 +25,11 @@ const PageNotFound = () => {
             rounded
           />
           <p className="bg-dark text-white">
-            <a href="https://www.freepik.com/free-vector/404-error-with-landscape-concept-illustration_20602785.htm#query=404%20page&position=4&from_view=search&track=ais">
+            <a
+              href="https://www.freepik.com/free-vector/404-error-with-landscape-concept-illustration_20602785.htm#query=404%20page&position=4&from_view=search&track=ais"
+              rel="noreferrer"
+              target="_blank"
+            >
               Image by storyset
             </a>{" "}
             on Freepik
