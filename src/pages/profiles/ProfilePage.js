@@ -38,7 +38,7 @@ function ProfilePage() {
       try {
         const [{ data: pageProfile }, { data: profileEvents }] =
           await Promise.all([
-            axiosReq.get(`/profiles/${id}`),
+            axiosReq.get(`/profiles/${id}/`),
             axiosReq.get(`/events/?owner__profile=${id}`),
           ]);
         setProfileData((prevState) => ({
@@ -160,7 +160,7 @@ function ProfilePage() {
   return (
     <Row>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <PopularProfiles />
+        <PopularProfiles mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
