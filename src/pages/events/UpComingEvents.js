@@ -62,6 +62,7 @@ const UpComingEvents = ({ mobile }) => {
           ) : (
             upcomingEvents.results
               .filter((a) => new Date(a.event_start_date) - new Date() > 0)
+              .slice(0, 6)
               .map((event) => (
                 <div key={event.id}>
                   <Link to={`/events/${event.id}`}>
