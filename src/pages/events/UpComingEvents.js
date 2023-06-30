@@ -47,15 +47,10 @@ const UpComingEvents = ({ mobile }) => {
             <div className="d-flex">
               {upcomingEvents.results
                 .filter((a) => new Date(a.event_start_date) - new Date() > 0)
-                .slice(0, 5)
+                .slice(0, 3)
                 .map((event) => (
                   <Card key={event.id} className="mr-2 p-2">
                     <Link to={`/events/${event.id}`}>{event.title}</Link>
-                    <p>
-                      <StartDateFormatter
-                        event_start_date={event.event_start_date}
-                      />
-                    </p>
                   </Card>
                 ))}
             </div>

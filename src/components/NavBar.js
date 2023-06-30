@@ -52,7 +52,6 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/feed"
-        onClick={() => {}}
       >
         <i className="fas fa-stream"></i>Feed
       </NavLink>
@@ -62,7 +61,6 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/interests"
-        onClick={() => {}}
       >
         <i className="fas fa-star"></i>Interested
       </NavLink>

@@ -16,7 +16,7 @@ const PopularProfiles = () => {
       {popularProfiles.results.length ? (
         <>
           <h4 className="text-center">Follow Our Top Organisers</h4>
-          {popularProfiles.results.slice(0, 4).map((profile) => (
+          {popularProfiles.results.slice(0, 5).map((profile) => (
             <Container
               key={profile.id}
               className="d-inline justify-content-center align-items-center"
