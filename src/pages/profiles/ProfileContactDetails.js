@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 // CSS imports
 import appStyles from "../../App.module.css";
+import styles from "../../styles/Profile.module.css";
 // Components imports
 import { axiosReq } from "../../api/axiosDefaults";
 import {
@@ -43,24 +44,24 @@ const ProfileContactDetails = ({ mobile }) => {
     >
       <h5 className="text-center p-2">Contact Details</h5>
       {profile?.phone_number && (
-        <Col className="p-1">
+        <Col className={`p-1 ${styles.WordBreak}`}>
           <i className="fas fa-phone-alt"></i> {profile?.phone_number}
         </Col>
       )}
       {profile?.email && (
-        <Col className="p-1">
+        <Col className={`p-1 ${styles.WordBreak}`}>
           <i className="fas fa-at"></i> {profile?.email}
         </Col>
       )}
       {profile?.facebook_link && (
-        <Col className="p-1">
+        <Col className={`p-1 ${styles.WordBreak}`}>
           <Link to={{ pathname: profile.facebook_link }} target="_blank">
             <i className="fab fa-facebook"></i> {profile?.facebook_link}
           </Link>
         </Col>
       )}
       {profile?.instagram_link && (
-        <Col className="p-1">
+        <Col className={`p-1 ${styles.WordBreak}`}>
           <Link to={{ pathname: profile.instagram_link }} target="_blank">
             <i className="fab fa-instagram"></i> {profile?.instagram_link}
           </Link>

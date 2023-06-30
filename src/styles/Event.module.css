@@ -13,7 +13,7 @@ h5 {
 }
 
 .Star {
-    color: rgb(246, 255, 0);
+    color: #c2e812;
 }
 
 .Star:hover {
@@ -21,6 +21,6 @@ h5 {
 }
 
 .StarOutline:hover {
-    color: yellow;
+    color: #c2e812;
 }
 
