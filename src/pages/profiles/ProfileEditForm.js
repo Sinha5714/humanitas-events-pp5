@@ -77,6 +77,7 @@ const ProfileEditForm = () => {
             email,
           });
         } catch (err) {
+          // console.log(err)
           history.push("/");
         }
       } else {
