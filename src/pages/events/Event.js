@@ -211,20 +211,20 @@ const Event = (props) => {
         </div>
         <div>
           <span className="mr-2">
-            {join_request} people are joining this event.{" "}
+            {join_request} people are attending this event.{" "}
           </span>
           {is_owner ? (
             <OverlayTrigger
               placement="top"
               overlay={
-                <Tooltip>You can't send join request to your own event</Tooltip>
+                <Tooltip>You can't add attending to your own event</Tooltip>
               }
             >
               <Button
                 className={btnStyles.Button}
                 onMouseDown={(e) => e.preventDefault()}
               >
-                Click here to Join
+                Attend
               </Button>
             </OverlayTrigger>
           ) : join_id ? (
@@ -233,7 +233,7 @@ const Event = (props) => {
               onMouseDown={(e) => e.preventDefault()}
               className={btnStyles.CancelButton}
             >
-              Cancel Join Request
+              You are attending!
             </Button>
           ) : currentUser ? (
             <Button
@@ -241,18 +241,18 @@ const Event = (props) => {
               onMouseDown={(e) => e.preventDefault()}
               className={btnStyles.Button}
             >
-              Click here to Join
+              Attend
             </Button>
           ) : (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>Log in to send a join request!</Tooltip>}
+              overlay={<Tooltip>Log in to show you want to attend!</Tooltip>}
             >
               <Button
                 className={btnStyles.Button}
                 onMouseDown={(e) => e.preventDefault()}
               >
-                Click here to Join
+                Attend
               </Button>
             </OverlayTrigger>
           )}
