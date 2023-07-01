@@ -107,9 +107,9 @@ const NavBar = () => {
       <Container>
         <NavLink to="/">
           <Navbar.Brand>
-            <img src={logo} alt="logo" height="55" />
+            <img src={logo} className={styles.logo} alt="logo" height="55" />
           </Navbar.Brand>
-          <Navbar.Brand className="text-success d-none d-lg-inline">Humanitas Events</Navbar.Brand>
+          <Navbar.Brand className= "text-secondary d-none d-lg-inline">Humanitas Events</Navbar.Brand>
         </NavLink>
         {currentUser && addEventIcon}
         <Navbar.Toggle

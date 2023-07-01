@@ -42,7 +42,7 @@ const UpComingEvents = ({ mobile }) => {
     >
       {upcomingEvents.results.length ? (
         <>
-          <h4 className="text-center mb-4">Top Upcoming Events</h4>
+          <h4 className="text-center mb-4">Upcoming Events</h4>
           {mobile ? (
             <div className="d-flex">
               {upcomingEvents.results

@@ -246,7 +246,7 @@ const Event = (props) => {
           ) : (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>Log in to show you want to attend!</Tooltip>}
+              overlay={<Tooltip>Log in if you want to attend!</Tooltip>}
             >
               <Button
                 className={btnStyles.Button}

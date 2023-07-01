@@ -15,7 +15,7 @@ const PopularProfiles = () => {
     <Container className={`${appStyles.Content} mb-3`}>
       {popularProfiles.results.length ? (
         <>
-          <h4 className="text-center">Follow Our Top Organisers</h4>
+          <h4 className="text-center">Follow our Top Organisers</h4>
           {popularProfiles.results.slice(0, 5).map((profile) => (
             <Container
               key={profile.id}
