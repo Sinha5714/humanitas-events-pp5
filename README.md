@@ -32,8 +32,11 @@ Developer: Shubham Sinha
    1. [Colors](#colours)
    2. [Fonts](#fonts)
 
-5. [Front End](#front-end)
-6. [Back End API](#back-end-api)
+5. [Project Structure](#project-structure)
+   1. [Front End](#front-end)
+   2. [Back End API](#back-end-api)
+
+6. [Features](#features)
 
 # About
 
@@ -179,9 +182,11 @@ The key functionality aspects:
 <img src="docs/readme/worksans.png">
 </details>
 
-## Front-End
+## Project Structure
 
-### React
+### Front-End
+
+#### React
 
 React is a declarative, efficient, and flexible JavaScript library for building user interfaces. Its primary goal is to make it easy to reason about an interface and its state at any point in time, by dividing the UI into a collection of independent and reusable components ([source](https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795/)).
 
@@ -251,10 +256,37 @@ There were various pages created and used in this application
   - UsernameForm.js - This file handles the username change form
   - UserPasswordForm.js - This file handles the password change form
 
-## Back-End API
+### Back-End API
 
-### Django REST Framework
+#### Django REST Framework
 
 The API for this Front-End application was built with the Django REST Framework. The repository with a README file for the DRF Back-End can be found [here](https://github.com/Sinha5714/pp5-api-ref).
 
 ##### Back to [top](#table-of-contents)
+
+## Features
+
+### Implemented Features
+
+#### Navigation(Navbar)
+
+- Navbar consists of Logo image and is displayed in all pages for easy navigation of website
+- Navbar consists of name of website which is displayed in larger device
+- Logo and website name both are links for home page 
+- Navbar consists of a links to a signin page and signup page for logged out users
+- Authenticated/Signed in user can see additional icons as follows:
+  - Add event: It opens the event create form page
+  - Feed: It shows the events posted of all users whom the logged in user has followed 
+  - Interested: It shows the events user has shown interest into
+  - Logout: This is used for user to logout
+  - Profile: This shows the user avatar and opens the user's profile page
+- Feature is fully responsive and on smaller screen sizes it coverts into a 'Hamburger menu'
+
+<details><summary>See Nav-bar</summary>
+
+![Navbar before signin]()
+![Navbar before signin - smaller device]()
+![Navbar after signin]()
+![Navbar after signin - smaller device]()
+
+</details>
