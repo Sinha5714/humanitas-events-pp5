@@ -27,6 +27,11 @@ Developer: Shubham Sinha
    2. [Libraries, frameworks and dependencies](#libraries-frameworks-and-dependencies)
    3. [Tools & Programs](#tools--programs)
 
+4. [Design](#design)
+
+   1. [Colors](#colours)
+   2. [Fonts](#fonts)
+
 # About
 
 - Humanitas Events is a platform where organisers can share the events they are organising related to human-rights topics.
@@ -103,12 +108,14 @@ The key functionality aspects:
 24. As a site users I can view my avatar or other user's avatar so that I know with whom I am interacting
 25. As a site user I can keep scrolling through the page and comments so that they are loaded automatically and I don't have to select next page
 26. As a site user I can be inform if my action has been successful so that I can be sure that my data is changed
+27. As a site user I can search for events with keywords so that I can find the events I am interested in
 
 ### Site Owner Stories
 
-27. As a site owner I can provide full access to logged in user so that they can interact with the pages more independently
-28. As a site owner I can restrict the interaction with website so that an unauthorised user cannot make changes in the app
-29. As a site owner I can make sure my site is responsive so that user can view the website in all devices without any problem
+28. As a site owner I can provide full access to logged in user so that they can interact with the pages more independently
+29. As a site owner I can restrict the interaction with website so that an unauthorised user cannot make changes in the app
+30. As a site owner I can make sure my site is responsive so that user can view the website in all devices without any problem
+31. As a site owner I want users to come to a 404 error page so that they don't have to user the browser back button if they enter a URL that does not exist
 
 ## Technologies Used
 
@@ -148,3 +155,22 @@ The key functionality aspects:
   - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) used to validate performance, accessibility, best practice and SEO of the app
 
 ##### Back to [top](#table-of-contents)
+
+## Design
+
+### Colours
+
+- I have tried to keep the color of the website simple, light and in matching with the logo.
+- I tried to find the similar palette using [Coolors](https://coolors.co/?home)
+
+<details><summary>See Color Palette</summary>
+<img src="docs/readme/coolers.png">
+</details>
+
+### Fonts
+
+- Google fonts "'Work Sans', sans-serif" font were used for this project as it offers clean and legible design, which makes it easy to read on screens of different sizes and resolutions. It has a neutral appearance and doesn't have any distracting features that can make it difficult to read.
+
+<details><summary>See Work Sans</summary>
+<img src="docs/readme/worksans.png">
+</details>
