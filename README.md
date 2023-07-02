@@ -32,6 +32,9 @@ Developer: Shubham Sinha
    1. [Colors](#colours)
    2. [Fonts](#fonts)
 
+5. [Front End](#front-end)
+6. [Back End API](#back-end-api)
+
 # About
 
 - Humanitas Events is a platform where organisers can share the events they are organising related to human-rights topics.
@@ -148,6 +151,7 @@ The key functionality aspects:
 - [Font Awesome](https://fontawesome.com/) - Icons from Font Awesome were used throughout the site
 - [Google Fonts](https://fonts.google.com/) - import of font for the website
 - [CodeAnyWhere](https://app.codeanywhere.com/) was IDE used for writing code and to push the code to GitHub
+- [GitHub](https://github.com/) was used as a remote repository to store project code
 - Validation:
   - [WC3 Validator](https://validator.w3.org/) was used to validate the html
   - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) was used to validate the css
@@ -174,3 +178,83 @@ The key functionality aspects:
 <details><summary>See Work Sans</summary>
 <img src="docs/readme/worksans.png">
 </details>
+
+## Front-End
+
+### React
+
+React is a declarative, efficient, and flexible JavaScript library for building user interfaces. Its primary goal is to make it easy to reason about an interface and its state at any point in time, by dividing the UI into a collection of independent and reusable components ([source](https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795/)).
+
+I used React for this application for several reasons:
+
+- Speed - applying React significantly increases the page loading speed and reducing the wait, which affects user experience and satisfaction
+- Flexibility - the React code is easier to maintain and is flexible due to its modular structure, compared to other front-end frameworks
+- React Bootstrap - excellent choice for improving user experience, used for styling and responsiveness. It comes with ready-to-use React built components. They are implemented with accessibility in mind, which is a vital factor when creating a front-end application.
+- Reusability of components - no need to write various codes for the same features
+
+There were various components created and reused across this application.
+
+- `<Asset />` - multi purpose component, used to display a range of items due to being passed props.
+
+  - Those include a loading spinner from React Bootstrap, image with source and alt attribute or a message consisting of a paragraph.
+
+- `<Avatar />` - resuable component, used to display the relevant user profile picture.
+
+  - This component uses props which can specify the source of the image and also its size
+  - This components was used in profile avatar, event owner, comment create form and comments posted
+
+- `<DropDowns />` - resuable component, used to display the three dots option button based on the required rights of the user.
+
+  - This was used for user who are authorised to make changes. For example, for user to edit and delete their own comments and user to edit their profile, change their username and password.
+
+- `<Feedback />` - resuable component, used to display feedback messages.
+
+  - This component was used in when user edit and delete their comments successfully
+  - This component is also displayed when user deletes his events posted
+
+- `<NavBar />` - resuable component, used for easy navigation of the site.
+
+  - This component is re usable as it will display different icons based on a users logged in status.
+  - If no user is logged in a log in, sign up and contact icon will be available however if a user is currently logged in, the full range of icons will be available apart from log in.
+
+- `<PageNotFound />` - specific component, used to display a 404 page made up of an image file and return home button for when the page does not exist.
+
+There were various pages created and used in this application
+
+- auth - The auth page group consisted of the following files:
+
+  - SignInForm.js - This file handles the Login form
+  - SignUpForm.js - This file handles the Sign up form
+
+- comments - The comments page group consisted of the following files:
+
+  - Comment.js - This file returns the comments
+  - CommentEditForm.js - This file handles the comment edit form
+  - CommentCreateForm.js - This file handles the create comment form
+
+- events - The events page group consisted of the following files:
+
+  - Event.js - This file returns the event and all its related info
+  - EventCreateForm.js - This file handles the event create form
+  - EventEditForm.js - This file handles the event edit form
+  - EventPage.js - This file handles the event detail
+  - EventsPage.js - This file returns the list of events
+  - UpComingEvents.js - This file returns upcoming events
+
+- profiles - The profiles page group consisted of the following files:
+
+  - Profile.js - This file returns the profile section
+  - ProfilePage.js - This file returns the entire Profile page
+  - PopularProfiles.js - This file returns the users of the site as per their events counts
+  - ProfileContactDetails.js - This file returns the contact details of the user's profile
+  - ProfileEditForm.js - This file handles the profile edit form
+  - UsernameForm.js - This file handles the username change form
+  - UserPasswordForm.js - This file handles the password change form
+
+## Back-End API
+
+### Django REST Framework
+
+The API for this Front-End application was built with the Django REST Framework. The repository with a README file for the DRF Back-End can be found [here](https://github.com/Sinha5714/pp5-api-ref).
+
+##### Back to [top](#table-of-contents)
