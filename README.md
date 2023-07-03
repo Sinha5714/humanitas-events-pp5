@@ -429,7 +429,7 @@ The API for this Front-End application was built with the Django REST Framework.
 
 #### Event Edit Page
 
-- This page consists of event form where user can edit the data of the event
+- This page consists of event form where event owner can edit the data of the event
 - Event owner can access this page by clicking on edit icon in event detail page
 - After successful update user is displayed successful message
 
@@ -438,5 +438,20 @@ The API for this Front-End application was built with the Django REST Framework.
 ![Event Edit Page](docs/readme/eventedit-large.png)
 ![Event Edit Page-smaller devices](docs/readme/event-edit-small.png)
 ![Event Edit success Modal](docs/readme/eventedit-success.png)
+
+</details>
+
+#### Profile Page
+
+- This page consists the detail of user including their bio, following and followers counts and events posted by that user
+- User can access other's profile by clicking on avatar of other users
+- Logged in user can access this page by clicking on their avatar image in Navbar
+
+<details><summary>See Profile Page</summary>
+
+![Profile Page](docs/readme/profilepage.png)
+![Profile Page-smaller device](docs/readme/profilepage-small.png)
+![Profile Page- events](docs/readme/profileevents.png)
+![Profile page- loggedin user](docs/readme/owner-profilepage.png)
 
 </details>
