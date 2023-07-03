@@ -42,18 +42,23 @@ Developer: Shubham Sinha
    1. [Implemented Features](#implemented-features)
    2. [Features to be Implemented](#features-to-be-implemented)
 
-7. [Deployment](#deployment)
+7. [Validation](#validation)
+
+   1. [CSS](#css)
+   2. [Html](#html)
+
+8. [Deployment](#deployment)
 
    1. [Deploying in Heroku](#deploying-the-website-in-heroko)
    2. [Forking of Github repo](#forking-the-github-repository)
    3. [Cloning the Github repo](#cloning-the-repository-in-github)
 
-8. [Credits](#credits)
+9. [Credits](#credits)
 
    1. [Image](#images)
    2. [Code](#code)
 
-9. [Thank You](#thank-you)
+10. [Thank You](#thank-you)
 
 # About
 
@@ -518,8 +523,17 @@ The API for this Front-End application was built with the Django REST Framework.
 - A contact form for user to ask if they have some problem with authentication or asking about individual event
 - Deletion of profile if user no longet to continue with the website
 
-
 ## Validation
+
+### CSS
+
+- [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)was used to validate the css in the project.
+- Validator with no errors.
+- The deployed app was passed as url input for validation
+
+<details><summary>Jigsaw validation screenshot</summary>
+<img src="docs/readme/css-validation.png">
+</details>
 
 ### Html
 
@@ -534,7 +548,6 @@ The API for this Front-End application was built with the Django REST Framework.
 <details><summary>No error screenshot</summary>
 <img src="docs/readme/htmlvalidator.png" >
 </details>
-
 
 ## Deployment
 
