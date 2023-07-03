@@ -284,9 +284,9 @@ The API for this Front-End application was built with the Django REST Framework.
 
 <details><summary>See Nav-bar</summary>
 
-![Navbar before signin]()
-![Navbar before signin - smaller device]()
-![Navbar after signin]()
-![Navbar after signin - smaller device]()
+![Navbar before signin](docs/readme/navbar-large.png)
+![Navbar before signin - smaller device](docs/readme/navbar-small.png)
+![Navbar after signin](docs/readme/navbar-user-large.png)
+![Navbar after signin - smaller device](docs/readme/navbar-user-small.png)
 
 </details>
