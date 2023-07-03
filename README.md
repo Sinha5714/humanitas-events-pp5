@@ -33,6 +33,7 @@ Developer: Shubham Sinha
    2. [Fonts](#fonts)
 
 5. [Project Structure](#project-structure)
+
    1. [Front End](#front-end)
    2. [Back End API](#back-end-api)
 
@@ -272,11 +273,11 @@ The API for this Front-End application was built with the Django REST Framework.
 
 - Navbar consists of Logo image and is displayed in all pages for easy navigation of website
 - Navbar consists of name of website which is displayed in larger device
-- Logo and website name both are links for home page 
+- Logo and website name both are links for home page
 - Navbar consists of a links to a signin page and signup page for logged out users
 - Authenticated/Signed in user can see additional icons as follows:
   - Add event: It opens the event create form page
-  - Feed: It shows the events posted of all users whom the logged in user has followed 
+  - Feed: It shows the events posted of all users whom the logged in user has followed
   - Interested: It shows the events user has shown interest into
   - Logout: This is used for user to logout
   - Profile: This shows the user avatar and opens the user's profile page
@@ -288,5 +289,91 @@ The API for this Front-End application was built with the Django REST Framework.
 ![Navbar before signin - smaller device](docs/readme/navbar-small.png)
 ![Navbar after signin](docs/readme/navbar-user-large.png)
 ![Navbar after signin - smaller device](docs/readme/navbar-user-small.png)
+
+</details>
+
+#### Sign Up Page
+
+- This page consists of sign up form for user to create new account
+- New users can access this page by clicked on SignUp link on Navbar
+
+<details><summary>See Sign Up Page</summary>
+
+![Signup Page](docs/readme/signup.png)
+
+</details>
+
+#### Sign In Page
+
+- This page consists of sign in form for existing user to signin using their credentials
+- Users can access this page by clicking on SignIn link on Navbar
+
+<details><summary>See Sign In Page</summary>
+
+![Signin Page](docs/readme/signin.png)
+
+</details>
+
+#### HomePage
+
+- This page consists of four components as follows
+  - Popular Profiles(Our Top Organisers)
+  - Events Posts
+  - Upcoming events
+  - Search form and filters
+
+##### Popular Profiles (Our Top Organisers)
+
+- This component is displayed on top of the page.
+- This component uses filter to order all the site users by events counts they organised
+- Logged in users can follow and unfollow users from here as well
+- User can click on these profiles avatar and see profile page of them
+
+<details><summary>See Top Organisers Section</summary>
+
+![Top Organisers](docs/readme/popular.png)
+![Top Organisers-small devices](docs/readme/popular-small.png)
+
+</details>
+
+##### Events Posted
+
+- All events posted by users and organisers are displayed here.
+- This component has infinite scroll functionality for user to scroll to view events posted and do not have to click for going to next page
+- The event posted is in form of a card and displays following:
+  - Event organiser avatar
+  - Image of event
+  - Title, content and date of evennt starting and ending
+  - Categories and sub-categories
+  - Intersted, comments and attending counts
+  - Logged in user and not event owner can show interest and add his number in attendance list
+
+<details><summary>See Event Section</summary>
+
+![Event](docs/readme/events.png)
+
+</details>
+
+##### Upcoming Events
+
+- This component consists of events which has been upcoming in future
+- User can click on the title and open the events detail page
+
+<details><summary>See UpComing events Section</summary>
+
+![UpComing Event](docs/readme/upcoming.png)
+![UpComing Event -small devices](docs/readme/upcoming-small.png)
+
+</details>
+
+##### Search form and filters
+
+- This component is provided for user to search all events easily by their title, date, category and sub-category.
+- User can also type other user's name and see all events posted by them
+- This component has a search bar for user to type and search and also filter buttons for categories and sub-categories for better user interaction
+
+<details><summary>See Search form and filters Section</summary>
+
+![Search form and filters](docs/readme/search-filters.png)
 
 </details>
