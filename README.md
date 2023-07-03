@@ -48,18 +48,20 @@ Developer: Shubham Sinha
    2. [Html](#html)
    3. [Lighthouse](#lighthouse)
 
-8. [Deployment](#deployment)
+8. [Testing](#testing)
+
+9. [Deployment](#deployment)
 
    1. [Deploying in Heroku](#deploying-the-website-in-heroko)
    2. [Forking of Github repo](#forking-the-github-repository)
    3. [Cloning the Github repo](#cloning-the-repository-in-github)
 
-9. [Credits](#credits)
+10. [Credits](#credits)
 
-   1. [Image](#images)
-   2. [Code](#code)
+    1. [Image](#images)
+    2. [Code](#code)
 
-10. [Thank You](#thank-you)
+11. [Thank You](#thank-you)
 
 # About
 
@@ -528,7 +530,6 @@ The API for this Front-End application was built with the Django REST Framework.
 
 ![PageNotFound Page](docs/readme/pagenotfound.png)
 
-
 </details>
 
 ### Features to be Implemented
@@ -650,6 +651,10 @@ The API for this Front-End application was built with the Django REST Framework.
 <details><summary>PageNotFound Mobile-screen</summary>
 <img src="docs/lighthouse/lh-404-mob.png" >
 </details>
+
+## Testing
+
+- Testing of the website can be [seen here](https://github.com/Sinha5714/humanitas-events-pp5/blob/main/TESTING.md)
 
 ## Deployment
 
