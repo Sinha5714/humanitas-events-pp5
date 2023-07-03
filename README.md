@@ -38,8 +38,22 @@ Developer: Shubham Sinha
    2. [Back End API](#back-end-api)
 
 6. [Features](#features)
+
    1. [Implemented Features](#implemented-features)
    2. [Features to be Implemented](#features-to-be-implemented)
+
+7. [Deployment](#deployment)
+
+   1. [Deploying in Heroku](#deploying-the-website-in-heroko)
+   2. [Forking of Github repo](#forking-the-github-repository)
+   3. [Cloning the Github repo](#cloning-the-repository-in-github)
+
+8. [Credits](#credits)
+
+   1. [Image](#images)
+   2. [Code](#code)
+
+9. [Thank You](#thank-you)
 
 # About
 
@@ -503,3 +517,139 @@ The API for this Front-End application was built with the Django REST Framework.
 - A validation form for event organisers to add a criteria form to selct users willing to attend an event
 - A contact form for user to ask if they have some problem with authentication or asking about individual event
 - Deletion of profile if user no longet to continue with the website
+
+## Deployment
+
+### Deploying the website in Heroko
+
+- Before deploying in Heroku following file was created:
+- Procfile : Very important for deployment and must be added with capital P
+
+<details><summary>See Image</summary>
+
+![Procfile](docs/readme/procfile.png)
+
+</details>
+  
+- The website was deployed to Heroko using following steps:
+
+#### Login or create an account at Heroku
+
+- Make an account in Heroko and login
+
+<details>
+    <summary>Heroko Login Page</summary>
+    <img src="docs/readme/heroku_login.png" alt="Heroko login page">
+</details>
+
+#### Creating an app
+
+- Create new app in the top right of the screen and add an app name.
+- Select region
+- Then click "create app".
+
+<details>
+    <summary>Create App</summary>
+    <img src="docs/readme/createapp.png" alt="Heroko create app screenshot">
+</details>
+
+#### Open settings Tab
+
+##### Click on config var
+
+- No key or value was added as it is already connected to API
+
+<details>
+    <summary>Config var</summary>
+    <img src="docs/readme/config-var.png" alt="Config var screenshot">
+</details>
+
+##### Add Buildpacks
+
+- Add python buildpack first
+- Add Nodejs buildpack after that
+
+<details>
+    <summary>Buildpacks</summary>
+    <img src="docs/readme/buildpacks.png" alt="Buildpacks screenshot">
+</details>
+
+#### Open Deploy Tab
+
+##### Choose deployment method
+
+- Connect GITHUB
+- Login if prompted
+
+<details>
+    <summary>Deployment method</summary>
+    <img src="docs/readme/method.png" alt="Deployment method screenshot">
+</details>
+
+##### Connect to Github
+
+- Choose repositories you want to connect
+- Click "Connect"
+
+<details>
+    <summary> Repo Connect</summary>
+    <img src="docs/readme/repo-connect.png" alt="Repo connect screenshot">
+</details>
+
+##### Automatic and Manual deploy
+
+- Choose a method to deploy
+- After Deploy is clicked it will install various file
+
+<details>
+    <summary> Deploy methods</summary>
+    <img src="docs/readme/deploy.png" alt="deploy method screenshot">
+</details>
+
+##### Deployment
+
+- Project was deployed in Heroku
+
+<details>
+    <summary>Deployed Website</summary>
+    <img src="docs/readme/deployed.png" alt="deployed">
+</details>
+
+### Forking the GitHub Repository
+
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+4. [GitHub Repository](https://github.com/Sinha5714/humanitas-events-pp5)
+
+### Cloning the repository in GitHub
+
+1. Visit the GitHub page of the website's repository
+2. Click the “Clone” button on top of the page
+3. Click on “HTTPS”
+4. Click on the copy button next to the link to copy it
+5. Open your IDE
+6. Type `git clone <copied URL>` into the terminal
+
+## Credits
+
+### Images
+
+- The image for event posted were taken from [Pexels](https://www.pexels.com/)
+- The image for no results and upload were taken from Code Institute walkthrough project [Moments](https://github.com/Code-Institute-Solutions/moments)
+- The image for 404 error page has been taken from [freepik.com](https://www.freepik.com/). Justification: The free image required an attribute which has been provided in the image
+
+### Code
+
+- The code was written with the help of Code Institute walkthrough project [Moments](https://github.com/Code-Institute-Solutions/moments)
+
+- Following Code were borrowed from [happening-react-frontend](https://github.com/quiltingcode/happening-react-frontend)
+
+- Date Formatter
+
+## Thank You
+
+- to my mentor Mo Shami for supporting me with his feedback through the entire project
+- special thanks to my husband Remo Liebetrau to help me in manual testing of the user stories
+- special thanks to [Kelly Hutchison](https://github.com/quiltingcode), a former student of CI for consenting to use her project as reference
+- to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
