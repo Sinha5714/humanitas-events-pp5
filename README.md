@@ -644,8 +644,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - The code was written with the help of Code Institute walkthrough project [Moments](https://github.com/Code-Institute-Solutions/moments)
 
 - Following Code were borrowed from [happening-react-frontend](https://github.com/quiltingcode/happening-react-frontend)
-
-- Date Formatter
+  - Date Formatter
 
 ## Thank You
 
