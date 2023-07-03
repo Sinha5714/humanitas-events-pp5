@@ -80,7 +80,8 @@ const UsernameForm = () => {
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit} className="my-2">
             <Form.Group>
-              <Form.Label>Change username</Form.Label>
+              <h3>Change Username</h3>
+              <Form.Label>New username</Form.Label>
               <Form.Control
                 placeholder="username"
                 type="text"

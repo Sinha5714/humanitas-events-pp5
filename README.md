@@ -455,3 +455,43 @@ The API for this Front-End application was built with the Django REST Framework.
 ![Profile page- loggedin user](docs/readme/owner-profilepage.png)
 
 </details>
+
+#### Profile Edit Page
+
+- This page consists of profile form where loggedin user can update their profile data
+- Profile owner can access this page by clicking on edit profile in their profile page
+- After successful update user is displayed successful message
+
+<details><summary>See Profile Edit Page</summary>
+
+![Profile Edit Page](docs/readme/profiledit.png)
+![Profile Edit Page-smaller devices](docs/readme/profileedit-small.png)
+![Profile Edit success Modal](docs/readme/profiledit-success.png)
+
+</details>
+
+#### Change Username Page
+
+- This page consists of username change form where loggedin user can update their username
+- Profile owner can access this page by clicking on change username in their profile page
+- After successful update user is displayed successful message
+
+<details><summary>See Change Username Page</summary>
+
+![Change username Page](docs/readme/usernamedit.png)
+![Change username success Modal](docs/readme/username-success.png)
+
+</details>
+
+#### Change Password Page
+
+- This page consists of username change form where loggedin user can update their password
+- Profile owner can access this page by clicking on change password in their profile page
+- After successful update user is displayed successful message
+
+<details><summary>See Change Password Page</summary>
+
+![Change Password Page](docs/readme/passwordediit.png)
+![Change password success Modal](docs/readme/password-success.png)
+
+</details>
