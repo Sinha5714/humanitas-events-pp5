@@ -377,3 +377,17 @@ The API for this Front-End application was built with the Django REST Framework.
 ![Search form and filters](docs/readme/search-filters.png)
 
 </details>
+
+#### Feed Page
+
+- The feed page looks identical to the homepage, only the Events Posts component changes.
+- In this page all the events displayed by filtering the events posted by the users logged in user is following
+
+![Feed](docs/readme/feed.png)
+
+#### Interested Page
+
+- The interested page looks identical to the homepage, only the Events Posts component changes.
+- In this page all the events displayed by filtering logged in user is has shown interest to
+
+![Interested](docs/readme/interested.png)
