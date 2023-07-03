@@ -518,6 +518,24 @@ The API for this Front-End application was built with the Django REST Framework.
 - A contact form for user to ask if they have some problem with authentication or asking about individual event
 - Deletion of profile if user no longet to continue with the website
 
+
+## Validation
+
+### Html
+
+- [WC3 Validator](https://validator.w3.org/) was used to validate the html in the project
+- The deployed app was passed as url input for validation
+- No errors were found
+- Note : info were provided regarding standard Meta code
+
+<details><summary>HTML validation screenshot</summary>
+<img src="docs/readme/html-validate.png"  >
+</details>
+<details><summary>No error screenshot</summary>
+<img src="docs/readme/htmlvalidator.png" >
+</details>
+
+
 ## Deployment
 
 ### Deploying the website in Heroko
