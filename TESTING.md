@@ -6,19 +6,21 @@
 
 ### Device testing
 
-- Project was tested in various mobile devices and was running succesfully
-- Macbook Pro 2019 16-inch
-    - Safari
+- Project was tested using various devices and browsers
+
 - Macbook Pro 2019 16-inch
 
-    - Chrome
-    <details><summary>Screenshot</summary>
-  <img src="">
-    
-  </details>
-    - Safari
-    <details><summary>Screenshot</summary>
-  <img src="" >
-    
-  </details>
+  - Firefox
+
+      <details><summary>Screenshot</summary>
+      <img src="">
+          
+      </details>
+
+  - Chrome
+
+      <details><summary>Screenshot</summary>
+      <img src="" >
+      </details>
+
 - Also tested various device sizes using [Dev.tools](https://developer.chrome.com/docs/devtools/)

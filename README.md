@@ -27,41 +27,43 @@ Developer: Shubham Sinha
    2. [Libraries, frameworks and dependencies](#libraries-frameworks-and-dependencies)
    3. [Tools & Programs](#tools--programs)
 
-4. [Design](#design)
+4. [Agile Design](#agile-design)
+
+5. [Design](#design)
 
    1. [Colors](#colours)
    2. [Fonts](#fonts)
 
-5. [Project Structure](#project-structure)
+6. [Project Structure](#project-structure)
 
    1. [Front End](#front-end)
    2. [Back End API](#back-end-api)
 
-6. [Features](#features)
+7. [Features](#features)
 
    1. [Implemented Features](#implemented-features)
    2. [Features to be Implemented](#features-to-be-implemented)
 
-7. [Validation](#validation)
+8. [Validation](#validation)
 
    1. [CSS](#css)
    2. [Html](#html)
    3. [Lighthouse](#lighthouse)
 
-8. [Testing](#testing)
+9. [Testing](#testing)
 
-9. [Deployment](#deployment)
+10. [Deployment](#deployment)
 
-   1. [Deploying in Heroku](#deploying-the-website-in-heroko)
-   2. [Forking of Github repo](#forking-the-github-repository)
-   3. [Cloning the Github repo](#cloning-the-repository-in-github)
+    1. [Deploying in Heroku](#deploying-the-website-in-heroko)
+    2. [Forking of Github repo](#forking-the-github-repository)
+    3. [Cloning the Github repo](#cloning-the-repository-in-github)
 
-10. [Credits](#credits)
+11. [Credits](#credits)
 
     1. [Image](#images)
     2. [Code](#code)
 
-11. [Thank You](#thank-you)
+12. [Thank You](#thank-you)
 
 # About
 
@@ -187,6 +189,40 @@ The key functionality aspects:
   - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) used to validate performance, accessibility, best practice and SEO of the app
 
 ##### Back to [top](#table-of-contents)
+
+## Agile design
+
+### About
+
+- Agile development is the most effective way to development of any website
+- This was able to do basic development of website using user story template
+- Due to time constraint of submission of project I didn't add milestones in this project
+
+### User Story Template
+
+- Using Github issues first I created the template for a user story that was later used to create user stories. I created four labels: must have, could have, should have.
+
+<details><summary>See User story template</summary>
+<img src="">
+</details>
+
+### Kanban Board
+
+- As a visual representation of the project's status, showing what tasks are to be done, in progress and completed.Each task is represented as a card on the board, and the cards can be moved from one column to another to show progress.
+
+[Link to project Kanban board.](https://github.com/users/Sinha5714/projects/7)
+
+<details><summary>See Kanban board</summary>
+<img src="">
+</details>
+
+### Moscow Prioritisation
+
+- The Moscow prioritization technique is used to prioritize project requirements based on their importance.
+
+<details><summary>See Image</summary>
+<img src="">
+</details>
 
 ## Design
 
