@@ -414,3 +414,29 @@ The API for this Front-End application was built with the Django REST Framework.
 ![Event Detail Page- event owner](docs/readme/eventownerdetail.png)
 
 </details>
+
+#### Event Create Page
+
+- This page consists of event create form where user can create an event
+- Logged in user can open this page by clicking on add event link on Navbar
+
+<details><summary>See Event Create Page</summary>
+
+![Event Create Page](docs/readme/eventcreate.png)
+![Event Create Page-smaller devices](docs/readme/eventcreate-small.png)
+
+</details>
+
+#### Event Edit Page
+
+- This page consists of event form where user can edit the data of the event
+- Event owner can access this page by clicking on edit icon in event detail page
+- After successful update user is displayed successful message
+
+<details><summary>See Event Edit Page</summary>
+
+![Event Edit Page](docs/readme/eventedit-large.png)
+![Event Edit Page-smaller devices](docs/readme/event-edit-small.png)
+![Event Edit success Modal](docs/readme/eventedit-success.png)
+
+</details>
