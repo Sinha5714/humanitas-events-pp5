@@ -38,6 +38,8 @@ Developer: Shubham Sinha
    2. [Back End API](#back-end-api)
 
 6. [Features](#features)
+   1. [Implemented Features](#implemented-features)
+   2. [Features to be Implemented](#features-to-be-implemented)
 
 # About
 
@@ -495,3 +497,9 @@ The API for this Front-End application was built with the Django REST Framework.
 ![Change password success Modal](docs/readme/password-success.png)
 
 </details>
+
+### Features to be Implemented
+
+- A validation form for event organisers to add a criteria form to selct users willing to attend an event
+- A contact form for user to ask if they have some problem with authentication or asking about individual event
+- Deletion of profile if user no longet to continue with the website
