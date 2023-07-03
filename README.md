@@ -383,11 +383,34 @@ The API for this Front-End application was built with the Django REST Framework.
 - The feed page looks identical to the homepage, only the Events Posts component changes.
 - In this page all the events displayed by filtering the events posted by the users logged in user is following
 
+<details><summary>See Feed Page</summary>
+
 ![Feed](docs/readme/feed.png)
+
+</details>
 
 #### Interested Page
 
 - The interested page looks identical to the homepage, only the Events Posts component changes.
 - In this page all the events displayed by filtering logged in user is has shown interest to
 
+<details><summary>See Interested Page</summary>
+
 ![Interested](docs/readme/interested.png)
+
+</details>
+
+#### Event Detail Page
+
+- This page consist a detail view of event posted by users
+- Users can click on event image in event card to open this page
+- Logged in users can post comments on this page on events and interact with other users
+- Event owner can edit and delete the event
+- User can read full content about what the event is about
+
+<details><summary>See Event Detail Page</summary>
+
+![Event Detail Page](docs/readme/eventdetail.png)
+![Event Detail Page- event owner](docs/readme/eventownerdetail.png)
+
+</details>
