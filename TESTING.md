@@ -547,9 +547,20 @@
 
 - No bug was found during Html validation
 
-### W3C CSS Validator
+### Jigsaw CSS Validator
 
 - No bug was found during CSS Validation
+
+### JSX
+
+- Auto import from "react-router-dom/cjs/react-router-dom.min" was creating error
+- Add devDependencies in package.json and rewrote all import from react-router-dom using terminal command
+- No errors were shown later
+
+<details><summary>Screenshot</summary>
+<img src="" >
+
+</details>
 
 ### REACT App
 

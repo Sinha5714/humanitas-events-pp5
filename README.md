@@ -49,6 +49,7 @@ Developer: Shubham Sinha
    1. [CSS](#css)
    2. [Html](#html)
    3. [Lighthouse](#lighthouse)
+   4. [ESLint](#eslint-validation)
 
 9. [Testing](#testing)
 
@@ -169,6 +170,7 @@ The key functionality aspects:
 - [React-Bootstrap 4.6](https://react-bootstrap-v4.netlify.app/) - Justification: I used Bootstrap React library for UI components, styling and responsiveness.
 - [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - Justification: I used this component to load content (posts/comments) automatically as the user scrolls towards the bottom of the page without having to jump to next/previous page.
 - [React Router](https://v5.reactrouter.com/web/guides/quick-start) - used for dynamic routing. Justification: I used this library to enable the navigation among views of various components and control what the user sees depending on the URL they have accessed in the browser.
+- [Prettier](https://prettier.io/): This extension was used to format code for all files
 
 ### Tools & Programs
 
@@ -693,6 +695,20 @@ The API for this Front-End application was built with the Django REST Framework.
 
 <details><summary>PageNotFound Mobile-screen</summary>
 <img src="docs/lighthouse/lh-404-mob.png" >
+</details>
+
+### ESLint Validation
+
+- The JSX code was validated using the ESLint utility.
+- The library was preinstalled in Codeanywhere IDE
+- The code was getting validated so the errors were corrected during development process
+- No errors remained before final submission
+
+<details><summary>Inbuild ESLint permission page</summary>
+<img src="docs/readme/html-validate.png"  >
+</details>
+<details><summary>No error screenshot</summary>
+<img src="docs/readme/htmlvalidator.png" >
 </details>
 
 ## Testing
