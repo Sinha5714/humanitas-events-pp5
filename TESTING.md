@@ -193,8 +193,8 @@
 | Logged in user click on attend button on event card | The text changes to attending and attending count increases | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/usertory12-1.png" >
+<img src="docs/manual-testing/userstory12-2.png" >
 
 </details>
 
@@ -205,8 +205,8 @@
 | Logged in user click on attending button on event card | The text changes to attend and attending count decreases | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory13-1.png" >
+<img src="docs/manual-testing/userstory13-2.png" >
 
 </details>
 
@@ -218,9 +218,10 @@
 | User fill data and submit form successfully      | Event created is displayed   | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory14-1.png" >
+<img src="docs/manual-testing/userstory14-2.png" >
+<img src="docs/manual-testing/userstory14-3.png" >
+<img src="docs/manual-testing/userstory14-4.png" >
 
 </details>
 
@@ -236,7 +237,11 @@
 | User close the model                                              | Event card is displayed with updated data        | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory15-1.png" >
+<img src="docs/manual-testing/userstory15-2.png" >
+<img src="docs/manual-testing/userstory15-3.png" >
+<img src="docs/manual-testing/userstory15-4.png" >
+<img src="docs/manual-testing/userstory15-5.png" >
 
 </details>
 
@@ -250,7 +255,9 @@
 | User clicks on delete icon                                        | Success feedback message displayed and user taken to home page | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory16-1.png" >
+<img src="docs/manual-testing/userstory16-2.png" >
+<img src="docs/manual-testing/userstory16-3.png" >
 
 </details>
 
