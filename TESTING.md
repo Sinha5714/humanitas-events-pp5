@@ -349,7 +349,13 @@
 | User opens feed page using navbar icon                            | Events posted by followed users are displayed             | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory21-1.png" >
+<img src="docs/manual-testing/userstory21-2.png" >
+<img src="docs/manual-testing/userstory21-3.png" >
+<img src="docs/manual-testing/userstory21-4.png" >
+<img src="docs/manual-testing/userstory21-5.png" >
+<img src="docs/manual-testing/userstory21-6.png" >
+<img src="docs/manual-testing/userstory21-7.png" >
 
 </details>
 

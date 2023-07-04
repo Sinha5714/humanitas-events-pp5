@@ -318,7 +318,7 @@ There were various pages created and used in this application
 
   - Profile.js - This file returns the profile section
   - ProfilePage.js - This file returns the entire Profile page
-  - PopularProfiles.js - This file returns the users of the site as per their events counts
+  - PopularProfiles.js - This file returns the users of the site as per their followers count
   - ProfileContactDetails.js - This file returns the contact details of the user's profile
   - ProfileEditForm.js - This file handles the profile edit form
   - UsernameForm.js - This file handles the username change form
@@ -392,7 +392,7 @@ The API for this Front-End application was built with the Django REST Framework.
 ##### Popular Profiles (Our Top Organisers)
 
 - This component is displayed on top of the page.
-- This component uses filter to order all the site users by events counts they organised
+- This component uses filter to order all the site users by followers count
 - Logged in users can follow and unfollow users from here as well
 - User can click on these profiles avatar and see profile page of them
 
