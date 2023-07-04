@@ -50,7 +50,9 @@
 | User submit data in form successully            | Signin page opens and user is signed up | Works as expected |
 
  <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory2-1.png" >
+<img src="docs/manual-testing/userstory2-2.png" >
+<img src="docs/manual-testing/userstory2-3.png" >
 
 </details>
 
@@ -62,8 +64,8 @@
 | User submit data in form succesully             | Home page opens and user is signed in | Works as expected |
 
  <details><summary>Screenshots</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory3-1.png" >
+<img src="docs/manual-testing/userstory3-2.png" >
 
 </details>
 
@@ -74,9 +76,8 @@
 | Logged in user clicks on logout link on Navbar | Home Page opens and user is logged out | Works as expected |
 
  <details><summary>Screenshots</summary>
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory4-1.png" >
+<img src="docs/manual-testing/userstory4-2.png" >
 
 </details>
 
@@ -88,7 +89,7 @@
 | User scrolls through home page                                                          | Posted events are listed | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory5.png" >
 
 </details>
 
@@ -101,6 +102,9 @@
 | User clicks on events title link on upcoming events | Event detail page opens  | Works as expected |
 
  <details><summary>Screenshot</summary>
+<img src="" >
+<img src="" >
+<img src="" >
 <img src="" >
 
 </details>
