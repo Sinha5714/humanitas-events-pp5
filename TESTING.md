@@ -47,7 +47,7 @@
 | **Step**                                        | **Expected Result**                     | **Actual Result** |
 | ----------------------------------------------- | --------------------------------------- | ----------------- |
 | Logged out user clicks on signup link on Navbar | Signup page opens                       | Works as expected |
-| User submit data in form succesully             | Signin page opens and user is signed up | Works as expected |
+| User submit data in form successully            | Signin page opens and user is signed up | Works as expected |
 
  <details><summary>Screenshot</summary>
 <img src="" >
@@ -122,14 +122,14 @@
 
 8. As a site user I can can edit my comments so that I can change what I commented before
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-| User clicks on events image link                    | Event detail page opens                         | Works as expected |
-| User clicks on events title link on upcoming events | Event detail page opens                         | Works as expected |
-| Logged in user scrolls down to comment section      | Comment list is visible with user avatar | Works as expected |
-| Comment owner clicks on deopdown threedots next to their comments         |        Drop down menu with edit and delete button opens             |     Works as expected              |
-|     User clicks on edit icon     |     Comment edit form opens                |        Works as expected          |
-|     User changes comment and click on update    |     Updated comment is displayed                |        Works as expected          |
+| **Step**                                                          | **Expected Result**                              | **Actual Result** |
+| ----------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
+| User clicks on events image link                                  | Event detail page opens                          | Works as expected |
+| User clicks on events title link on upcoming events               | Event detail page opens                          | Works as expected |
+| Logged in user scrolls down to comment section                    | Comment list is visible with user avatar         | Works as expected |
+| Comment owner clicks on dropdown threedots next to their comments | Drop down menu with edit and delete button opens | Works as expected |
+| User clicks on edit icon                                          | Comment edit form opens                          | Works as expected |
+| User changes comment and click on update                          | Updated comment is displayed with feedback message                    | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -139,12 +139,13 @@
 
 9. As a site user I can delete my comments so that I can delete the comments which I don't want to show
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     |                   |
-|          |                     |                   |
-|          |                     |                   |
-|          |                     |                   |
+| **Step**                                                          | **Expected Result**                              | **Actual Result** |
+| ----------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
+| User clicks on events image link                                  | Event detail page opens                          | Works as expected |
+| User clicks on events title link on upcoming events               | Event detail page opens                          | Works as expected |
+| Logged in user scrolls down to comment section                    | Comment list is visible with user avatar         | Works as expected |
+| Comment owner clicks on dropdown threedots next to their comments | Drop down menu with edit and delete button opens | Works as expected |
+| User clicks on delete icon                                        | Comment is deleted with feedback message         | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -155,10 +156,10 @@
 
 10. As a site user I can show interest in an event so that I can be interested in event which I like
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     |                   |
-|          |                     |                   |
+| **Step**                                               | **Expected Result**                                   | **Actual Result** |
+| ------------------------------------------------------ | ----------------------------------------------------- | ----------------- |
+| Logged in user click on star icon in event card        | The star color changes and interested count increases | Works as expected |
+| Logged in user click on interested icon link in Navbar | Events what user has shown interested is displayed    | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -167,9 +168,10 @@
 
 11. As a site user I can remove my interests so that I can be remove my interests if not interested anymore
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     |                   |
+| **Step**                                               | **Expected Result**                                   | **Actual Result** |
+| ------------------------------------------------------ | ----------------------------------------------------- | ----------------- |
+| Logged in user click on star icon in event card        | The star color changes and interested count decreases | Works as expected |
+| Logged in user click on interested icon link in Navbar | Events is removed                                     | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -178,11 +180,9 @@
 
 12. As a site user I can add attending to an event so that I can add me in attending list
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     |                   |
-|          |                     |                   |
-|          |                     |                   |
+| **Step**                                            | **Expected Result**                                         | **Actual Result** |
+| --------------------------------------------------- | ----------------------------------------------------------- | ----------------- |
+| Logged in user click on attend button on event card | The text changes to attending and attending count increases | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -192,11 +192,9 @@
 
 13. As a site user I can delete my attending so that I can remove my data if not attending event
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                                               | **Expected Result**                                      | **Actual Result** |
+| ------------------------------------------------------ | -------------------------------------------------------- | ----------------- |
+| Logged in user click on attending button on event card | The text changes to attend and attending count decreases | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="" >
@@ -208,10 +206,8 @@
 
 | **Step** | **Expected Result** | **Actual Result** |
 | -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| Logged in user click on add event link on Navbar | Event create form page opens | Works as expected |
+| User fill data and submit form successfully | Event created is displayed | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="" >
@@ -224,8 +220,12 @@
 
 | **Step** | **Expected Result** | **Actual Result** |
 | -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| User clicks on events image link                                  | Event detail page opens                          | Works as expected |
+| User clicks on events title link on upcoming events               | Event detail page opens                          | Works as expected |
+| Event owner  clicks on dropdown threedots next to their event card                 |   Drop down menu with edit and delete button opens     | Works as expected |
+| User clicks on edit icon                                          | Event edit form opens                          | Works as expected |
+| User changes data of events and click on update                          |  Success feedback modal is displayed                     | Works as expected |
+| User close the model                          |  Event card is displayed with updated data                  | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
