@@ -133,7 +133,7 @@
 | Logged in user scrolls down to comment section                    | Comment list is visible with user avatar           | Works as expected |
 | Comment owner clicks on dropdown threedots next to their comments | Drop down menu with edit and delete button opens   | Works as expected |
 | User clicks on edit icon                                          | Comment edit form opens                            | Works as expected |
-| User changes comment and click on save                          | Updated comment is displayed with feedback message | Works as expected |
+| User changes comment and click on save                            | Updated comment is displayed with feedback message | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/manual-testing/userstory8-1.png" >
@@ -269,8 +269,14 @@
 | Logged in user clicks on profile avatar in event card, comment list, top organisers and Navbar | User's profile page or clicked profile page opens | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory17-1.png" >
+<img src="docs/manual-testing/userstory17-2.png" >
+<img src="docs/manual-testing/userstory17-3.png" >
+<img src="docs/manual-testing/userstory17-4.png" >
+<img src="docs/manual-testing/userstory17-5.png" >
+<img src="docs/manual-testing/userstory17-6.png" >
+<img src="docs/manual-testing/userstory17-7.png" >
+<img src="docs/manual-testing/userstory17-8.png" >
 
 </details>
 
@@ -285,9 +291,11 @@
 | User close the model                                       | Profile page opens with updated data                                        | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory18-1.png" >
+<img src="docs/manual-testing/userstory18-2.png" >
+<img src="docs/manual-testing/userstory18-3.png" >
+<img src="docs/manual-testing/userstory18-4.png" >
+<img src="docs/manual-testing/userstory18-5.png" >
 
 </details>
 
@@ -302,7 +310,11 @@
 | User close the model                                       | Profile page opens with updated username                                    | Works as expected |
 
  <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory19-1.png" >
+<img src="docs/manual-testing/userstory19-2.png" >
+<img src="docs/manual-testing/userstory19-3.png" >
+<img src="docs/manual-testing/userstory19-4.png" >
+<img src="docs/manual-testing/userstory19-5.png" >
 
 </details>
 
@@ -317,7 +329,11 @@
 | User close the model                                       | Profile page opens                                                          | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory20-1.png" >
+<img src="docs/manual-testing/userstory20-2.png" >
+<img src="docs/manual-testing/userstory20-3.png" >
+<img src="docs/manual-testing/userstory20-4.png" >
+<img src="docs/manual-testing/userstory20-5.png">
 
 </details>
 
@@ -330,9 +346,9 @@
 | Logged in user clicks follow/unfollow button for individual users | The button text changes to follow/unfollow as per request | Works as expected |
 | User opens his profile page                                       | His following counts changes                              | Works as expected |
 | User opens profile page from user he followed/unfollowed          | The followers counts changes                              | Works as expected |
+| User opens feed page using navbar icon                            | Events posted by followed users are displayed             | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="">
 <img src="" >
 
 </details>
