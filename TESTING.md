@@ -407,8 +407,8 @@
 | Logged in user scrolls down to comment section | Comments keeps loading without need to change page           | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory25-1.png" >
+<img src="docs/manual-testing/userstory25-2.png" >
 
 </details>
 
@@ -416,7 +416,7 @@
 
 | **Step**                               | **Expected Result**           | **Actual Result** |
 | -------------------------------------- | ----------------------------- | ----------------- |
-| Logged in user edit his event posted   | Feedback modal is displayed   | Work as expected  |
+| Logged in user edit his posted event   | Feedback modal is displayed   | Work as expected  |
 | Logged in user delete his posted event | Feedback message is displayed | Work as expected  |
 | Logged in user update his comment      | Feedback message is displayed | Work as expected  |
 | Logged in user delete his comment      | Feedback message is displayed | Work as expected  |
@@ -425,13 +425,13 @@
 | Logged in user change his password     | Feedback modal is displayed   | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
-<img src="" >
-<img src="" >
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory15-4.png" >
+<img src="docs/manual-testing/userstory16-3.png" >
+<img src="docs/manual-testing/userstory8-4.png" >
+<img src="docs/manual-testing/userstory9-3.png" >
+<img src="docs/manual-testing/userstory18-4.png" >
+<img src="docs/manual-testing/userstory19-4.png" >
+<img src="docs/manual-testing/userstory20-4.png" >
 
 </details>
 
@@ -444,8 +444,10 @@
 | User clicks on search buttons in sub-categories  | Events as per that sub-category is displayed               | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory27-1.png" >
+<img src="docs/manual-testing/userstory27-2.png" >
+<img src="docs/manual-testing/userstory27-3.png" >
+<img src="docs/manual-testing/userstory27-4.png" >
 
 </details>
 
@@ -463,8 +465,13 @@
 | Logged in user opens his profile                                | Drop down menu with edit profile, change username and change password is provided | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory28-1.png" >
+<img src="docs/manual-testing/userstory28-2.png" >
+<img src="docs/manual-testing/userstory28-3.png" >
+<img src="docs/manual-testing/userstory28-4.png" >
+<img src="docs/manual-testing/userstory28-5.png" >
+<img src="docs/manual-testing/userstory28-6.png" >
+<img src="docs/manual-testing/userstory28-7.png" >
 
 </details>
 
@@ -480,8 +487,12 @@
 | Logged out opens other's profile page               | No follow/unfollow button is displayed          | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory29-1.png" >
+<img src="docs/manual-testing/userstory29-2.png" >
+<img src="docs/manual-testing/userstory29-3.png" >
+<img src="docs/manual-testing/userstory29-4.png" >
+<img src="docs/manual-testing/userstory29-5.png" >
+<img src="docs/manual-testing/userstory29-6.png" >
 
 </details>
 
@@ -494,8 +505,8 @@
 | Hamburger menu for small devices                        | Navbar menu is compressed to be shown as hamnurger menu in small devices | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory30-2.png" >
+<img src="docs/manual-testing/userstory30-3.png" >
 
 </details>
 
@@ -507,7 +518,6 @@
 | User clicks on go to home button       | User taken to home page | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory31.png" >
 
 </details>
