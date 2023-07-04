@@ -13,14 +13,14 @@
   - Firefox
 
       <details><summary>Screenshot</summary>
-      <img src="">
+      <img src="docs/manual-testing/firefox-home.png">
           
       </details>
 
   - Chrome
 
       <details><summary>Screenshot</summary>
-      <img src="" >
+      <img src="docs/manual-testing/chrome-home.png" >
       </details>
 
 - Also tested various device sizes using [Dev.tools](https://developer.chrome.com/docs/devtools/)
@@ -29,346 +29,422 @@
 
 1. As a site user I can be able to navigate through pages so that I can be able to interact with the app easily
 
-| **Step**                              | **Expected Result**             | **Actual Result** |
-| ------------------------------------- | ------------------------------- | ----------------- |
-| Add "/profiles" in deployed url       | profile list page opens         | Work as expected  |
-| User scrolls through the profile list | profiles of users are displayed | Work as expected  |
+| **Step**                                                                                | **Expected Result**                              | **Actual Result** |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
+| User clicks on [website link](https://humanitas-events-pp5-fba97e12d8c2.herokuapp.com/) | Home page opens with Navbar for logged out users | Works as expected |
+| Logged out user clicks on signin link on Navbar                                         | Signin page opens                                | Works as expected |
+| Logged in user clicks on feed page link on Navbar                                       | Feed page opens                                  | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory1.png" >
+<img src="docs/manual-testing/userstory1-1.png" >
+<img src="docs/manual-testing/userstory1-2.png" >
+<img src="docs/manual-testing/userstory1-3.png" >
 
 </details>
 
 2. As a site user I can sign up as new user so that I can interact with the site comfortably
 
-| **Step**                           | **Expected Result**       | **Actual Result** |
-| ---------------------------------- | ------------------------- | ----------------- |
-| Add "/profiles/id" in deployed url | profile detail page loads | Work as expected  |
+| **Step**                                        | **Expected Result**                     | **Actual Result** |
+| ----------------------------------------------- | --------------------------------------- | ----------------- |
+| Logged out user clicks on signup link on Navbar | Signup page opens                       | Works as expected |
+| User submit data in form succesully             | Signin page opens and user is signed up | Works as expected |
 
  <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory2.png" >
+<img src="" >
 
 </details>
 
 3. As a site user I can login as existing user so that I can interact with all features in the website
 
-| **Step**                                                  | **Expected Result**                      | **Actual Result** |
-| --------------------------------------------------------- | ---------------------------------------- | ----------------- |
-| User log in                                               | logged in status is shown in top right   | Work as expected  |
-| Add "/profiles/id" in deployed url (id of user's profile) | profile detail page loads with edit form | Work as expected  |
-| User update the data and click on put                     | updated data is shown in profile list    | Work as expected  |
+| **Step**                                        | **Expected Result**                   | **Actual Result** |
+| ----------------------------------------------- | ------------------------------------- | ----------------- |
+| Logged out user clicks on signin link on Navbar | Signin page opens                     | Works as expected |
+| User submit data in form succesully             | Home page opens and user is signed in | Works as expected |
 
  <details><summary>Screenshots</summary>
-<img src="images/manualtesting/userstory3-1.png" >
-<img src="images/manualtesting/userstory3-2.png" >
+<img src="" >
+<img src="" >
 
 </details>
 
 4. As a site user I can logout so that I am sure my data is secured
 
-| **Step**                                                  | **Expected Result**                          | **Actual Result** |
-| --------------------------------------------------------- | -------------------------------------------- | ----------------- |
-| User log in                                               | logged in status is shown in top right       | Work as expected  |
-| Add "/profiles/id" in deployed url (id of user's profile) | profile detail page loads with delete button | Work as expected  |
-| User clicks on delete button                              | a modal confirming delete occurs             | Work as expected  |
-| User clicks on delete button                              | profile is deleted                           | Work as expected  |
+| **Step**                                       | **Expected Result**                    | **Actual Result** |
+| ---------------------------------------------- | -------------------------------------- | ----------------- |
+| Logged in user clicks on logout link on Navbar | Home Page opens and user is logged out | Works as expected |
 
  <details><summary>Screenshots</summary>
-<img src="images/manualtesting/userstory4-1.png" >
-<img src="images/manualtesting/userstory4-2.png" >
-<img src="images/manualtesting/userstory4-3.png" >
+<img src="" >
+<img src="" >
+<img src="" >
 
 </details>
 
 5. As a site user I can I can see list of events so that that can view all the events happening around
 
-| **Step**                             | **Expected Result**    | **Actual Result** |
-| ------------------------------------ | ---------------------- | ----------------- |
-| Add "/events" in deployed url        | events list page opens | Work as expected  |
-| User scrolls through the events list | events are displayed   | Work as expected  |
+| **Step**                                                                                | **Expected Result**      | **Actual Result** |
+| --------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| User clicks on [website link](https://humanitas-events-pp5-fba97e12d8c2.herokuapp.com/) | Home page opens          | Works as expected |
+| User scrolls through home page                                                          | Posted events are listed | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="images/manualtesting/userstory5.png" >
+<img src="" >
 
 </details>
 
 6. As a site user I can see detail page of the Event so that I can read about the Event and comment on it
 
-| **Step**                         | **Expected Result**      | **Actual Result** |
-| -------------------------------- | ------------------------ | ----------------- |
-| Add "/events/id" in deployed url | events detail page loads | Work as expected  |
+| **Step**                                            | **Expected Result**      | **Actual Result** |
+| --------------------------------------------------- | ------------------------ | ----------------- |
+| User scrolls through home page                      | Posted events are listed | Works as expected |
+| User clicks on events image link                    | Event detail page opens  | Works as expected |
+| User clicks on events title link on upcoming events | Event detail page opens  | Works as expected |
 
  <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory6.png" >
+<img src="" >
 
 </details>
 
 7. As a site user I can be able to post comments so that I can interact with other users
 
-| **Step**                            | **Expected Result**                      | **Actual Result** |
-| ----------------------------------- | ---------------------------------------- | ----------------- |
-| User log in                         | logged in status is shown in top right   | Work as expected  |
-| Add "/events" in deployed url       | events lists page loads with create form | Work as expected  |
-| User add the data and click on post | new event is shown in events list        | Work as expected  |
+| **Step**                                            | **Expected Result**                             | **Actual Result** |
+| --------------------------------------------------- | ----------------------------------------------- | ----------------- |
+| User clicks on events image link                    | Event detail page opens                         | Works as expected |
+| User clicks on events title link on upcoming events | Event detail page opens                         | Works as expected |
+| Logged in user scrolls down to comment section      | Comment create form is visible with user avatar | Works as expected |
+| Logged in user type comments and post               | Comment is added and displayed in comment list  | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory7-1.png" >
-<img src="images/manualtesting/userstory7-2.png" >
+<img src="" >
+<img src="" >
 
 </details>
 
 8. As a site user I can can edit my comments so that I can change what I commented before
 
-| **Step**                                              | **Expected Result**                    | **Actual Result** |
-| ----------------------------------------------------- | -------------------------------------- | ----------------- |
-| User log in                                           | logged in status is shown in top right | Work as expected  |
-| Add "/events/id" in deployed url (id of user's event) | event detail page loads with edit form | Work as expected  |
-| User update the data and click on put                 | updated data is shown in events list   | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+| User clicks on events image link                    | Event detail page opens                         | Works as expected |
+| User clicks on events title link on upcoming events | Event detail page opens                         | Works as expected |
+| Logged in user scrolls down to comment section      | Comment list is visible with user avatar | Works as expected |
+| Comment owner clicks on deopdown threedots next to their comments         |        Drop down menu with edit and delete button opens             |     Works as expected              |
+|     User clicks on edit icon     |     Comment edit form opens                |        Works as expected          |
+|     User changes comment and click on update    |     Updated comment is displayed                |        Works as expected          |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory8-1.png" >
-<img src="images/manualtesting/userstory8-2.png" >
+<img src="" >
+<img src="" >
 
 </details>
 
 9. As a site user I can delete my comments so that I can delete the comments which I don't want to show
 
-| **Step**                                              | **Expected Result**                        | **Actual Result** |
-| ----------------------------------------------------- | ------------------------------------------ | ----------------- |
-| User log in                                           | logged in status is shown in top right     | Work as expected  |
-| Add "/events/id" in deployed url (id of user's event) | event detail page loads with delete button | Work as expected  |
-| User clicks on delete button                          | a modal confirming delete occurs           | Work as expected  |
-| User clicks on delete button                          | event is deleted                           | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     |                   |
+|          |                     |                   |
+|          |                     |                   |
+|          |                     |                   |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory9-1.png" >
-<img src="images/manualtesting/userstory9-2.png" >
-<img src="images/manualtesting/userstory9-3.png" >
+<img src="" >
+<img src="" >
+<img src="" >
 
 </details>
 
 10. As a site user I can show interest in an event so that I can be interested in event which I like
 
-| **Step**                               | **Expected Result**      | **Actual Result** |
-| -------------------------------------- | ------------------------ | ----------------- |
-| Add "/comments" in deployed url        | comments list page opens | Work as expected  |
-| User scrolls through the comments list | comments are displayed   | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     |                   |
+|          |                     |                   |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory10.png" >
+<img src="" >
 
 </details>
 
 11. As a site user I can remove my interests so that I can be remove my interests if not interested anymore
 
-| **Step**                           | **Expected Result**       | **Actual Result** |
-| ---------------------------------- | ------------------------- | ----------------- |
-| Add "/comments/id" in deployed url | comment detail page loads | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     |                   |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory11.png" >
+<img src="" >
 
 </details>
 
 12. As a site user I can add attending to an event so that I can add me in attending list
 
-| **Step**                            | **Expected Result**                       | **Actual Result** |
-| ----------------------------------- | ----------------------------------------- | ----------------- |
-| User log in                         | logged in status is shown in top right    | Work as expected  |
-| Add "/comments" in deployed url     | comment lists page loads with create form | Work as expected  |
-| User add the data and click on post | comment is shown in comments list         | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     |                   |
+|          |                     |                   |
+|          |                     |                   |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory12-1.png" >
-<img src="images/manualtesting/userstory12-2.png" >
+<img src="" >
+<img src="" >
 
 </details>
 
 13. As a site user I can delete my attending so that I can remove my data if not attending event
 
-| **Step**                                                  | **Expected Result**                      | **Actual Result** |
-| --------------------------------------------------------- | ---------------------------------------- | ----------------- |
-| User log in                                               | logged in status is shown in top right   | Work as expected  |
-| Add "/comments/id" in deployed url (id of user's comment) | comment detail page loads with edit form | Work as expected  |
-| User update the data and click on put                     | updated data is shown in comments list   | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="images/manualtesting/userstory13-1.png" >
-<img src="images/manualtesting/userstory13-2.png" >
+<img src="" >
+<img src="" >
 
 </details>
 
 14. As a site user I can add events so that I can share the events which I am organising
 
-| **Step**                                                  | **Expected Result**                          | **Actual Result** |
-| --------------------------------------------------------- | -------------------------------------------- | ----------------- |
-| User log in                                               | logged in status is shown in top right       | Work as expected  |
-| Add "/comments/id" in deployed url (id of user's comment) | comment detail page loads with delete button | Work as expected  |
-| User clicks on delete button                              | a modal confirming delete occurs             | Work as expected  |
-| User clicks on delete button                              | comment is deleted                           | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="images/manualtesting/userstory14-1.png" >
-<img src="images/manualtesting/userstory14-2.png" >
-<img src="images/manualtesting/userstory14-3.png" >
+<img src="" >
+<img src="" >
+<img src="" >
 
 </details>
 
 15. As a site user I can edit event which I posted so that I can change the details if required
 
-| **Step**                                 | **Expected Result**        | **Actual Result** |
-| ---------------------------------------- | -------------------------- | ----------------- |
-| Add "/interested" in deployed url        | interested list page opens | Work as expected  |
-| User scrolls through the interested list | interested are displayed   | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory15.png" >
+<img src="" >
 
 </details>
 
 16. As a site user I can delete event which I posted so that I can remove event if its cancelled
 
-| **Step**                             | **Expected Result**          | **Actual Result** |
-| ------------------------------------ | ---------------------------- | ----------------- |
-| Add "/interested/id" in deployed url | interested detail page loads | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory16.png" >
+<img src="" >
 
 </details>
 
-17. As a site owner/developer I can add interested functionality for events so that I can show interest for the event
+17. As a site user I can view my profile or other's profile so that I can see my or their informations
 
-| **Step**                            | **Expected Result**                          | **Actual Result** |
-| ----------------------------------- | -------------------------------------------- | ----------------- |
-| User log in                         | logged in status is shown in top right       | Work as expected  |
-| Add "/interested" in deployed url   | interested lists page loads with create form | Work as expected  |
-| User select event and click on post | interested is shown in interested list       | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory17-1.png" >
-<img src="images/manualtesting/userstory17-2.png" >
+<img src="" >
+<img src="" >
 
 </details>
 
-18. As a site owner/developer I can delete interested functionality to event so that I can delete my interested instance if not interested anymore
+18. As a site user I can I can edit my profile so that I can change my data or update it
 
-| **Step**                                                       | **Expected Result**                             | **Actual Result** |
-| -------------------------------------------------------------- | ----------------------------------------------- | ----------------- |
-| User log in                                                    | logged in status is shown in top right          | Work as expected  |
-| Add "/interested/id" in deployed url (id of user's interested) | interested detail page loads with delete button | Work as expected  |
-| User clicks on delete button                                   | a modal confirming delete occurs                | Work as expected  |
-| User clicks on delete button                                   | interested is deleted                           | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory18-1.png" >
-<img src="images/manualtesting/userstory18-2.png" >
-<img src="images/manualtesting/userstory18-3.png" >
+<img src="" >
+<img src="" >
+<img src="" >
 
 </details>
 
-19. As a site owner/developer I can view a list of join request for an event so that I can view how many request has been requested
+19. As a site user I can change my username so that can decide to change my username as I like
 
-| **Step**                           | **Expected Result**  | **Actual Result** |
-| ---------------------------------- | -------------------- | ----------------- |
-| Add "/join" in deployed url        | join list page opens | Work as expected  |
-| User scrolls through the join list | join are displayed   | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
  <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory19.png" >
+<img src="" >
 
 </details>
 
-20. As a site owner/developer I can retrieve join request so that I can make changes to it
+20. As a site user I can change my password so that I can keep updating my password as I wish
 
-| **Step**                       | **Expected Result**    | **Actual Result** |
-| ------------------------------ | ---------------------- | ----------------- |
-| Add "/join/id" in deployed url | join detail page loads | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory20.png" >
+<img src="" >
 
 </details>
 
-21. As a site owner/developer I can create a join request for an event so that I can join an event
+21. As a site users I can follow/unfollow other users so that see the events what they posted in my post's feed
 
-| **Step**                            | **Expected Result**                    | **Actual Result** |
-| ----------------------------------- | -------------------------------------- | ----------------- |
-| User log in                         | logged in status is shown in top right | Work as expected  |
-| Add "/join" in deployed url         | join list page loads with create form  | Work as expected  |
-| User select event and click on post | join is shown in join list             | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory21-1.png">
-<img src="images/manualtesting/userstory21-2.png" >
+<img src="">
+<img src="" >
 
 </details>
 
-22. As a site owner/developer I can delete join request so that I can delete join request which is not approved anymore
+22. As a site user I can see what events are upcoming so that I can see the events which are upcoming
 
-| **Step**                                           | **Expected Result**                       | **Actual Result** |
-| -------------------------------------------------- | ----------------------------------------- | ----------------- |
-| User log in                                        | logged in status is shown in top right    | Work as expected  |
-| Add "/join/id" in deployed url (id of user's join) | join detail page loads with delete button | Work as expected  |
-| User clicks on delete button                       | a modal confirming delete occurs          | Work as expected  |
-| User clicks on delete button                       | join is deleted                           | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory22-1.png" >
-<img src="images/manualtesting/userstory22-2.png" >
-<img src="images/manualtesting/userstory22-3.png" >
+<img src="" >
+<img src="" >
+<img src="" >
 
 </details>
 
-23. As a site owner/developer I can view a list of followers so that I can view who is following
+23. As a site user I can see who are the top organisers so that I can follow them or see their profiles easily
 
-| **Step**                                | **Expected Result**      | **Actual Result** |
-| --------------------------------------- | ------------------------ | ----------------- |
-| Add "/followers" in deployed url        | follower list page opens | Work as expected  |
-| User scrolls through the followers list | follower are displayed   | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory23.png" >
+<img src="" >
 
 </details>
 
-24. As a site owner/ developer I can retrieve followers by id so that I can make changes to it
+24. As a site users I can view my avatar or other user's avatar so that I know with whom I am interacting
 
-| **Step**                            | **Expected Result**        | **Actual Result** |
-| ----------------------------------- | -------------------------- | ----------------- |
-| Add "/followers/id" in deployed url | follower detail page loads | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory24.png" >
+<img src="" >
 
 </details>
 
-25. As a site owner/developer I can create follow so that I can follow another user
+25. As a site user I can keep scrolling through the page and comments so that they are loaded automatically and I don't have to select next page
 
-| **Step**                           | **Expected Result**                       | **Actual Result** |
-| ---------------------------------- | ----------------------------------------- | ----------------- |
-| User log in                        | logged in status is shown in top right    | Work as expected  |
-| Add "/followers" in deployed url   | follower list page loads with create form | Work as expected  |
-| User select user and click on post | follower is shown in followers list       | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory25-1.png" >
-<img src="images/manualtesting/userstory25-2.png" >
+<img src="" >
+<img src="" >
 
 </details>
 
-26. As a site owner/developer I can delete a follow so that I can unfollow another user
+26. As a site user I can be inform if my action has been successful so that I can be sure that my data is changed
 
-| **Step**                                                     | **Expected Result**                           | **Actual Result** |
-| ------------------------------------------------------------ | --------------------------------------------- | ----------------- |
-| User log in                                                  | logged in status is shown in top right        | Work as expected  |
-| Add "/followers/id" in deployed url (id of user's followers) | follower detail page loads with delete button | Work as expected  |
-| User clicks on delete button                                 | a modal confirming delete occurs              | Work as expected  |
-| User clicks on delete button                                 | follower is deleted                           | Work as expected  |
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="images/manualtesting/userstory26-1.png" >
-<img src="images/manualtesting/userstory26-2.png" >
-<img src="images/manualtesting/userstory26-3.png" >
+<img src="" >
+<img src="" >
+<img src="" >
+
+</details>
+
+27. As a site user I can search for events with keywords so that I can find the events I am interested in
+
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+<img src="" >
+
+</details>
+
+28. As a site owner I can provide full access to logged in user so that they can interact with the pages more independently
+
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+<img src="" >
+
+</details>
+
+29. As a site owner I can provide full access to logged in user so that they can interact with the pages more independently
+
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+<img src="" >
+
+</details>
+
+30. As a site owner I can make sure my site is responsive so that user can view the website in all devices without any problem
+
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+<img src="" >
+
+</details>
+
+31. As a site owner I want users to come to a 404 error page so that they don't have to user the browser back button if they enter a URL that does not exist
+
+| **Step** | **Expected Result** | **Actual Result** |
+| -------- | ------------------- | ----------------- |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+|          |                     | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+<img src="" >
 
 </details>
