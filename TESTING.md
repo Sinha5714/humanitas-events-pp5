@@ -3,6 +3,9 @@
 ## Table of Contents
 
 1. [Device Testing](#device-testing)
+2. [Manual Testing](#manual-testing-of-user-stories)
+3. [Bugs & Bug Fixes](#bugs--bug-fixes)
+4. [Unfixed Bugs](#unfixed-bugs)
 
 ### Device testing
 
@@ -521,3 +524,52 @@
 <img src="docs/manual-testing/userstory31.png" >
 
 </details>
+
+## Bugs & Bug Fixes
+
+### Device Bug
+
+| **Bug**                                                        | **Bug Fix**                                           | **Status**  |
+| -------------------------------------------------------------- | ----------------------------------------------------- | ----------- |
+| Unable to login and signup with few devices and safari browser | Contacted tutor support and found out its a known bug | Bug ignored |
+
+### Lighthouse
+
+| **Bug**                                                                                                                                        | **Bug Fix**                              | **Status** |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
+| Unable to conduct lighthouse validation for profile edit page, change username and change password page. Browser was testing homw page instead | Unable to determine why it was happening | Pending    |
+
+<details><summary>Screenshot</summary>
+<img src="documentation/bugs/lh-errorinallpage.png" >
+</details>
+
+### W3C Html Validator
+
+- No bug was found during Html validation
+
+### W3C CSS Validator
+
+- No bug was found during CSS Validation
+
+### REACT App
+
+| **Bug**                                                    | **Bug Fix**                    | **Status** |
+| ---------------------------------------------------------- | ------------------------------ | ---------- |
+| Unable to use react-dom-route Route function in version 18 | Downgraded version to REACT 17 | Bug Fixed  |
+
+### Heroku Deployment
+
+| **Bug**                                                    | **Bug Fix**                                      | **Status** |
+| ---------------------------------------------------------- | ------------------------------------------------ | ---------- |
+| Unable to deploy as dependencies were for REACT 18 version | Downgraded dependencies to REACT 17 requirements | Bug Fixed  |
+
+<details><summary>Screenshot</summary>
+<img src="docs/manual-testing/bug-heroku.png" >
+
+</details>
+
+## Unfixed Bugs
+
+- No unfixed bugs from developer side
+- Lighthouse validation for few pages pending due to auto refresh back to home page
+- Unable to login and sign up in some devices which is a known bug and can be ignored
