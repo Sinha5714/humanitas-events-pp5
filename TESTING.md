@@ -366,9 +366,8 @@
 | Once user open the website | Upcoming events are displayed in a container | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory22-1.png" >
+<img src="docs/manual-testing/userstory22-2.png" >
 
 </details>
 
@@ -380,7 +379,8 @@
 | Logged in user open the website | Top organisers profiles are displayed on top of the page with follow/unfollow button | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory23-1.png" >
+<img src="docs/manual-testing/userstory23.png" >
 
 </details>
 
@@ -392,7 +392,10 @@
 | Logged in users opens the website | He can also see his avatar in Navbar                                                       | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory24-1.png" >
+<img src="docs/manual-testing/userstory24-2.png" >
+<img src="docs/manual-testing/userstory24-3.png" >
+<img src="docs/manual-testing/userstory24-4.png" >
 
 </details>
 
