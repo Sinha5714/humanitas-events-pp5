@@ -1,7 +1,7 @@
 // React imports
 import React, { useState } from "react";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useHistory } from "react-router-dom";
 // Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";

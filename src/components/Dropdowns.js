@@ -1,6 +1,6 @@
 // React imports
 import React from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 // CSS imports
 import styles from "../styles/Dropdowns.module.css";
 // Bootstrap imports

@@ -1,6 +1,6 @@
 // React imports
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useHistory } from "react-router-dom";
 // Bootstrap imports
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";

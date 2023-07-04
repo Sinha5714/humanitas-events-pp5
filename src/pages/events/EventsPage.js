@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { useLocation } from "react-router-dom";
 // Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";

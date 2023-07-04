@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import {
   useHistory,
   useParams,
-} from "react-router-dom/cjs/react-router-dom.min";
+} from "react-router-dom";
 // Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
