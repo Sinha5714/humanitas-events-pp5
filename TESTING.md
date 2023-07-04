@@ -102,10 +102,10 @@
 | User clicks on events title link on upcoming events | Event detail page opens  | Works as expected |
 
  <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory6-1.png" >
+<img src="docs/manual-testing/userstory6-2.png" >
+<img src="docs/manual-testing/userstory6-3.png" >
+<img src="docs/manual-testing/userstory6-4.png" >
 
 </details>
 
@@ -119,8 +119,8 @@
 | Logged in user type comments and post               | Comment is added and displayed in comment list  | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory7-1.png" >
+<img src="docs/manual-testing/userstory7-2.png" >
 
 </details>
 
@@ -133,11 +133,13 @@
 | Logged in user scrolls down to comment section                    | Comment list is visible with user avatar           | Works as expected |
 | Comment owner clicks on dropdown threedots next to their comments | Drop down menu with edit and delete button opens   | Works as expected |
 | User clicks on edit icon                                          | Comment edit form opens                            | Works as expected |
-| User changes comment and click on update                          | Updated comment is displayed with feedback message | Works as expected |
+| User changes comment and click on save                          | Updated comment is displayed with feedback message | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory8-1.png" >
+<img src="docs/manual-testing/userstory8-2.png" >
+<img src="docs/manual-testing/userstory8-3.png" >
+<img src="docs/manual-testing/userstory8-4.png" >
 
 </details>
 
@@ -152,9 +154,9 @@
 | User clicks on delete icon                                        | Comment is deleted with feedback message         | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/userstory9-1.png" >
+<img src="docs/manual-testing/userstory9-2.png" >
+<img src="docs/manual-testing/userstory9-3.png" >
 
 </details>
 
@@ -166,7 +168,8 @@
 | Logged in user click on interested icon link in Navbar | Events what user has shown interested is displayed    | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory10-1.png" >
+<img src="docs/manual-testing/userstory10-2.png" >
 
 </details>
 
@@ -178,7 +181,8 @@
 | Logged in user click on interested icon link in Navbar | Events is removed                                     | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="docs/manual-testing/userstory11-1.png" >
+<img src="docs/manual-testing/userstory11-2.png" >
 
 </details>
 
