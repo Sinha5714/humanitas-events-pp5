@@ -196,14 +196,13 @@ The key functionality aspects:
 
 - Agile development is the most effective way to development of any website
 - This was able to do basic development of website using user story template
-- Due to time constraint of submission of project I didn't add milestones in this project
 
 ### User Story Template
 
-- Using Github issues first I created the template for a user story that was later used to create user stories. I created four labels: must have, could have, should have.
+- Using Github issues first I created the template for a user story that was later used to create user stories. I created three labels: must have, could have, should have.
 
 <details><summary>See User story template</summary>
-<img src="">
+<img src="docs/readme/usertemplate.png">
 </details>
 
 ### Kanban Board
@@ -213,7 +212,7 @@ The key functionality aspects:
 [Link to project Kanban board.](https://github.com/users/Sinha5714/projects/7)
 
 <details><summary>See Kanban board</summary>
-<img src="">
+<img src="docs/readme/kanbanfront.png">
 </details>
 
 ### Moscow Prioritisation
@@ -221,7 +220,15 @@ The key functionality aspects:
 - The Moscow prioritization technique is used to prioritize project requirements based on their importance.
 
 <details><summary>See Image</summary>
-<img src="">
+<img src="docs/readme/moscowfront.png">
+</details>
+
+### Milestones
+
+- Milestones are created with a aim of finishing a task on a certain date. I have created 6 milestones for this project and linked them with issues related.
+
+<details><summary>See Image</summary>
+<img src="docs/readme/milestonesfront.png">
 </details>
 
 ## Design
