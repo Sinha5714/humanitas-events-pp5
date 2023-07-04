@@ -1,13 +1,15 @@
 ---
 name: User Story
 about: User story template for pp5 frontend
-title: User Story
+title: 'User Story: '
 labels: ''
 assignees: ''
 
 ---
 
-As a **role** I can **capability** so that **received benefit**
+EPIC: 
+
+USER STORY: As a **role** I can **capability** so that **received benefit**
 
 ## Acceptance Criteria:
 
