@@ -122,14 +122,14 @@
 
 8. As a site user I can can edit my comments so that I can change what I commented before
 
-| **Step**                                                          | **Expected Result**                              | **Actual Result** |
-| ----------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
-| User clicks on events image link                                  | Event detail page opens                          | Works as expected |
-| User clicks on events title link on upcoming events               | Event detail page opens                          | Works as expected |
-| Logged in user scrolls down to comment section                    | Comment list is visible with user avatar         | Works as expected |
-| Comment owner clicks on dropdown threedots next to their comments | Drop down menu with edit and delete button opens | Works as expected |
-| User clicks on edit icon                                          | Comment edit form opens                          | Works as expected |
-| User changes comment and click on update                          | Updated comment is displayed with feedback message                    | Works as expected |
+| **Step**                                                          | **Expected Result**                                | **Actual Result** |
+| ----------------------------------------------------------------- | -------------------------------------------------- | ----------------- |
+| User clicks on events image link                                  | Event detail page opens                            | Works as expected |
+| User clicks on events title link on upcoming events               | Event detail page opens                            | Works as expected |
+| Logged in user scrolls down to comment section                    | Comment list is visible with user avatar           | Works as expected |
+| Comment owner clicks on dropdown threedots next to their comments | Drop down menu with edit and delete button opens   | Works as expected |
+| User clicks on edit icon                                          | Comment edit form opens                            | Works as expected |
+| User changes comment and click on update                          | Updated comment is displayed with feedback message | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -204,10 +204,10 @@
 
 14. As a site user I can add events so that I can share the events which I am organising
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
+| **Step**                                         | **Expected Result**          | **Actual Result** |
+| ------------------------------------------------ | ---------------------------- | ----------------- |
 | Logged in user click on add event link on Navbar | Event create form page opens | Works as expected |
-| User fill data and submit form successfully | Event created is displayed | Works as expected |
+| User fill data and submit form successfully      | Event created is displayed   | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="" >
@@ -218,14 +218,14 @@
 
 15. As a site user I can edit event which I posted so that I can change the details if required
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
+| **Step**                                                          | **Expected Result**                              | **Actual Result** |
+| ----------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
 | User clicks on events image link                                  | Event detail page opens                          | Works as expected |
 | User clicks on events title link on upcoming events               | Event detail page opens                          | Works as expected |
-| Event owner  clicks on dropdown threedots next to their event card                 |   Drop down menu with edit and delete button opens     | Works as expected |
-| User clicks on edit icon                                          | Event edit form opens                          | Works as expected |
-| User changes data of events and click on update                          |  Success feedback modal is displayed                     | Works as expected |
-| User close the model                          |  Event card is displayed with updated data                  | Works as expected |
+| Event owner clicks on dropdown threedots next to their event card | Drop down menu with edit and delete button opens | Works as expected |
+| User clicks on edit icon                                          | Event edit form opens                            | Works as expected |
+| User changes data of events and click on update                   | Success feedback modal is displayed              | Works as expected |
+| User close the model                                              | Event card is displayed with updated data        | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -234,9 +234,12 @@
 
 16. As a site user I can delete event which I posted so that I can remove event if its cancelled
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
+| **Step**                                                          | **Expected Result**                                            | **Actual Result** |
+| ----------------------------------------------------------------- | -------------------------------------------------------------- | ----------------- |
+| User clicks on events image link                                  | Event detail page opens                                        | Works as expected |
+| User clicks on events title link on upcoming events               | Event detail page opens                                        | Works as expected |
+| Event owner clicks on dropdown threedots next to their event card | Drop down menu with edit and delete button opens               | Works as expected |
+| User clicks on delete icon                                        | Success feedback message displayed and user taken to home page | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -245,11 +248,10 @@
 
 17. As a site user I can view my profile or other's profile so that I can see my or their informations
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                                                                                       | **Expected Result**                               | **Actual Result** |
+| ---------------------------------------------------------------------------------------------- | ------------------------------------------------- | ----------------- |
+| User clicks on profile avatar in event card, comment list, top organisers                      | Individual profile page is open                   | Works as expected |
+| Logged in user clicks on profile avatar in event card, comment list, top organisers and Navbar | User's profile page or clicked profile page opens | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -259,12 +261,13 @@
 
 18. As a site user I can I can edit my profile so that I can change my data or update it
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                                                   | **Expected Result**                                                         | **Actual Result** |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------- |
+| Logged in user clicks on profile avatar in Navbar          | User's profile page opens                                                   | Works as expected |
+| Profile owner clicks on dropdown threedots in profile page | Drop down menu with edit profile, change username and change password opens | Works as expected |
+| User clicks on edit profile                                | Profile edit form opens                                                     | Works as expected |
+| User updates the data and click on update                  | Success Feedback model opens                                                | Works as expected |
+| User close the model                                       | Profile page opens with updated data                                        | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -275,10 +278,13 @@
 
 19. As a site user I can change my username so that can decide to change my username as I like
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                                                   | **Expected Result**                                                         | **Actual Result** |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------- |
+| Logged in user clicks on profile avatar in Navbar          | User's profile page opens                                                   | Works as expected |
+| Profile owner clicks on dropdown threedots in profile page | Drop down menu with edit profile, change username and change password opens | Works as expected |
+| User clicks on change username                             | Change username form page opens                                             | Works as expected |
+| User updates the data and click on change                  | Success Feedback model opens                                                | Works as expected |
+| User close the model                                       | Profile page opens with updated username                                    | Works as expected |
 
  <details><summary>Screenshot</summary>
 <img src="" >
@@ -287,9 +293,13 @@
 
 20. As a site user I can change my password so that I can keep updating my password as I wish
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
+| **Step**                                                   | **Expected Result**                                                         | **Actual Result** |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------- |
+| Logged in user clicks on profile avatar in Navbar          | User's profile page opens                                                   | Works as expected |
+| Profile owner clicks on dropdown threedots in profile page | Drop down menu with edit profile, change username and change password opens | Works as expected |
+| User clicks on change password                             | Change password form page opens                                             | Works as expected |
+| User updates the data and click on change                  | Success Feedback model opens                                                | Works as expected |
+| User close the model                                       | Profile page opens                                                          | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -298,11 +308,13 @@
 
 21. As a site users I can follow/unfollow other users so that see the events what they posted in my post's feed
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+- Logged in user can see follow/unfollow button in top organisers and profilr page of users
+
+| **Step**                                                          | **Expected Result**                                       | **Actual Result** |
+| ----------------------------------------------------------------- | --------------------------------------------------------- | ----------------- |
+| Logged in user clicks follow/unfollow button for individual users | The button text changes to follow/unfollow as per request | Works as expected |
+| User opens his profile page                                       | His following counts changes                              | Works as expected |
+| User opens profile page from user he followed/unfollowed          | The followers counts changes                              | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="">
@@ -312,12 +324,9 @@
 
 22. As a site user I can see what events are upcoming so that I can see the events which are upcoming
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                   | **Expected Result**                          | **Actual Result** |
+| -------------------------- | -------------------------------------------- | ----------------- |
+| Once user open the website | Upcoming events are displayed in a container | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -328,10 +337,10 @@
 
 23. As a site user I can see who are the top organisers so that I can follow them or see their profiles easily
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                        | **Expected Result**                                                                  | **Actual Result** |
+| ------------------------------- | ------------------------------------------------------------------------------------ | ----------------- |
+| Once user open the website      | Top organisers profiles are displayed on top of the page                             | Work as expected  |
+| Logged in user open the website | Top organisers profiles are displayed on top of the page with follow/unfollow button | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -340,9 +349,10 @@
 
 24. As a site users I can view my avatar or other user's avatar so that I know with whom I am interacting
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
+| **Step**                          | **Expected Result**                                                                        | **Actual Result** |
+| --------------------------------- | ------------------------------------------------------------------------------------------ | ----------------- |
+| Users opens the website           | He can see avatar of all profiles in event card, comment list and top organisers container | Work as expected  |
+| Logged in users opens the website | He can also see his avatar in Navbar                                                       | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -351,11 +361,10 @@
 
 25. As a site user I can keep scrolling through the page and comments so that they are loaded automatically and I don't have to select next page
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                                       | **Expected Result**                                          | **Actual Result** |
+| ---------------------------------------------- | ------------------------------------------------------------ | ----------------- |
+| User opens the website and keep scrolling down | Events posted are getting loaded without need to change page | Work as expected  |
+| Logged in user scrolls down to comment section | Comments keeps loading without need to change page           | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -365,14 +374,21 @@
 
 26. As a site user I can be inform if my action has been successful so that I can be sure that my data is changed
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                               | **Expected Result**           | **Actual Result** |
+| -------------------------------------- | ----------------------------- | ----------------- |
+| Logged in user edit his event posted   | Feedback modal is displayed   | Work as expected  |
+| Logged in user delete his posted event | Feedback message is displayed | Work as expected  |
+| Logged in user update his comment      | Feedback message is displayed | Work as expected  |
+| Logged in user delete his comment      | Feedback message is displayed | Work as expected  |
+| Logged in user edit his profile        | Feedback modal is displayed   | Work as expected  |
+| Logged in user change his username     | Feedback modal is displayed   | Work as expected  |
+| Logged in user change his password     | Feedback modal is displayed   | Work as expected  |
 
 <details><summary>Screenshot</summary>
+<img src="" >
+<img src="" >
+<img src="" >
+<img src="" >
 <img src="" >
 <img src="" >
 <img src="" >
