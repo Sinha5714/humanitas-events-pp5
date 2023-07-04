@@ -397,11 +397,11 @@
 
 27. As a site user I can search for events with keywords so that I can find the events I am interested in
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                                         | **Expected Result**                                        | **Actual Result** |
+| ------------------------------------------------ | ---------------------------------------------------------- | ----------------- |
+| User type username, title and date in serach bar | Events posted by that username, title or date is displayed | Work as expected  |
+| User clicks on search buttons in categories      | Events as per that category is displayed                   | Work as expected  |
+| User clicks on search buttons in sub-categories  | Events as per that sub-category is displayed               | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -411,11 +411,16 @@
 
 28. As a site owner I can provide full access to logged in user so that they can interact with the pages more independently
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                                                        | **Expected Result**                                                               | **Actual Result** |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------- | ----------------- |
+| User sign in in website                                         | Homepage opens with Navbar displaying links to all pages                          | Work as expected  |
+| Logged in user opens his event detail page                      | A dropdown with edit and delete is provided for event                             | Work as expected  |
+| Logged in user opens event detail page and scrolls down         | He can comment on the event posted                                                | Work as expected  |
+| Logged in user opens comment list                               | A dropdown with edit and delete is provided for his comments                      | Work as expected  |
+| Logged in user clicks on interested icon in event card          | Interested count increase                                                         | Work as expected  |
+| Logged in user clicks on attend button in event card            | Attendees count increase                                                          | Work as expected  |
+| Logged in user clicks on follow/unfollow button for other users | following count increase                                                          | Work as expected  |
+| Logged in user opens his profile                                | Drop down menu with edit profile, change username and change password is provided | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -423,13 +428,16 @@
 
 </details>
 
-29. As a site owner I can provide full access to logged in user so that they can interact with the pages more independently
+29. As a site owner I can restrict the interaction with website so that an unauthorised user cannot make changes in the app
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                                            | **Expected Result**                             | **Actual Result** |
+| --------------------------------------------------- | ----------------------------------------------- | ----------------- |
+| Logged out user opens website                       | Navbar has limited icons                        | Work as expected  |
+| Logged out user opens profile page                  | No dropdown menu is provided                    | Work as expected  |
+| Logged out try to show interest in an event         | An overlay message is displayed to be logged in | Work as expected  |
+| Logged out try to add attend in an event            | An overlay message is displayed to be logged in | Work as expected  |
+| Logged out opens event detail page to write comment | A message is displayed to be logged in          | Work as expected  |
+| Logged out opens other's profile page               | No follow/unfollow button is displayed          | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -439,11 +447,11 @@
 
 30. As a site owner I can make sure my site is responsive so that user can view the website in all devices without any problem
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                                                | **Expected Result**                                                      | **Actual Result** |
+| ------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------- |
+| Slice the upcoming events list for small devices        | User can see only 3 upcoming events in mobile                            | Work as expected  |
+| Remove app label "Humanitas Events" for smaller devices | User cannot see label in mobile                                          | Work as expected  |
+| Hamburger menu for small devices                        | Navbar menu is compressed to be shown as hamnurger menu in small devices | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="" >
@@ -453,11 +461,10 @@
 
 31. As a site owner I want users to come to a 404 error page so that they don't have to user the browser back button if they enter a URL that does not exist
 
-| **Step** | **Expected Result** | **Actual Result** |
-| -------- | ------------------- | ----------------- |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
-|          |                     | Work as expected  |
+| **Step**                               | **Expected Result**     | **Actual Result** |
+| -------------------------------------- | ----------------------- | ----------------- |
+| User tries to add url which is invalid | PageNotFound page opens | Work as expected  |
+| User clicks on go to home button       | User taken to home page | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="" >
