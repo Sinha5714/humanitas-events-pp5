@@ -105,7 +105,7 @@ const SignInForm = () => {
             </Button>
 
             <Link className={styles.Link} to="/signup">
-              Don't Have an account? Click <span>here </span> to sign up.
+              Don`&apos;`t Have an account? Click <span>here </span> to sign up.
             </Link>
           </Form>
         </Container>
