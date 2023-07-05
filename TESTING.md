@@ -597,6 +597,8 @@
 
 ### Follow/Unfollow Bug
 
+- Help for this bug was asked from Mentor, tutor support of Code Institute, slack community and student support of Code Institute. Unable to find bug even by them.
+
 | **Bug**                                               | **Steps Taken**                                                                                                                                                                    | **Status**                |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
 | Unable to follow/unfollow all users by logged in user | 1. Try deleting user from backend still problem exists. 2. Try tutor support of Code Institute, Tutor Sean was unable to find the error 3. Asked in slack unable to find the error | Bug not found and unfixed |
