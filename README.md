@@ -21,50 +21,52 @@ Developer: Shubham Sinha
    3. [User Stories](#user-stories)
    4. [Site Owner Stories](#site-owner-stories)
 
-3. [Technologies Used](#technologies-used)
+3. [Wireframes](#wireframes)
+
+4. [Technologies Used](#technologies-used)
 
    1. [Languages](#languages)
    2. [Libraries, frameworks and dependencies](#libraries-frameworks-and-dependencies)
    3. [Tools & Programs](#tools--programs)
 
-4. [Agile Design](#agile-design)
+5. [Agile Design](#agile-design)
 
-5. [Design](#design)
+6. [Design](#design)
 
    1. [Colors](#colours)
    2. [Fonts](#fonts)
 
-6. [Project Structure](#project-structure)
+7. [Project Structure](#project-structure)
 
    1. [Front End](#front-end)
    2. [Back End API](#back-end-api)
 
-7. [Features](#features)
+8. [Features](#features)
 
    1. [Implemented Features](#implemented-features)
    2. [Features to be Implemented](#features-to-be-implemented)
 
-8. [Validation](#validation)
+9. [Validation](#validation)
 
    1. [CSS](#css)
    2. [Html](#html)
    3. [Lighthouse](#lighthouse)
    4. [ESLint](#eslint-validation)
 
-9. [Testing](#testing)
+10. [Testing](#testing)
 
-10. [Deployment](#deployment)
+11. [Deployment](#deployment)
 
     1. [Deploying in Heroku](#deploying-the-website-in-heroko)
     2. [Forking of Github repo](#forking-the-github-repository)
     3. [Cloning the Github repo](#cloning-the-repository-in-github)
 
-11. [Credits](#credits)
+12. [Credits](#credits)
 
     1. [Image](#images)
     2. [Code](#code)
 
-12. [Thank You](#thank-you)
+13. [Thank You](#thank-you)
 
 # About
 
@@ -150,6 +152,59 @@ The key functionality aspects:
 29. As a site owner I can restrict the interaction with website so that an unauthorised user cannot make changes in the app
 30. As a site owner I can make sure my site is responsive so that user can view the website in all devices without any problem
 31. As a site owner I want users to come to a 404 error page so that they don't have to user the browser back button if they enter a URL that does not exist
+
+## Wireframes
+
+- A low-fi wireframe was build before developing the website.
+- This was done in Balsamiq Wireframes.
+- Most of the pages has same design so a basic wireframe was created for the following pages:
+- Home page also used for feed and interested page
+- Add/edit page also used for add events, edit events and edit profile
+
+<details><summary>Home Page logged out</summary>
+<img src="docs/wireframes/loggedouthome.png" >
+
+</details>
+
+<details><summary>Home Page logged in</summary>
+<img src="docs/wireframes/loggedinhome.png" >
+
+</details>
+
+<details><summary>Signin Page</summary>
+<img src="docs/wireframes/signin.png" >
+
+</details>
+
+<details><summary>Signup Page</summary>
+<img src="docs/wireframes/signup.png" >
+
+</details>
+
+<details><summary>Profile Page</summary>
+<img src="docs/wireframes/profilepage.png" >
+
+</details>
+
+<details><summary>Event detail Page</summary>
+<img src="docs/wireframes/eventdetail.png" >
+
+</details>
+
+<details><summary>Add/edit form page</summary>
+<img src="docs/wireframes/add-edit.png" >
+
+</details>
+
+<details><summary>Change username Page</summary>
+<img src="docs/wireframes/changeusername.png" >
+
+</details>
+
+<details><summary>Change password Page</summary>
+<img src="docs/wireframes/chnagepassword.png" >
+
+</details>
 
 ## Technologies Used
 
@@ -320,7 +375,7 @@ There were various pages created and used in this application
 
   - Profile.js - This file returns the profile section
   - ProfilePage.js - This file returns the entire Profile page
-  - PopularProfiles.js - This file returns the users of the site as per their followers count
+  - PopularProfiles.js - This file returns the users of the site as per the events count they posted
   - ProfileContactDetails.js - This file returns the contact details of the user's profile
   - ProfileEditForm.js - This file handles the profile edit form
   - UsernameForm.js - This file handles the username change form
@@ -705,10 +760,10 @@ The API for this Front-End application was built with the Django REST Framework.
 - No errors remained before final submission
 
 <details><summary>Inbuild ESLint permission page</summary>
-<img src="docs/readme/html-validate.png"  >
+<img src="docs/readme/eslint-use.png"  >
 </details>
 <details><summary>No error screenshot</summary>
-<img src="docs/readme/htmlvalidator.png" >
+<img src="docs/readme/eslint-noerror.png" >
 </details>
 
 ## Testing
