@@ -186,7 +186,7 @@ const Event = (props) => {
             <OverlayTrigger
               placement="top"
               overlay={
-                <Tooltip>You can`&apos;`t show interest to your own event</Tooltip>
+                <Tooltip>You can&apos;t show interest to your own event</Tooltip>
               }
             >
               <i className="far fa-star" />
@@ -221,7 +221,7 @@ const Event = (props) => {
             <OverlayTrigger
               placement="top"
               overlay={
-                <Tooltip>You can`&apos;`t add attending to your own event</Tooltip>
+                <Tooltip>You can&apos;t add attending to your own event</Tooltip>
               }
             >
               <Button

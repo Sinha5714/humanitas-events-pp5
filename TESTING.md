@@ -596,6 +596,22 @@
 
 </details>
 
+### Follow/Unfollow Bug
+
+| **Bug**                                                    | **Steps Taken**                                    | **Status** |
+| ---------------------------------------------------------- | ------------------------------------------------ | ---------- |
+| Unable to follow/unfollow all users by logged in user | 1. Try deleting user from backend still problem exists. 2. Try tutor support of Code Institute, Tutor Sean was unable to find the error 3. Asked in slack unable to find the error  | Bug not found and unfixed  |
+| After clicking follow console shows object not found | 1. Checked backend API , object exist 2. Try unfollow another user and follow the object not found one, was able to follow | Bug not found and unfixed  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+<img src="" >
+<img src="" >
+<img src="" >
+<img src="" >
+
+</details>
+
 ## Unfixed Bugs
 
 - No unfixed bugs from developer side
