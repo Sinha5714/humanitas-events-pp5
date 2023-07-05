@@ -541,7 +541,6 @@
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
 | Unable to conduct lighthouse validation for profile edit page, change username and change password page. Browser was testing home page instead | Unable to determine why it was happening | Pending    |
 
-
 ### W3C Html Validator
 
 - No bug was found during Html validation
@@ -559,10 +558,10 @@
 - Add following rules in eslintrc.json file to solve bugs:
 
   `"rules": {
-      "react/prop-types": 0,
-      "react/no-children-prop": "off",
-      "react/display-name": "off"
-  }`
+    "react/prop-types": 0,
+    "react/no-children-prop": "off",
+    "react/display-name": "off"
+}`
 
   - `"react/prop-types": 0` was used to suppress the errors relating to prop-types
   - `"react/no-children-prop": "off"` was used to suppress the errors related to the Infinit Scroll component using children={}
@@ -598,17 +597,17 @@
 
 ### Follow/Unfollow Bug
 
-| **Bug**                                                    | **Steps Taken**                                    | **Status** |
-| ---------------------------------------------------------- | ------------------------------------------------ | ---------- |
-| Unable to follow/unfollow all users by logged in user | 1. Try deleting user from backend still problem exists. 2. Try tutor support of Code Institute, Tutor Sean was unable to find the error 3. Asked in slack unable to find the error  | Bug not found and unfixed  |
-| After clicking follow console shows object not found | 1. Checked backend API , object exist 2. Try unfollow another user and follow the object not found one, was able to follow | Bug not found and unfixed  |
+| **Bug**                                               | **Steps Taken**                                                                                                                                                                    | **Status**                |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| Unable to follow/unfollow all users by logged in user | 1. Try deleting user from backend still problem exists. 2. Try tutor support of Code Institute, Tutor Sean was unable to find the error 3. Asked in slack unable to find the error | Bug not found and unfixed |
+| After clicking follow console shows object not found  | 1. Checked backend API , object exist 2. Try unfollow another user and follow the object not found one, was able to follow                                                         | Bug not found and unfixed |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="docs/manual-testing/followerror1.png" >
+<img src="docs/manual-testing/followerror2.png" >
+<img src="docs/manual-testing/followerror3.png" >
+<img src="docs/manual-testing/followerror4.png" >
+<img src="docs/manual-testing/tutorsupport.png" >
 
 </details>
 
@@ -617,3 +616,4 @@
 - No unfixed bugs from developer side
 - Lighthouse validation for few pages pending due to auto refresh back to home page
 - Unable to login and sign up in some devices which is a known bug and can be ignored
+- Follow/Unfollow bug not fixed
