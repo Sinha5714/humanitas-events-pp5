@@ -757,6 +757,8 @@ The API for this Front-End application was built with the Django REST Framework.
 - The JSX code was validated using the ESLint utility.
 - The library was preinstalled in Codeanywhere IDE
 - The code was getting validated so the errors were corrected during development process
+- The library was also installed later using [ESLint website](https://eslint.org/) for final validation
+- Few errors were shown which has been documented in Bug and fixes in TESTING.md
 - No errors remained before final submission
 
 <details><summary>Inbuild ESLint permission page</summary>

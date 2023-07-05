@@ -1,4 +1,5 @@
 // React imports
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 // Bootstrap imports
 import Container from "react-bootstrap/Container";

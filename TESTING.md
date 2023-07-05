@@ -554,13 +554,17 @@
 ### JSX ESLint Validation
 
 - Auto import from "react-router-dom/cjs/react-router-dom.min" was creating error
-- Add devDependencies in package.json and rewrote all import from react-router-dom using terminal command
+- Prop types were showing error
+- Add devDependencies in package.json using terminal command and rewrote all import from react-router-dom
+- Add rules in eslintrc.json file to solve bugs 
 - No errors were shown later
 
 <details><summary>Screenshot</summary>
 <img src="docs/manual-testing/eslinterror.png" >
+<img src="docs/manual-testing/erroreslint.png" >
 <img src="docs/manual-testing/devdependencies.png" >
-<img src="docs/manual-testing/packagedev.png" >
+<img src="docs/manual-testing/packagedev1.png" >
+<img src="docs/manual-testing/eslintrcrules.png" >
 
 </details>
 

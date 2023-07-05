@@ -1,4 +1,5 @@
 // React imports
+import React from "react";
 import { useState } from "react";
 // CSS imports
 import styles from "../styles/Feedback.module.css";
