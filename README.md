@@ -344,7 +344,7 @@ There were various components created and reused across this application.
 
   - This component was used in when user edit and delete their comments successfully
   - This component is also displayed when user deletes his events posted
-  - User Stories covered: 8, 9, 16
+  - User Stories covered: 8, 9, 16, 26
 
 - `<NavBar />` - resuable component, used for easy navigation of the site.
 

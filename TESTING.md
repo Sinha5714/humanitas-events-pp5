@@ -69,7 +69,7 @@
 | User submit data in form succesully             | Home page opens and user is signed in | Works as expected |
 
  <details><summary>Screenshots</summary>
-<img src="docs/manual-testing/userstory3-1.png" >
+<img src="docs/manual-testing/userstory3-1.png" >  
 <img src="docs/manual-testing/userstory3-2.png" >
 
 </details>
@@ -239,7 +239,7 @@
 | Event owner clicks on dropdown threedots next to their event card | Drop down menu with edit and delete button opens | Works as expected |
 | User clicks on edit icon                                          | Event edit form opens                            | Works as expected |
 | User changes data of events and click on update                   | Success feedback modal is displayed              | Works as expected |
-| User close the model                                              | Event card is displayed with updated data        | Works as expected |
+| User close the modal                                              | Event card is displayed with updated data        | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/manual-testing/userstory15-1.png" >
@@ -292,8 +292,8 @@
 | Logged in user clicks on profile avatar in Navbar          | User's profile page opens                                                   | Works as expected |
 | Profile owner clicks on dropdown threedots in profile page | Drop down menu with edit profile, change username and change password opens | Works as expected |
 | User clicks on edit profile                                | Profile edit form opens                                                     | Works as expected |
-| User updates the data and click on update                  | Success Feedback model opens                                                | Works as expected |
-| User close the model                                       | Profile page opens with updated data                                        | Works as expected |
+| User updates the data and click on update                  | Success Feedback modal opens                                                | Works as expected |
+| User close the modal                                       | Profile page opens with updated data                                        | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/manual-testing/userstory18-1.png" >
@@ -311,8 +311,8 @@
 | Logged in user clicks on profile avatar in Navbar          | User's profile page opens                                                   | Works as expected |
 | Profile owner clicks on dropdown threedots in profile page | Drop down menu with edit profile, change username and change password opens | Works as expected |
 | User clicks on change username                             | Change username form page opens                                             | Works as expected |
-| User updates the data and click on change                  | Success Feedback model opens                                                | Works as expected |
-| User close the model                                       | Profile page opens with updated username                                    | Works as expected |
+| User updates the data and click on change                  | Success Feedback modal opens                                                | Works as expected |
+| User close the modal                                       | Profile page opens with updated username                                    | Works as expected |
 
  <details><summary>Screenshot</summary>
 <img src="docs/manual-testing/userstory19-1.png" >
@@ -561,10 +561,10 @@
 - Add following rules in eslintrc.json file to solve bugs:
 
   `"rules": {
-        "react/prop-types": 0,
-        "react/no-children-prop": "off",
-        "react/display-name": "off"
-    }`
+      "react/prop-types": 0,
+      "react/no-children-prop": "off",
+      "react/display-name": "off"
+  }`
 
   - `"react/prop-types": 0` was used to suppress the errors relating to prop-types
   - `"react/no-children-prop": "off"` was used to suppress the errors related to the Infinit Scroll component using children={}
