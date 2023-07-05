@@ -1,5 +1,5 @@
 // React imports
-import { createContext, useContext, useEffect, useState } from "react";
+import { React, createContext, useContext, useEffect, useState } from "react";
 // Components imports
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { followHelper, unfollowHelper } from "../utils/utils";

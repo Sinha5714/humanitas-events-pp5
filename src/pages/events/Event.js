@@ -99,7 +99,9 @@ const Event = (props) => {
             : event;
         }),
       }));
-    } catch (err) {}
+    } catch (err) {
+        // console.log(err)
+    }
   };
 
   const handleJoin = async () => {
@@ -117,7 +119,9 @@ const Event = (props) => {
             : event;
         }),
       }));
-    } catch (err) {}
+    } catch (err) {
+        // console.log(err)
+    }
   };
   const handleCancelJoin = async () => {
     try {
@@ -182,7 +186,7 @@ const Event = (props) => {
             <OverlayTrigger
               placement="top"
               overlay={
-                <Tooltip>You can't show interest to your own event</Tooltip>
+                <Tooltip>You can`&apos;`t show interest to your own event</Tooltip>
               }
             >
               <i className="far fa-star" />
@@ -217,7 +221,7 @@ const Event = (props) => {
             <OverlayTrigger
               placement="top"
               overlay={
-                <Tooltip>You can't add attending to your own event</Tooltip>
+                <Tooltip>You can`&apos;`t add attending to your own event</Tooltip>
               }
             >
               <Button
