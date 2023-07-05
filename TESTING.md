@@ -529,7 +529,7 @@
 
 ## Bugs & Bug Fixes
 
-### Device Bug
+### Devices Bug
 
 | **Bug**                                                        | **Bug Fix**                                           | **Status**  |
 | -------------------------------------------------------------- | ----------------------------------------------------- | ----------- |
@@ -539,11 +539,8 @@
 
 | **Bug**                                                                                                                                        | **Bug Fix**                              | **Status** |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| Unable to conduct lighthouse validation for profile edit page, change username and change password page. Browser was testing homw page instead | Unable to determine why it was happening | Pending    |
+| Unable to conduct lighthouse validation for profile edit page, change username and change password page. Browser was testing home page instead | Unable to determine why it was happening | Pending    |
 
-<details><summary>Screenshot</summary>
-<img src="documentation/bugs/lh-errorinallpage.png" >
-</details>
 
 ### W3C Html Validator
 
