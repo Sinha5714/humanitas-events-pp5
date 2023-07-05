@@ -327,27 +327,33 @@ There were various components created and reused across this application.
 - `<Asset />` - multi purpose component, used to display a range of items due to being passed props.
 
   - Those include a loading spinner from React Bootstrap, image with source and alt attribute or a message consisting of a paragraph.
+  - User Story covered: 25
 
 - `<Avatar />` - resuable component, used to display the relevant user profile picture.
 
   - This component uses props which can specify the source of the image and also its size
   - This components was used in profile avatar, event owner, comment create form and comments posted
+  - User Story covered: 24
 
 - `<DropDowns />` - resuable component, used to display the three dots option button based on the required rights of the user.
 
   - This was used for user who are authorised to make changes. For example, for user to edit and delete their own comments and user to edit their profile, change their username and password.
+  - User Stories covered: 8, 9, 15, 16, 18, 19, 20
 
 - `<Feedback />` - resuable component, used to display feedback messages.
 
   - This component was used in when user edit and delete their comments successfully
   - This component is also displayed when user deletes his events posted
+  - User Stories covered: 8, 9, 16
 
 - `<NavBar />` - resuable component, used for easy navigation of the site.
 
-  - This component is re usable as it will display different icons based on a users logged in status.
+  - This component is reusable as it will display different icons based on a users logged in status.
   - If no user is logged in a log in, sign up and contact icon will be available however if a user is currently logged in, the full range of icons will be available apart from log in.
+  - User Stories covered: 1, 28, 29, 30
 
 - `<PageNotFound />` - specific component, used to display a 404 page made up of an image file and return home button for when the page does not exist.
+  - User Story covered: 31
 
 There were various pages created and used in this application
 
@@ -406,6 +412,7 @@ The API for this Front-End application was built with the Django REST Framework.
   - Logout: This is used for user to logout
   - Profile: This shows the user avatar and opens the user's profile page
 - Feature is fully responsive and on smaller screen sizes it coverts into a 'Hamburger menu'
+- User Stories covered: 1, 4, 28, 29
 
 <details><summary>See Nav-bar</summary>
 
@@ -420,6 +427,7 @@ The API for this Front-End application was built with the Django REST Framework.
 
 - This page consists of sign up form for user to create new account
 - New users can access this page by clicked on SignUp link on Navbar
+- User Story covered: 2
 
 <details><summary>See Sign Up Page</summary>
 
@@ -431,6 +439,7 @@ The API for this Front-End application was built with the Django REST Framework.
 
 - This page consists of sign in form for existing user to signin using their credentials
 - Users can access this page by clicking on SignIn link on Navbar
+- User Stories covered: 3
 
 <details><summary>See Sign In Page</summary>
 
@@ -452,6 +461,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - This component uses filter to order all the site users by followers count
 - Logged in users can follow and unfollow users from here as well
 - User can click on these profiles avatar and see profile page of them
+- User Stories covered: 21, 23
 
 <details><summary>See Top Organisers Section</summary>
 
@@ -471,6 +481,7 @@ The API for this Front-End application was built with the Django REST Framework.
   - Categories and sub-categories
   - Intersted, comments and attending counts
   - Logged in user and not event owner can show interest and add his number in attendance list
+- User Stories covered: 5, 10, 11, 12, 13
 
 <details><summary>See Event Section</summary>
 
@@ -482,6 +493,7 @@ The API for this Front-End application was built with the Django REST Framework.
 
 - This component consists of events which has been upcoming in future
 - User can click on the title and open the events detail page
+- User Stories covered: 6, 22
 
 <details><summary>See UpComing events Section</summary>
 
@@ -495,6 +507,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - This component is provided for user to search all events easily by their title, date, category and sub-category.
 - User can also type other user's name and see all events posted by them
 - This component has a search bar for user to type and search and also filter buttons for categories and sub-categories for better user interaction
+- User Stories covered: 27
 
 <details><summary>See Search form and filters Section</summary>
 
@@ -506,6 +519,7 @@ The API for this Front-End application was built with the Django REST Framework.
 
 - The feed page looks identical to the homepage, only the Events Posts component changes.
 - In this page all the events displayed by filtering the events posted by the users logged in user is following
+- User Stories covered: 21
 
 <details><summary>See Feed Page</summary>
 
@@ -517,6 +531,7 @@ The API for this Front-End application was built with the Django REST Framework.
 
 - The interested page looks identical to the homepage, only the Events Posts component changes.
 - In this page all the events displayed by filtering logged in user is has shown interest to
+- User Stories covered: 10
 
 <details><summary>See Interested Page</summary>
 
@@ -531,6 +546,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Logged in users can post comments on this page on events and interact with other users
 - Event owner can edit and delete the event
 - User can read full content about what the event is about
+- User Stories covered: 6, 7, 8, 9, 10, 11, 12, 13
 
 <details><summary>See Event Detail Page</summary>
 
@@ -543,6 +559,7 @@ The API for this Front-End application was built with the Django REST Framework.
 
 - This page consists of event create form where user can create an event
 - Logged in user can open this page by clicking on add event link on Navbar
+- User Stories covered: 14
 
 <details><summary>See Event Create Page</summary>
 
@@ -556,6 +573,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - This page consists of event form where event owner can edit the data of the event
 - Event owner can access this page by clicking on edit icon in event detail page
 - After successful update user is displayed successful message
+- User Stories covered: 15
 
 <details><summary>See Event Edit Page</summary>
 
@@ -570,6 +588,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - This page consists the detail of user including their bio, following and followers counts and events posted by that user
 - User can access other's profile by clicking on avatar of other users
 - Logged in user can access this page by clicking on their avatar image in Navbar
+- User Stories covered: 17
 
 <details><summary>See Profile Page</summary>
 
@@ -585,6 +604,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - This page consists of profile form where loggedin user can update their profile data
 - Profile owner can access this page by clicking on edit profile in their profile page
 - After successful update user is displayed successful message
+- User Stories covered: 18
 
 <details><summary>See Profile Edit Page</summary>
 
@@ -599,6 +619,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - This page consists of username change form where loggedin user can update their username
 - Profile owner can access this page by clicking on change username in their profile page
 - After successful update user is displayed successful message
+- User Stories covered: 19
 
 <details><summary>See Change Username Page</summary>
 
@@ -612,6 +633,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - This page consists of username change form where loggedin user can update their password
 - Profile owner can access this page by clicking on change password in their profile page
 - After successful update user is displayed successful message
+- User Stories covered: 20
 
 <details><summary>See Change Password Page</summary>
 
@@ -625,6 +647,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - This page occurs when there is an 404 error
 - This consists of an image and a button with a link to go back to home page
 - After successful update user is displayed successful message
+- User Stories covered: 31
 
 <details><summary>PageNotFound Page</summary>
 
