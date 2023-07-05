@@ -556,7 +556,17 @@
 - Auto import from "react-router-dom/cjs/react-router-dom.min" was creating error
 - Prop types were showing error
 - Add devDependencies in package.json using terminal command and rewrote all import from react-router-dom
-- Add rules in eslintrc.json file to solve bugs 
+- Add following rules in eslintrc.json file to solve bugs:
+  `"rules": {
+        "react/prop-types": 0,
+        "react/no-children-prop": "off",
+        "react/display-name": "off"
+    }`
+
+  - `"react/prop-types": 0` was used to suppress the errors relating to prop-types
+  - `"react/no-children-prop": "off"` was used to suppress the errors related to the Infinit Scroll component using children={}
+  - `"react/display-name": "off"` was used to suppress the need for a component display name
+
 - No errors were shown later
 
 <details><summary>Screenshot</summary>
