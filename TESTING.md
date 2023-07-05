@@ -557,6 +557,7 @@
 
 - Auto import from "react-router-dom/cjs/react-router-dom.min" was creating error
 - Prop types were showing error
+- "'" was replced from `&apos;`
 - Add devDependencies in package.json using terminal command and rewrote all import from react-router-dom
 - Add following rules in eslintrc.json file to solve bugs:
 

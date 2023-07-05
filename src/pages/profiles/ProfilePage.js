@@ -141,7 +141,7 @@ function ProfilePage() {
   const mainProfileEvents = (
     <>
       <hr />
-      <h5 className="text-center">{profile?.owner}'s Events</h5>
+      <h5 className="text-center">{profile?.owner}&apos;s Events</h5>
       <hr />
       {profileEvents.results.length ? (
         <InfiniteScroll
