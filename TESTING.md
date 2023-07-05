@@ -10,6 +10,8 @@
 ### Device testing
 
 - Project was tested using various devices and browsers
+- In all devices website was loading but unable to sign in in few devices especially smaller devices
+- See [bugs & bug fixes section](#bugs--bug-fixes)
 
 - Macbook Pro 2019 16-inch
 
@@ -557,6 +559,7 @@
 - Prop types were showing error
 - Add devDependencies in package.json using terminal command and rewrote all import from react-router-dom
 - Add following rules in eslintrc.json file to solve bugs:
+
   `"rules": {
         "react/prop-types": 0,
         "react/no-children-prop": "off",
